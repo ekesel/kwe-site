@@ -1,0 +1,1751 @@
+{
+  "site": {
+    "name": "kwe advisors",
+    "tagline": "Institutional capital formation advisory for private credit managers.",
+    "email": "hello@kweadvisors.com",
+    "linkedin": "https://www.linkedin.com/company/kwe-advisors",
+    "heroVideo": "https://assets.mixkit.co/videos/4170/4170-720.mp4",
+    "heroPoster": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80"
+  },
+  "nav": {
+    "links": [
+      {
+        "label": "Our Story",
+        "to": "/story"
+      },
+      {
+        "label": "Our Team",
+        "to": "/team"
+      },
+      {
+        "label": "Our Process",
+        "to": "/process"
+      },
+      {
+        "label": "Solutions",
+        "to": "/solutions"
+      },
+      {
+        "label": "Case Studies",
+        "to": "/case-studies"
+      },
+      {
+        "label": "Insights",
+        "to": "/insights"
+      }
+    ],
+    "cta": {
+      "label": "Arrange a conversation",
+      "to": "/contact"
+    }
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Solutions",
+        "links": [
+          {
+            "label": "All Solutions",
+            "to": "/solutions"
+          },
+          {
+            "label": "Capital Formation",
+            "to": "/solution/capital-formation-advisory"
+          },
+          {
+            "label": "Messaging & Marketing",
+            "to": "/solution/strategic-messaging-and-marketing"
+          },
+          {
+            "label": "Investor Relations",
+            "to": "/solution/investor-relations"
+          }
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          {
+            "label": "Case Studies",
+            "to": "/case-studies"
+          },
+          {
+            "label": "Insights",
+            "to": "/insights"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "Our Story",
+            "to": "/story"
+          },
+          {
+            "label": "Our Team",
+            "to": "/team"
+          },
+          {
+            "label": "Our Process",
+            "to": "/process"
+          }
+        ]
+      },
+      {
+        "title": "Legal & Regulatory",
+        "links": [
+          {
+            "label": "Privacy Policy",
+            "to": "/legal"
+          },
+          {
+            "label": "Terms of Use",
+            "to": "/legal"
+          },
+          {
+            "label": "Disclosures",
+            "to": "/legal"
+          }
+        ]
+      },
+      {
+        "title": "Contact",
+        "links": [
+          {
+            "label": "Arrange a conversation",
+            "to": "/contact"
+          },
+          {
+            "label": "contact@kweadvisors.com",
+            "href": "mailto:contact@kweadvisors.com"
+          }
+        ]
+      }
+    ],
+    "disclosure": "Securities offered through GT Securities, Inc., member FINRA/SIPC. KWE Advisors is not a registered investment adviser. [Exact wording subject to compliance review — placeholder pending client sign-off]",
+    "copyright": "© 2026 KWE Advisors. All rights reserved."
+  },
+  "cta": {
+    "eyebrow": "Get started",
+    "title": "Ready to transform your business?",
+    "body": "Speak with us about whether an embedded operating partnership is right for your firm.",
+    "button": {
+      "label": "Arrange a conversation",
+      "to": "/contact"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": [
+        "You focus on investing.",
+        "We'll handle fundraising."
+      ],
+      "scrollCue": "Scroll to discover"
+    },
+    "intro": {
+      "eyebrow": "Introducing KWE",
+      "statement": "Private credit has become one of the most important asset classes in institutional portfolios. The fundraising infrastructure supporting most credit managers has not kept pace.",
+      "link": {
+        "label": "Our story",
+        "to": "/story"
+      }
+    },
+    "stats": {
+      "eyebrow": "By the numbers",
+      "title": "Institutional experience, measured.",
+      "items": [
+        {
+          "figure": "$7bn+",
+          "label": "Capital raised for clients",
+          "tone": "g1"
+        },
+        {
+          "figure": "20+",
+          "label": "Years in credit markets",
+          "tone": "g3"
+        },
+        {
+          "figure": "10+",
+          "label": "Countries covered",
+          "tone": "sage"
+        },
+        {
+          "figure": "4",
+          "label": "Partners on every mandate",
+          "tone": "g6"
+        }
+      ]
+    },
+    "who": {
+      "eyebrow": "Who we work with",
+      "title": "Managers with a differentiated investment process who need an equally rigorous approach to raising capital.",
+      "tiles": [
+        {
+          "label": "Direct lending",
+          "tone": "g1"
+        },
+        {
+          "label": "Asset-backed credit",
+          "tone": "g3"
+        },
+        {
+          "label": "CLOs",
+          "tone": "berry"
+        },
+        {
+          "label": "Structured credit",
+          "tone": "aub"
+        },
+        {
+          "label": "Opportunistic",
+          "tone": "g2"
+        }
+      ]
+    },
+    "challenge": {
+      "eyebrow": "The challenge",
+      "title": "Why traditional fundraising fails to scale",
+      "body": "Differentiated credit managers remain under-allocated — not for lack of merit, but because the capital-raising model hasn't evolved. The constraint is capital formation.",
+      "items": [
+        {
+          "icon": "puzzle",
+          "title": "Fragmented Process",
+          "body": "Capital formation, marketing, and IR operate in silos, cut off from the data that drives conviction."
+        },
+        {
+          "icon": "clock",
+          "title": "Lengthy Timelines",
+          "body": "Raises stretch on, draining management time and creating investor uncertainty."
+        },
+        {
+          "icon": "chat",
+          "title": "Generic Investor Outreach",
+          "body": "Broad approaches that ignore investor mandates, timing, and allocation nuance."
+        },
+        {
+          "icon": "target",
+          "title": "Loss of Focus",
+          "body": "Senior time pulled from origination and the work that creates returns."
+        }
+      ]
+    },
+    "diptych": {
+      "traditional": {
+        "label": "Traditional approach",
+        "items": [
+          "Generalist placement agent covering multiple asset classes",
+          "Episodic engagement tied to specific fund closes",
+          "Relationship-driven with limited process infrastructure",
+          "LP communications managed reactively",
+          "Fragmented data across spreadsheets and email"
+        ]
+      },
+      "kwe": {
+        "label": "The KWE model",
+        "items": [
+          "Credit-specialist advisory — deep domain, not breadth",
+          "Continuous, embedded partnership across the capital formation lifecycle",
+          "Structured process with technology-enabled pipeline management",
+          "Proactive LP communications built around allocator workflows",
+          "Unified CRM and reporting platform, purpose-built for credit"
+        ]
+      }
+    },
+    "whatWeDo": {
+      "eyebrow": "What we do",
+      "title": "Three capabilities. One execution model.",
+      "body": "A capital formation function, not a fundraising exercise. KWE operates across the full capital lifecycle — from positioning through fundraising to investor relations — with continuity and structure.",
+      "cards": [
+        {
+          "n": "01",
+          "title": "Capital Formation Advisory",
+          "subtitle": "Investor insight-led execution",
+          "body": "We define target markets, prioritise LP segments, build investor pipelines, and run the raise from first outreach through commitment.",
+          "to": "/solution/capital-formation-advisory"
+        },
+        {
+          "n": "02",
+          "title": "Strategic Messaging & Marketing",
+          "subtitle": "Built by experienced credit fundraisers",
+          "body": "We develop and execute targeted marketing that articulates your edge and builds visibility among the right investor segments.",
+          "to": "/solution/strategic-messaging-and-marketing"
+        },
+        {
+          "n": "03",
+          "title": "Investor Relations",
+          "subtitle": "Beyond the raise",
+          "body": "We manage relationships beyond the raise — across reporting cycles, allocation windows, and future fundraising periods.",
+          "to": "/solution/investor-relations"
+        }
+      ]
+    },
+    "caseStudies": {
+      "eyebrow": "Case studies",
+      "title": "Mandates executed with precision.",
+      "link": {
+        "label": "Read case study"
+      }
+    },
+    "approach": {
+      "eyebrow": "Our approach",
+      "title": "A disciplined framework that introduces structure, alignment, and accountability to execution.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Analyze & Frame the Challenge",
+          "body": "Institutional, investor-grade diagnosis of your private credit strategy, risk profile, and investment case.",
+          "tone": "g1"
+        },
+        {
+          "n": "02",
+          "title": "Research & Evaluate the Opportunity",
+          "body": "We build the analytical foundation of your fundraising strategy.",
+          "tone": "g2"
+        },
+        {
+          "n": "03",
+          "title": "Design & Execute the Fundraising Plan",
+          "body": "A fund manager-specific plan, built to execute.",
+          "tone": "g1"
+        },
+        {
+          "n": "04",
+          "title": "Sustain & Compound Investor Relationships",
+          "body": "Beyond the raise.",
+          "tone": "berry"
+        }
+      ],
+      "link": {
+        "label": "Learn about our approach",
+        "to": "/process"
+      }
+    },
+    "team": {
+      "eyebrow": "The team",
+      "title": "Built from the allocator side.",
+      "link": {
+        "label": "Meet the team",
+        "to": "/team"
+      }
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "What our clients say",
+      "items": [
+        {
+          "firm": "BlueBay",
+          "quote": "Katherine is the queen of the $1mm–50mm tickets. Her tenacity and network make her the perfect partner for raising assets in Europe. Her endearing nature earns client trust and helps build lasting relationships.",
+          "name": "Marc Stacey",
+          "role": "Partner & Senior Portfolio Manager (Private Credit & Alternative Fixed Income)",
+          "tone": "aub"
+        },
+        {
+          "firm": "HSBC",
+          "quote": "Katherine is highly professional and talented. In client-facing roles, she's shown strong networking and sales skills.",
+          "name": "Christopher Harrocks",
+          "role": "Regional Treasury (Institutional Treasury & Liquidity Solutions, based in Hong Kong)",
+          "tone": "g4"
+        },
+        {
+          "firm": "Bladex",
+          "quote": "A proficient relationship manager with a strong understanding of financial products and client needs. Her analytical skills enable effective risk/return analysis and business development.",
+          "name": "Eduardo Vivone",
+          "role": "Executive Vice President, Head of Treasury & Capital Markets",
+          "tone": "aub"
+        },
+        {
+          "firm": "Commonwealth Bank",
+          "quote": "Katherine is hard-working, driven, and quickly masters all aspects of her work. She's known for her integrity, polish, and excellent client service.",
+          "name": "Patricia (Patti) Koo",
+          "role": "Head of Banks Offshore (as listed in public directories, based in New York)",
+          "tone": "g4"
+        }
+      ],
+      "trustedEyebrow": "We work with",
+      "trustedTitle": "Trusted by",
+      "logos": [
+        "BlueBay",
+        "Bladex",
+        "HSBC",
+        "Commonwealth Bank"
+      ]
+    },
+    "insights": {
+      "label": "News & insights",
+      "title": "Perspectives on capital formation.",
+      "button": {
+        "label": "View all insights",
+        "to": "/insights"
+      },
+      "readMore": "Read more"
+    }
+  },
+  "story": {
+    "hero": {
+      "eyebrow": "Our story",
+      "title": "Kwe — Credit Fundraising Experience",
+      "subtitle": [
+        "Built inside institutional private credit.",
+        "Designed for managers who want to compete at that level."
+      ],
+      "anchors": [
+        {
+          "label": "Our mission",
+          "href": "#mission"
+        },
+        {
+          "label": "Our background",
+          "href": "#background"
+        },
+        {
+          "label": "How we respond",
+          "href": "#respond"
+        },
+        {
+          "label": "Our vision",
+          "href": "#vision"
+        }
+      ]
+    },
+    "who": {
+      "eyebrow": "Who we are",
+      "title": "Two decades inside institutional private credit — a rare combination of LP-side judgment and capital-formation execution, unified in one approach.",
+      "pillars": [
+        {
+          "title": "LP decision-making",
+          "body": "How allocators screen, prioritise, and build conviction.",
+          "accent": false
+        },
+        {
+          "title": "Capital formation",
+          "body": "Fund design, positioning, and fundraising execution.",
+          "accent": false
+        },
+        {
+          "title": "One unified approach",
+          "body": "Strategy, positioning, and execution in a single engine.",
+          "accent": true
+        }
+      ],
+      "stats": [
+        {
+          "figure": "20+",
+          "label": "Years in private credit"
+        },
+        {
+          "figure": "$7bn+",
+          "label": "Capital raised"
+        }
+      ],
+      "button": {
+        "label": "Let's talk",
+        "to": "/contact"
+      }
+    },
+    "mission": {
+      "eyebrow": "Our mission",
+      "statement": "Our mission is to give private credit managers the clarity, structure and technology they need to fundraise at true institutional scale — matching the quality of their underwriting with an equally rigorous capital-formation platform."
+    },
+    "background": {
+      "eyebrow": "Our background",
+      "title": "What makes us different",
+      "rows": [
+        {
+          "n": "01",
+          "label": "Experience",
+          "body": "20+ years in institutional private credit, on both sides of the table — structuring and marketing strategies on the sell side, and assessing managers and allocations alongside LPs on the buy side."
+        },
+        {
+          "n": "02",
+          "label": "Responsibilities",
+          "body": "Designing and executing fundraising plans; positioning direct lending, special situations and niche strategies; coordinating global capital-raising; managing pipelines across pensions, insurers, sovereign wealth, endowments and family offices."
+        },
+        {
+          "n": "03",
+          "label": "Learnings",
+          "body": "How LPs actually screen and prioritise managers, what builds conviction beyond past performance, and where good managers consistently lose momentum."
+        }
+      ],
+      "button": {
+        "label": "Learn more",
+        "to": "/team"
+      }
+    },
+    "respond": {
+      "eyebrow": "How we respond",
+      "title": "Not for lack of performance, but for lack of process.",
+      "lead": "We work with private credit managers to:",
+      "steps": [
+        {
+          "n": "1",
+          "title": "Clarify narrative",
+          "body": "Strategy and edge in the language LPs actually use."
+        },
+        {
+          "n": "2",
+          "title": "Target the raise",
+          "body": "Plans by LP mandate fit, risk appetite and needs."
+        },
+        {
+          "n": "3",
+          "title": "Institutional materials",
+          "body": "Answering LP diligence and internal approvals."
+        },
+        {
+          "n": "4",
+          "title": "AI-enabled workflows",
+          "body": "Efficient, reliable, scalable pipeline and reporting."
+        }
+      ],
+      "button": {
+        "label": "Learn about our approach",
+        "to": "/process"
+      }
+    },
+    "vision": {
+      "eyebrow": "Our vision",
+      "index": "05",
+      "before": "KWE unifies and scales your market presence intelligently — giving niche managers the ",
+      "highlight": "clarity, structure and fuel",
+      "after": " to fundraise at true institutional scale."
+    },
+    "milestones": {
+      "eyebrow": "Milestones",
+      "title": "Building the practice",
+      "items": [
+        {
+          "year": "2018",
+          "text": "Practice founded. Focus exclusively on private credit capital formation."
+        },
+        {
+          "year": "2020",
+          "text": "First full-service mandates across two direct lending strategies."
+        },
+        {
+          "year": "2022",
+          "text": "Expanded to CLO and structured credit. European LP relationships formalised."
+        },
+        {
+          "year": "2024",
+          "text": "Launched proprietary CRM and LP reporting platform. Entered Middle Eastern market."
+        },
+        {
+          "year": "2026",
+          "text": "$7bn+ cumulative capital raised across client mandates.",
+          "current": true
+        }
+      ]
+    },
+    "teamTeaser": {
+      "title": "Meet the partners behind the practice.",
+      "link": {
+        "label": "Meet the team",
+        "to": "/team"
+      }
+    }
+  },
+  "team": {
+    "hero": {
+      "eyebrow": "Our team",
+      "title": "Every KWE partner has operated within institutional investment management — the background that makes the advisory credible in allocator conversations.",
+      "anchor": {
+        "label": "Meet the team",
+        "href": "#people"
+      },
+      "cta": {
+        "label": "Arrange a conversation",
+        "to": "/contact"
+      }
+    },
+    "filters": [
+      {
+        "label": "Team",
+        "key": "team",
+        "options": [
+          "Founding Partners",
+          "Partners"
+        ]
+      },
+      {
+        "label": "Role",
+        "key": "focus",
+        "options": [
+          "Capital formation",
+          "Process infrastructure",
+          "Positioning & materials",
+          "Investor relations"
+        ]
+      },
+      {
+        "label": "Region",
+        "key": "region",
+        "options": [
+          "London",
+          "Frankfurt",
+          "Luxembourg"
+        ]
+      }
+    ],
+    "searchPlaceholder": "Search by name",
+    "members": [
+      {
+        "slug": "katherine-wentrup",
+        "name": "Katherine Wentrup",
+        "role": "Founding Partner",
+        "focus": "Capital formation",
+        "firms": [
+          "HSBC",
+          "BlueBay",
+          "La Française"
+        ],
+        "image": "https://images.unsplash.com/photo-1758600587839-56ba05596c69?auto=format&fit=crop&w=1200&q=80",
+        "span": 3,
+        "bio": [
+          "Katherine has over 20 years of experience in institutional credit markets, spanning portfolio management, investor relations, and capital formation advisory.",
+          "At HSBC and BlueBay, she developed deep relationships with global pension funds, insurance companies, and sovereign wealth funds across Europe, the Middle East, and Asia.",
+          "She founded KWE to apply institutional-grade discipline to the fundraising process for credit managers."
+        ],
+        "team": "Founding Partners",
+        "region": "London"
+      },
+      {
+        "slug": "olaf-wentrup",
+        "name": "Olaf Wentrup",
+        "role": "Founding Partner",
+        "focus": "Process infrastructure",
+        "firms": [
+          "Moelis",
+          "Investcorp-Tages",
+          "Mesirow"
+        ],
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80",
+        "span": 4,
+        "bio": [
+          "Olaf brings extensive experience in private credit structuring, fund finance, and LP advisory from senior roles at Moelis, Investcorp-Tages, and Mesirow.",
+          "His focus at KWE is on process infrastructure — building the operational backbone that enables credit managers to run disciplined, scalable fundraises."
+        ],
+        "team": "Founding Partners",
+        "region": "Frankfurt"
+      },
+      {
+        "slug": "selim-rekaibi",
+        "name": "Sélim Rekaibi",
+        "role": "Partner",
+        "focus": "Positioning & materials",
+        "firms": [
+          "Apax",
+          "EY",
+          "Citigroup"
+        ],
+        "image": "https://images.unsplash.com/photo-1652471943570-f3590a4e52ed?auto=format&fit=crop&w=1200&q=80",
+        "span": 5,
+        "bio": [
+          "Sélim's background spans private equity and credit at Apax, financial services advisory at EY, and investment banking at Citigroup.",
+          "At KWE, he leads positioning and materials — translating investment theses into allocator-facing narratives that communicate with precision."
+        ],
+        "team": "Partners",
+        "region": "London"
+      },
+      {
+        "slug": "duyen-jade-vo",
+        "name": "Duyen Jade Vo",
+        "role": "Partner",
+        "focus": "Investor relations",
+        "firms": [
+          "La Française",
+          "EY"
+        ],
+        "image": "https://images.unsplash.com/photo-1770058443069-e384cd001e9b?auto=format&fit=crop&w=1200&q=80",
+        "span": 4,
+        "bio": [
+          "Duyen brings institutional investor relations experience from La Française and financial advisory expertise from EY.",
+          "At KWE, she focuses on ongoing LP relationship management and the design of investor communications programs."
+        ],
+        "team": "Partners",
+        "region": "Luxembourg"
+      }
+    ],
+    "profile": {
+      "back": "View all team members",
+      "focusLabel": "Focus",
+      "connectLabel": "Connect",
+      "connectValue": "LinkedIn",
+      "firmsLabel": "Prior firms"
+    },
+    "priorFirms": [
+      "HSBC",
+      "BlueBay",
+      "Moelis",
+      "Apax",
+      "Citigroup",
+      "Mesirow",
+      "La Française",
+      "EY",
+      "Investcorp-Tages"
+    ],
+    "matters": {
+      "eyebrow": "Why it matters",
+      "statement": "We value judgment built from real allocation decisions — guided by shared discipline.",
+      "link": {
+        "label": "Read our story",
+        "to": "/story"
+      }
+    },
+    "noResults": "No team members match.",
+    "clear": "Clear"
+  },
+  "process": {
+    "hero": {
+      "eyebrow": "Our process",
+      "title": "A process built around how investors decide.",
+      "subtitle": "We analyze, plan, execute, and sustain — an integrated extension of your business across the full capital lifecycle.",
+      "anchors": [
+        "01 Analyze",
+        "02 Research",
+        "03 Design",
+        "04 Sustain"
+      ]
+    },
+    "stepper": {
+      "eyebrow": "Our process",
+      "nextLabel": "Next",
+      "steps": [
+        {
+          "n": "01",
+          "short": "Analyze & Frame",
+          "title": "Analyze & Frame the Challenge",
+          "lead": "Institutional, investor-grade diagnosis of your private credit strategy, risk profile, and investment case.",
+          "body": "We assess how your platform takes risk, where alpha is created, and how governance supports it. The output is an institutional-grade investment case that allocators can underwrite: your portfolio role, return and risk parameters, and a clear decomposition of performance, process, and people."
+        },
+        {
+          "n": "02",
+          "short": "Research & Evaluate",
+          "title": "Research & Evaluate the Opportunity",
+          "lead": "We build the analytical foundation of your fundraising strategy.",
+          "body": "We map the allocator universe for your strategy — by type, geography and mandate fit — and evaluate where demand, competition and timing align. The output is a target list with conviction behind it, and a clear view of what each allocator will need to see before they commit."
+        },
+        {
+          "n": "03",
+          "short": "Design & Execute",
+          "title": "Design & Execute the Fundraising Plan",
+          "lead": "A fund manager-specific plan, built to execute.",
+          "body": "We design the raise around how your target allocators decide — sequencing, materials, data room and DDQ — then run structured outreach with full pipeline visibility, coordinating introductions, meeting preparation and follow-up cadences throughout."
+        },
+        {
+          "n": "04",
+          "short": "Sustain & Compound",
+          "title": "Sustain & Compound Investor Relationships",
+          "lead": "Beyond the raise.",
+          "body": "As commitments close, we build the LP communications program that sustains the relationship: onboarding, quarterly reporting and re-up planning — so that the next raise starts from a stronger position than the last."
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Why KWE",
+      "title": "Structurally different by design",
+      "cards": [
+        {
+          "icon": "link",
+          "tone": "sage",
+          "title": "Embedded, not episodic",
+          "body": "An integrated part of your business — capital formation and IR run as one continuous function. Consistency builds conviction."
+        },
+        {
+          "icon": "target",
+          "tone": "blush",
+          "title": "Selectivity over volume",
+          "body": "We prioritise relevance over reach — and pause when conditions aren't right. Protecting long-term outcomes, never short-term activity."
+        }
+      ]
+    },
+    "timeline": {
+      "figure": "18–36",
+      "text": "months from initial engagement to final close — a typical full-cycle fundraise.",
+      "nodes": [
+        "Diagnostic & positioning",
+        "Infrastructure & materials",
+        "Outreach & pipeline management",
+        "Closing & LP relations"
+      ]
+    },
+    "faq": {
+      "eyebrow": "Frequently asked",
+      "title": "Common questions about the process",
+      "items": [
+        {
+          "q": "How many clients do you work with at once?",
+          "a": "A small number by design — typically no more than four active mandates at a time, so that every engagement has partner-level attention throughout."
+        },
+        {
+          "q": "Do you work on placement fees or retainer?",
+          "a": "Engagements are structured as embedded advisory mandates with a retainer and success component, aligned to the fundraising timeline rather than individual closes."
+        },
+        {
+          "q": "How long does a typical fundraise take?",
+          "a": "A full-cycle institutional raise typically runs 18 to 36 months from initial engagement to final close, depending on strategy, track record and target allocator base."
+        },
+        {
+          "q": "Do you work with emerging managers or only established firms?",
+          "a": "Both. The constraint is a differentiated, institutional-quality strategy and a willingness to build the process infrastructure the raise requires."
+        },
+        {
+          "q": "Which geographies do you cover?",
+          "a": "We have allocator relationships in Europe, the Middle East, Asia, and North America. Coverage depth varies by region — we discuss geographic strategy as part of the diagnostic."
+        }
+      ]
+    }
+  },
+  "solutions": {
+    "hero": {
+      "eyebrow": "Solutions",
+      "title": "Three capabilities, one integrated advisory.",
+      "subtitle": "Capital formation, messaging and investor relations — run as one continuous function across the full capital lifecycle."
+    },
+    "listEyebrow": "Capabilities",
+    "detailEyebrow": "In detail",
+    "glance": {
+      "eyebrow": "At a glance",
+      "title": "What each capability addresses.",
+      "rows": [
+        {
+          "label": "Allocator pipeline management",
+          "cells": [
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "label": "LP communications & reporting",
+          "cells": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "label": "CRM & data infrastructure",
+          "cells": [
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "label": "Pitch materials & DDQ",
+          "cells": [
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "label": "Outreach and follow-up",
+          "cells": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "label": "Differentiation and positioning",
+          "cells": [
+            false,
+            true,
+            false
+          ]
+        }
+      ],
+      "challengeHeader": "Challenge",
+      "columns": [
+        "Capital Formation",
+        "Messaging & Marketing",
+        "Investor Relations"
+      ]
+    },
+    "overviewEyebrow": "Overview",
+    "deliverEyebrow": "What we deliver",
+    "expectEyebrow": "What you can expect",
+    "moreEyebrow": "More solutions",
+    "moreTitle": "See our other solutions",
+    "scrollCue": "Scroll to explore",
+    "items": [
+      {
+        "slug": "capital-formation-advisory",
+        "n": "01",
+        "category": "Capital formation",
+        "title": "Capital Formation Advisory",
+        "tagline": "End-to-end fundraising support, from strategy to close.",
+        "subtitle": "Investor insight-led execution",
+        "lead": "We define target markets, prioritise LP segments, build investor pipelines, and run the fundraising process from first outreach through commitment.",
+        "cardBody": "Investor insight-led execution, from first outreach to commitment.",
+        "tint": "#E4E9EA",
+        "overview": {
+          "before": "From market positioning to close, as a ",
+          "highlight": "disciplined, repeatable process",
+          "after": " — embedded as an operating partner, not a remote advisor."
+        },
+        "deliverables": [
+          {
+            "icon": "target",
+            "title": "Fundraising strategy & investor targeting"
+          },
+          {
+            "icon": "people",
+            "title": "Outreach & meeting management"
+          },
+          {
+            "icon": "doc",
+            "title": "Diligence process coordination"
+          },
+          {
+            "icon": "bank",
+            "title": "Fund structuring advisory"
+          },
+          {
+            "icon": "globe",
+            "title": "Market entry & regulatory guidance"
+          },
+          {
+            "icon": "leaf",
+            "title": "ESG reporting"
+          }
+        ],
+        "expect": [
+          {
+            "icon": "map",
+            "title": "A complete capital formation plan",
+            "body": "Positioning and infrastructure, end to end."
+          },
+          {
+            "icon": "star",
+            "title": "The \"Three Ps\" narrative",
+            "body": "People, performance, process — structured for LPs."
+          },
+          {
+            "icon": "layers",
+            "title": "A full marketing suite",
+            "body": "Deck, one-pager, summaries and documentation."
+          },
+          {
+            "icon": "check",
+            "title": "Comprehensive documentation",
+            "body": "Every element captured and repeatable."
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1565626424178-c699f6601afd?auto=format&fit=crop&w=1400&q=80",
+        "highlights": [
+          "Allocator universe mapping",
+          "Outreach strategy and sequencing",
+          "Pipeline management and CRM"
+        ],
+        "tag": "Capability 01"
+      },
+      {
+        "slug": "strategic-messaging-and-marketing",
+        "n": "02",
+        "category": "Marketing",
+        "title": "Strategic Messaging & Marketing",
+        "tagline": "Investment thesis translated into allocator-facing narrative.",
+        "subtitle": "Built by experienced credit fundraisers",
+        "lead": "We develop and execute targeted marketing that articulates your edge and builds visibility among the right investor segments.",
+        "cardBody": "Articulate your edge and build visibility with the right investors.",
+        "tint": "#E7EBE1",
+        "overview": {
+          "before": "Investment thesis translated into ",
+          "highlight": "allocator-facing narrative",
+          "after": " — precise, differentiated, and calibrated to the audience that decides."
+        },
+        "deliverables": [
+          {
+            "icon": "target",
+            "title": "Positioning framework & differentiation"
+          },
+          {
+            "icon": "doc",
+            "title": "Core pitch deck (allocator version)"
+          },
+          {
+            "icon": "layers",
+            "title": "One-page tearsheet & executive summary"
+          },
+          {
+            "icon": "check",
+            "title": "DDQ master document"
+          },
+          {
+            "icon": "people",
+            "title": "RFP response templates"
+          },
+          {
+            "icon": "globe",
+            "title": "Materials version control & updates"
+          }
+        ],
+        "expect": [
+          {
+            "icon": "map",
+            "title": "A positioning framework",
+            "body": "Differentiation defined before the first meeting."
+          },
+          {
+            "icon": "star",
+            "title": "Investor-grade materials",
+            "body": "Deck, tearsheet and summaries built for CIOs."
+          },
+          {
+            "icon": "layers",
+            "title": "A complete DDQ & RFP library",
+            "body": "Answers ready before allocators ask."
+          },
+          {
+            "icon": "check",
+            "title": "Consistent messaging",
+            "body": "One narrative across every conversation."
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1725913496276-47d7147da99f?auto=format&fit=crop&w=1400&q=80",
+        "highlights": [
+          "Positioning framework",
+          "Core pitch deck and tearsheet",
+          "DDQ master document"
+        ],
+        "tag": "Capability 02"
+      },
+      {
+        "slug": "investor-relations",
+        "n": "03",
+        "category": "Investor relations",
+        "title": "Investor Relations",
+        "tagline": "LP relationships managed as the strategic asset they are.",
+        "subtitle": "Beyond the raise",
+        "lead": "We manage relationships beyond the raise — across reporting cycles, allocation windows, and future fundraising periods.",
+        "cardBody": "LP relationships managed as the strategic asset they are.",
+        "tint": "#EFE1EA",
+        "overview": {
+          "before": "LP relationships managed as the ",
+          "highlight": "strategic asset they are",
+          "after": " — engaged throughout the fund lifecycle, not just during raises."
+        },
+        "deliverables": [
+          {
+            "icon": "map",
+            "title": "LP relationship mapping & segmentation"
+          },
+          {
+            "icon": "doc",
+            "title": "Quarterly & annual reporting templates"
+          },
+          {
+            "icon": "target",
+            "title": "Investor communications calendar"
+          },
+          {
+            "icon": "people",
+            "title": "Re-up strategy & outreach timing"
+          },
+          {
+            "icon": "layers",
+            "title": "Co-investment & SMA communications"
+          },
+          {
+            "icon": "check",
+            "title": "DDQ & RFP response management"
+          }
+        ],
+        "expect": [
+          {
+            "icon": "map",
+            "title": "A structured IR program",
+            "body": "Cadence, content and ownership defined."
+          },
+          {
+            "icon": "star",
+            "title": "Reporting allocators trust",
+            "body": "Quarterly and annual templates that answer real questions."
+          },
+          {
+            "icon": "layers",
+            "title": "Re-up readiness",
+            "body": "Timing and outreach planned fund to fund."
+          },
+          {
+            "icon": "check",
+            "title": "A compounding LP base",
+            "body": "Relationships that strengthen across successive funds."
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1667892702884-faa077e80d7b?auto=format&fit=crop&w=1400&q=80",
+        "highlights": [
+          "LP relationship mapping",
+          "Quarterly and annual reporting",
+          "Re-up strategy and timing"
+        ],
+        "tag": "Capability 03"
+      }
+    ],
+    "header": {
+      "title": "Three capabilities, one integrated advisory.",
+      "body": "Most capital formation problems are not isolated — we address them as a system."
+    },
+    "detailTitle": "What each capability delivers.",
+    "exploreLabel": "Explore capability"
+  },
+  "caseStudies": {
+    "hero": {
+      "eyebrow": "Case studies",
+      "title": "Proof of what an embedded partnership delivers.",
+      "subtitle": "Selected engagements across strategy, fund type, and region — from first outreach to close and beyond.",
+      "filters": [
+        {
+          "label": "Strategy",
+          "key": "strategy",
+          "options": [
+            "Direct lending",
+            "Opportunistic credit",
+            "Macro",
+            "Structured credit",
+            "CLO"
+          ]
+        },
+        {
+          "label": "Fund type",
+          "key": "fundType",
+          "options": [
+            "Closed-end fund",
+            "Open-ended fund",
+            "Separately managed account"
+          ]
+        },
+        {
+          "label": "Region",
+          "key": "region",
+          "options": [
+            "EMEA",
+            "Europe",
+            "North America",
+            "Middle East"
+          ]
+        }
+      ],
+      "scrollCue": "Browse case studies"
+    },
+    "controls": {
+      "categories": "Categories",
+      "filter": "Filter",
+      "readMore": "Read more",
+      "showing": "Showing {shown} of {total}",
+      "loadMore": "Load more",
+      "categoriesOptions": [
+        "Fundraising engagement & execution",
+        "Capital formation advisory",
+        "Fund placement"
+      ],
+      "clear": "Clear filters",
+      "noResults": "No case studies match these filters.",
+      "pageSize": 6
+    },
+    "detail": {
+      "back": "All case studies",
+      "tag": "Case study",
+      "meta": [
+        "Service",
+        "Duration",
+        "Strategy",
+        "Target market"
+      ],
+      "challenge": "The challenge",
+      "approach": "The approach",
+      "results": "The results",
+      "moreEyebrow": "More case studies",
+      "moreTitle": "Explore more work"
+    },
+    "items": [
+      {
+        "slug": "german-private-credit",
+        "key": "European specialist credit manager",
+        "category": "Direct lending · EMEA",
+        "tags": [
+          "Case study",
+          "Direct lending"
+        ],
+        "image": "https://images.unsplash.com/photo-1518112166137-85f9979a43aa?auto=format&fit=crop&w=1600&q=80",
+        "cardTitle": "Repositioning a German private credit manager for Northern European institutions",
+        "title": "Repositioning a German private credit manager for Northern European institutions",
+        "subtitle": "How we rebuilt the narrative and outreach for a DACH direct-lending specialist and opened Scandinavian, Benelux and UK allocators.",
+        "meta": [
+          "Fundraising engagement & execution",
+          "24 months",
+          "Subordinated private credit (DACH)",
+          "Northern European institutions"
+        ],
+        "challenge": "A specialist direct lending manager operating primarily in the DACH region had a strong track record in subordinated corporate loans but limited visibility outside its domestic allocator base. The strategy was differentiated — regional depth, relationship-driven origination, low leverage — but the materials and outreach approach had not been built for international institutional audiences.",
+        "approach": [
+          {
+            "title": "Allocator segmentation",
+            "body": "Identified 60 target institutions across Scandinavia, the Benelux and the UK, mapped by type, mandate fit and appetite for regional private credit."
+          },
+          {
+            "title": "Narrative rebuild",
+            "body": "Replaced the strategy document with an allocator-facing deck that led with differentiation and risk management rather than deal-flow biography."
+          },
+          {
+            "title": "Structured outreach",
+            "body": "Configured a CRM and executed a six-month outreach calendar, coordinating and supporting all first- and second-level meetings."
+          }
+        ],
+        "results": [
+          {
+            "big": "60",
+            "small": "targets",
+            "label": "Institutions mapped and prioritised"
+          },
+          {
+            "big": "24",
+            "small": "mo",
+            "label": "Embedded advisory mandate"
+          },
+          {
+            "big": "3",
+            "small": "regions",
+            "label": "Scandinavia, Benelux, UK"
+          }
+        ],
+        "outcome": "Outcome figures pending client review and confirmation. The engagement established a Northern European allocator pipeline and a materials suite calibrated for international institutional diligence.",
+        "quote": null,
+        "strategy": "Direct lending",
+        "fundType": "Closed-end fund",
+        "region": "EMEA",
+        "categoryGroup": "Fundraising engagement & execution"
+      },
+      {
+        "slug": "us-opportunistic-credit",
+        "key": "US opportunistic credit manager",
+        "category": "Opportunistic credit · Europe",
+        "tags": [
+          "Case study",
+          "Opportunistic"
+        ],
+        "image": "https://images.unsplash.com/photo-1591200146894-5a3f43fa951c?auto=format&fit=crop&w=1600&q=80",
+        "cardTitle": "Bringing a US opportunistic credit manager to European institutional capital",
+        "title": "Bringing a US opportunistic credit manager to European institutional capital",
+        "subtitle": "How we built a European market-entry strategy, localised the materials and ran a phased 18-month outreach across four markets.",
+        "meta": [
+          "Capital formation advisory",
+          "18 months",
+          "Opportunistic credit (US)",
+          "UK, Germany, Netherlands, Switzerland"
+        ],
+        "challenge": "An established US opportunistic credit manager with a strong domestic LP base wanted to diversify geographically and access European institutional capital. No prior European LP relationships existed, and the materials were calibrated entirely for a US audience.",
+        "approach": [
+          {
+            "title": "Landscape mapping",
+            "body": "Mapped the European allocator landscape for US opportunistic credit strategies, identifying 45 high-probability targets."
+          },
+          {
+            "title": "Materials localisation",
+            "body": "Rebuilt the deck for European regulatory, contractual and structural expectations that the existing materials did not address."
+          },
+          {
+            "title": "Phased outreach",
+            "body": "Executed an 18-month program beginning with the UK and the Netherlands, where appetite for US credit strategies was strongest."
+          }
+        ],
+        "results": [
+          {
+            "big": "45",
+            "small": "targets",
+            "label": "High-probability European allocators"
+          },
+          {
+            "big": "18",
+            "small": "mo",
+            "label": "Phased outreach program"
+          },
+          {
+            "big": "4",
+            "small": "markets",
+            "label": "UK, DE, NL, CH"
+          }
+        ],
+        "outcome": "Outcome figures pending client review and confirmation. The manager entered Europe with a localised materials suite and an active pipeline in its two strongest markets.",
+        "quote": null,
+        "strategy": "Opportunistic credit",
+        "fundType": "Closed-end fund",
+        "region": "Europe",
+        "categoryGroup": "Capital formation advisory"
+      },
+      {
+        "slug": "bladex-macro-fund",
+        "key": "Bladex Macro Fund",
+        "category": "Macro strategy · Europe",
+        "tags": [
+          "Case study",
+          "Macro"
+        ],
+        "image": "https://images.unsplash.com/photo-1515799251528-8e14681f214e?auto=format&fit=crop&w=1600&q=80",
+        "cardTitle": "Placing a Latin America–focused macro fund with European institutions",
+        "title": "Placing a Latin America–focused macro fund with European institutions",
+        "subtitle": "How we repositioned a concentrated macro strategy as a diversifying global allocation and built a European LP base from the ground up.",
+        "meta": [
+          "Fund placement, Europe",
+          "12 months",
+          "Discretionary macro (LatAm)",
+          "European institutions"
+        ],
+        "challenge": "European investors were hesitant toward a Latin America–concentrated macro fund — citing regional concentration risk, liquidity constraints, and limited familiarity with LatAm-focused managers. The fund needed a placement strategy that repositioned it as a diversifying global allocation and built credibility with institutions new to the strategy.",
+        "approach": [
+          {
+            "title": "Narrative refinement",
+            "body": "Repositioned the strategy as a diversifying global macro allocation, emphasising liquid instruments and risk discipline over regional focus."
+          },
+          {
+            "title": "Investor mapping",
+            "body": "Identified and prioritised European allocators with macro appetite — single-manager funds, funds of funds, family offices and private banks."
+          },
+          {
+            "title": "Hands-on execution",
+            "body": "Ran end-to-end fundraising — introductions, meetings, diligence support, and iterative feedback on messaging."
+          }
+        ],
+        "results": [
+          {
+            "big": "Multi-",
+            "small": "jurisdiction",
+            "label": "European LP base established"
+          },
+          {
+            "big": "12",
+            "small": "mo",
+            "label": "First close to European raise"
+          },
+          {
+            "big": "Long-term",
+            "small": "capital",
+            "label": "Institutional + private"
+          }
+        ],
+        "outcome": "The raise established a diversified European LP base across multiple jurisdictions, securing long-term institutional and sophisticated private capital — and elevating the fund's profile within the European macro community.",
+        "quote": {
+          "text": "KWE's understanding of European allocator expectations was critical. They knew exactly how to frame the strategy for an audience that had no prior framework for it.",
+          "attribution": "Bladex representative, Fund Manager · Bladex"
+        },
+        "strategy": "Macro",
+        "fundType": "Open-ended fund",
+        "region": "Europe",
+        "categoryGroup": "Fund placement"
+      }
+    ],
+    "extraCards": [
+      {
+        "category": "Structured credit · Middle East",
+        "title": "Opening Gulf sovereign and family-office capital",
+        "tags": [
+          "Case study",
+          "Structured credit"
+        ],
+        "image": "https://images.unsplash.com/photo-1615141328086-72a5a01b1b25?auto=format&fit=crop&w=1600&q=80",
+        "strategy": "Structured credit",
+        "fundType": "Separately managed account",
+        "region": "Middle East",
+        "categoryGroup": "Fund placement"
+      },
+      {
+        "category": "Opportunistic · Europe",
+        "title": "Re-engaging LPs after a paused raise",
+        "tags": [
+          "Case study",
+          "Opportunistic"
+        ],
+        "image": "https://images.unsplash.com/photo-1630452606939-5f72e4b7dd20?auto=format&fit=crop&w=1600&q=80",
+        "strategy": "Opportunistic credit",
+        "fundType": "Closed-end fund",
+        "region": "Europe",
+        "categoryGroup": "Fundraising engagement & execution"
+      },
+      {
+        "category": "CLO · North America",
+        "title": "Building a US allocator pipeline for a CLO manager",
+        "tags": [
+          "Case study",
+          "CLO"
+        ],
+        "image": "https://images.unsplash.com/photo-1521194263619-39ecc5b55c61?auto=format&fit=crop&w=1600&q=80",
+        "strategy": "CLO",
+        "fundType": "Closed-end fund",
+        "region": "North America",
+        "categoryGroup": "Capital formation advisory"
+      }
+    ],
+    "perspectives": {
+      "eyebrow": "Client perspectives",
+      "title": "What our clients say.",
+      "note": "Pending compliance review",
+      "items": [
+        {
+          "quote": "KWE brought a level of institutional rigour to our fundraise that we had not encountered in the placement market before. The combination of deep allocator relationships and genuine process infrastructure made a material difference to the outcome.",
+          "name": "[Name — pending written consent]",
+          "firm": "HSBC"
+        },
+        {
+          "quote": "The positioning work KWE did on our strategy was the single most impactful deliverable of the engagement. Within three months we were having fundamentally different conversations with allocators.",
+          "name": "[Name — pending written consent]",
+          "firm": "Bladex"
+        },
+        {
+          "quote": "The difference with KWE was the infrastructure they built and left behind — our IR function is categorically stronger than it was.",
+          "name": "[Name — pending written consent]",
+          "firm": "Commonwealth Bank"
+        },
+        {
+          "quote": "KWE's understanding of how European allocators evaluate credit managers is unmatched. They knew exactly which questions to anticipate and how to build the answers into our materials.",
+          "name": "[Name — pending written consent]",
+          "firm": "BlueBay"
+        }
+      ],
+      "compliance": "Compliance notice: These testimonials and the “Trusted by” names are pending written consent from each named individual and firm, and pending compliance review under applicable SEC Marketing Rule requirements."
+    },
+    "trusted": {
+      "eyebrow": "Trusted by",
+      "logos": [
+        "BlueBay",
+        "Bladex",
+        "HSBC",
+        "Commonwealth Bank"
+      ],
+      "note": "[Client logos to be supplied. Logo usage rights and compliance clearance must be confirmed before display.]"
+    }
+  },
+  "insights": {
+    "hero": {
+      "eyebrow": "Insights",
+      "title": "Our latest thinking on how credit managers raise capital.",
+      "chips": [
+        {
+          "label": "All",
+          "topic": null
+        },
+        {
+          "label": "Market notes",
+          "topic": "Market note"
+        },
+        {
+          "label": "LP behaviour",
+          "topic": "LP behaviour"
+        },
+        {
+          "label": "Case studies",
+          "topic": "Case study"
+        }
+      ],
+      "scrollCue": "Latest insights"
+    },
+    "controls": {
+      "categories": "Categories",
+      "filter": "Filter",
+      "readMore": "Read more",
+      "showing": "Showing {shown} of {total}",
+      "loadMore": "Load more",
+      "tagPrimary": "KWE insights",
+      "categoriesOptions": [
+        "Market note",
+        "LP behaviour",
+        "Practice note",
+        "Case study"
+      ],
+      "clear": "Clear filters",
+      "noResults": "No insights match these filters.",
+      "pageSize": 6,
+      "filterOptions": {
+        "label": "Read time",
+        "options": [
+          "Under 6 min",
+          "6 min and over"
+        ]
+      }
+    },
+    "follow": {
+      "statement": "Explore our views and opinions on the latest investment and industry trends.",
+      "button": "Follow us on LinkedIn",
+      "mediaLabel": "Media contact",
+      "contacts": [
+        {
+          "label": "Press enquiries",
+          "value": "press@kweadvisors.com"
+        },
+        {
+          "label": "Speaking & events",
+          "value": "events@kweadvisors.com"
+        },
+        {
+          "label": "Research partnerships",
+          "value": "research@kweadvisors.com"
+        }
+      ]
+    },
+    "article": {
+      "back": "All insights",
+      "author": "KWE Advisors · Research",
+      "initials": "KW",
+      "toc": "On this page",
+      "related": "Related insights"
+    },
+    "items": [
+      {
+        "slug": "allocator-due-diligence-2025",
+        "category": "Market note",
+        "date": "18 Sep 2025",
+        "read": "8 min read",
+        "image": "https://images.unsplash.com/photo-1521194263619-39ecc5b55c61?auto=format&fit=crop&w=1600&q=80",
+        "title": "How allocator due diligence has changed for private credit managers",
+        "subtitle": "The operational due diligence process has become as rigorous as investment due diligence. Credit managers who underinvest in their IR infrastructure are paying for it in extended close timelines.",
+        "toc": [
+          "The structural shift",
+          "What allocators now ask for",
+          "The cost of being unprepared",
+          "What managers should do"
+        ],
+        "h2": "The structural shift: operational diligence in parallel with investment diligence",
+        "p1": "The private credit due diligence process has undergone a structural shift since 2020. What was once primarily an investment-led evaluation — returns, track record, team — now involves a parallel operational assessment that many managers are unprepared for.",
+        "stats": [
+          {
+            "big": "2020",
+            "unit": "",
+            "label": "Operational diligence becomes standard"
+          },
+          {
+            "big": "2",
+            "unit": "×",
+            "label": "Parallel evaluation tracks"
+          },
+          {
+            "big": "60",
+            "unit": "%",
+            "label": "Screened out on infrastructure"
+          }
+        ],
+        "p2": "Allocators at institutional quality — pension funds, insurance companies, sovereign wealth funds — now routinely request evidence of CRM systems, LP reporting infrastructure, and compliance documentation before proceeding past a first meeting.",
+        "quote": "Managers who cannot provide this documentation are screened out, regardless of investment quality.",
+        "p3": "The practical response is to build the infrastructure before the raise — a configured CRM, a documented reporting cadence and a DDQ library — so that the operational track moves as quickly as the investment track."
+      },
+      {
+        "slug": "european-lp-landscape-2025",
+        "category": "LP behaviour",
+        "date": "14 Jan 2025",
+        "read": "6 min read",
+        "image": "https://images.unsplash.com/photo-1630452606939-5f72e4b7dd20?auto=format&fit=crop&w=1600&q=80",
+        "title": "The European LP landscape for private credit: what has changed",
+        "subtitle": "European pension and insurance allocators increased private credit allocations through 2024. The resulting competition for relationships has raised the bar for how managers present themselves.",
+        "toc": [
+          "Allocations through 2024",
+          "A more organised field",
+          "What the bar looks like now",
+          "Implications for managers"
+        ],
+        "h2": "Allocations through 2024: yield, illiquidity premium and low volatility",
+        "p1": "European institutional allocators increased their private credit allocations meaningfully through 2024, driven by attractive all-in yields relative to public credit and the persistent appeal of illiquidity premiums in a low-volatility context.",
+        "stats": [
+          {
+            "big": "2024",
+            "unit": "",
+            "label": "Peak allocation year"
+          },
+          {
+            "big": "529",
+            "unit": "bps",
+            "label": "Avg. European spread"
+          },
+          {
+            "big": "54",
+            "unit": "%",
+            "label": "Market in €100–349m"
+          }
+        ],
+        "p2": "The competitive consequence is that managers seeking European LP relationships are now competing against a well-organised field of global brands and specialist boutiques.",
+        "quote": "The era of a relationship and a good pitch deck being sufficient has ended.",
+        "p3": "Managers entering Europe should expect a longer diligence cycle, a more structured materials request and a stronger preference for demonstrated process over relationship alone."
+      },
+      {
+        "slug": "positioning-in-credit-fundraising",
+        "category": "Practice note",
+        "date": "12 Nov 2024",
+        "read": "5 min read",
+        "image": "https://images.unsplash.com/photo-1615141328086-72a5a01b1b25?auto=format&fit=crop&w=1600&q=80",
+        "title": "Why positioning is the most under-invested capability in credit fundraising",
+        "subtitle": "Most credit managers have a genuine edge in investment — and struggle to translate it into language that institutional allocators find compelling. The gap is narrower than it appears.",
+        "toc": [
+          "Two audiences",
+          "The translation problem",
+          "Audience calibration",
+          "Closing the gap"
+        ],
+        "h2": "Two audiences: investment teams write for portfolio managers, IR teams write for allocators",
+        "p1": "Investment teams write for portfolio managers. Investor relations teams write for allocators. Most credit managers have only the first, and the translation problem shows up immediately in every allocator conversation.",
+        "stats": [
+          {
+            "big": "1",
+            "unit": "",
+            "label": "Audience most decks are written for"
+          },
+          {
+            "big": "3",
+            "unit": "Ps",
+            "label": "People, performance, process"
+          },
+          {
+            "big": "0",
+            "unit": "",
+            "label": "Positioning frameworks in most raises"
+          }
+        ],
+        "p2": "The gap between a compelling investment thesis and a compelling fundraising narrative is not about quality of the underlying strategy. It is about audience calibration.",
+        "quote": "The CIO of a European pension fund evaluates managers on different dimensions than a credit-specialist portfolio manager.",
+        "p3": "A positioning framework — differentiation, portfolio role, and risk narrative written for the decision-maker — is the highest-leverage investment most managers have not yet made."
+      }
+    ],
+    "extraCards": [
+      {
+        "category": "Market note",
+        "title": "Why capital formation is the real constraint in private credit",
+        "image": "https://images.unsplash.com/photo-1518112166137-85f9979a43aa?auto=format&fit=crop&w=1600&q=80",
+        "date": "2024",
+        "read": "5 min read"
+      },
+      {
+        "category": "LP behaviour",
+        "title": "How allocators build conviction beyond performance",
+        "image": "https://images.unsplash.com/photo-1591200146894-5a3f43fa951c?auto=format&fit=crop&w=1600&q=80",
+        "date": "2024",
+        "read": "5 min read"
+      },
+      {
+        "category": "Case study",
+        "title": "Repositioning a direct-lending raise for a crowded market",
+        "image": "https://images.unsplash.com/photo-1515799251528-8e14681f214e?auto=format&fit=crop&w=1600&q=80",
+        "date": "2024",
+        "read": "5 min read"
+      }
+    ]
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let's arrange a conversation.",
+      "subtitle": "Speak with us about whether an embedded operating partnership is right for your firm.",
+      "email": "hello@kweadvisors.com",
+      "linkedin": "LinkedIn"
+    },
+    "form": {
+      "eyebrow": "Contact us",
+      "title": "Speak with KWE Advisors",
+      "body": "We partner with global private-credit managers seeking a more modern, efficient, and scalable fundraising model.",
+      "email": "hello@kweadvisors.com",
+      "fields": {
+        "name": {
+          "label": "Full name",
+          "placeholder": "Anna Smith"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "anna@abc.com"
+        },
+        "company": {
+          "label": "Company name",
+          "placeholder": "Company name"
+        },
+        "message": {
+          "label": "How can we help you?",
+          "placeholder": "I need help with..."
+        }
+      },
+      "submit": "Submit",
+      "success": "Thank you — we respond within two business days."
+    },
+    "offices": {
+      "title": "Office locations",
+      "mapsLabel": "View on Google maps",
+      "items": [
+        {
+          "name": "KWE Advisors Ltd",
+          "address": [
+            "1 Cornhill",
+            "London EC3V 3ND"
+          ],
+          "tel": "+44 (0)20 0000 0000",
+          "email": "hello@kweadvisors.com",
+          "maps": "https://maps.google.com/?q=1+Cornhill+London"
+        },
+        {
+          "name": "KWE Advisors GmbH",
+          "address": [
+            "Bockenheimer Landstraße 2–4",
+            "60306 Frankfurt am Main"
+          ],
+          "tel": "+49 (0)69 000 0000",
+          "email": "frankfurt@kweadvisors.com",
+          "maps": "https://maps.google.com/?q=Bockenheimer+Landstrasse+2+Frankfurt"
+        },
+        {
+          "name": "KWE Advisors S.à r.l.",
+          "address": [
+            "12, rue Guillaume Kroll",
+            "L-1882 Luxembourg"
+          ],
+          "tel": "+352 00 00 00 00",
+          "email": "lux@kweadvisors.com",
+          "maps": "https://maps.google.com/?q=12+rue+Guillaume+Kroll+Luxembourg"
+        }
+      ]
+    },
+    "media": {
+      "title": "Media contacts",
+      "items": [
+        {
+          "name": "Katherine Wentrup",
+          "role": "Founding Partner",
+          "tel": "+44 (0)7000 000 000",
+          "email": "katherine@kweadvisors.com"
+        },
+        {
+          "name": "Olaf Wentrup",
+          "role": "Founding Partner",
+          "tel": "+44 (0)7000 000 001",
+          "email": "olaf@kweadvisors.com"
+        }
+      ]
+    }
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "title": "Privacy Policy & Disclosures",
+    "updated": "Last updated: [Date — placeholder pending compliance review]",
+    "sections": [
+      {
+        "heading": "Securities disclosure",
+        "body": "Securities offered through GT Securities, Inc., member FINRA/SIPC. KWE Advisors is not a registered investment adviser. The information on this website is for informational purposes only and does not constitute an offer or solicitation to buy or sell any security. Past performance is not indicative of future results. [Exact wording to be confirmed with compliance contact before publication]"
+      },
+      {
+        "heading": "Privacy policy",
+        "body": "[Privacy policy content to be supplied by client's legal counsel. This is a placeholder.]"
+      },
+      {
+        "heading": "Terms of use",
+        "body": "[Terms of use content to be supplied by client's legal counsel. This is a placeholder.]"
+      },
+      {
+        "heading": "Regulatory information",
+        "body": "[Regulatory and compliance information to be supplied. Confirm applicable jurisdiction(s) with client.]"
+      }
+    ]
+  },
+  "notFound": {
+    "code": "404",
+    "title": "This page doesn't exist.",
+    "body": "The link may be out of date, or the page may have moved.",
+    "button": {
+      "label": "Back to home",
+      "to": "/"
+    }
+  }
+}
