@@ -1,0 +1,11 @@
+Django>=5.2,<5.3
+djangorestframework>=3.16
+psycopg[binary]>=3.2
+django-environ>=0.12
+gunicorn>=23
+whitenoise>=6.9
+django-unfold>=0.70
+django-solo>=2.4
+django-simple-history>=3.10
+Pillow>=11
+django-storages>=1.14

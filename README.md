@@ -1,60 +1,178 @@
-# KWE Advisors — website
+# KWE Advisors — website + CMS
 
-React 19 + Vite + TypeScript + Tailwind CSS v4 + React Router + Framer Motion.
-Responsive at desktop (1440), tablet (768) and mobile (390), matching the Figma prototype.
+A React/Vite marketing site whose content is managed in a Django admin (styled with
+django-unfold) and served from PostgreSQL. One `docker compose up` runs everything.
 
-## Run
-
-```bash
-npm install
-npm run dev        # http://localhost:5173
-npm run build      # production build → dist/
-npm run preview    # serve the build locally
+```
+┌──────────────┐   /            ┌───────────────────────┐
+│   Browser    │ ─────────────▶ │  web  (nginx)         │  SPA build (frontend/dist)
+└──────────────┘                │   /api/ /admin/       │──┐  /media/ served from shared volume
+                                │   /static/  ──▶ proxy │  │
+                                └───────────────────────┘  ▼
+                                                   ┌────────────────────┐     ┌──────────────┐
+                                                   │ backend (gunicorn) │────▶│ db (postgres)│
+                                                   │ Django 5 + DRF     │     └──────────────┘
+                                                   │ /admin/ CMS        │
+                                                   │ GET /api/content/  │
+                                                   └────────────────────┘
 ```
 
-## Editing content — `src/data.json`
+* **frontend/** — Vite 6, React 19, TypeScript, Tailwind v4, react-router 7. On load it fetches
+  `GET /api/content/` once and renders from that object (`useContent()`); the public site is
+  otherwise unchanged from the static version.
+* **backend/** — Django 5.2, DRF, PostgreSQL 16, django-unfold admin, django-solo (page
+  singletons), django-simple-history (per-record history + revert). The admin **is** the CMS.
+* `/api/content/` returns `{ "data": <exactly the shape of frontend/src/data.json>, "updated_at" }`.
+  It is public, read-only and cached in-process per gunicorn worker. A `ContentVersion` row in the database is
+  bumped by model signals on every save/delete and checked on each request, so a change saved by one worker is
+  picked up by all of them immediately.
 
-**All copy, links, image and video URLs live in `src/data.json`.** No component needs to change to edit text.
+## Quick start (fresh VPS)
 
-| Key | What it controls |
+```bash
+git clone … kwe-site && cd kwe-site
+cp .env.example .env            # edit SECRET_KEY, POSTGRES_PASSWORD, ADMIN_PASSWORD, ALLOWED_HOSTS, CSRF_TRUSTED_ORIGINS
+make up                         # builds images, starts db → backend → web
+```
+
+* Site: `http://<host>/`
+* CMS: `http://<host>/admin/` — log in with `ADMIN_USERNAME` / `ADMIN_PASSWORD` from `.env`.
+
+On first boot the backend runs migrations, creates the admin user, imports
+`backend/seed/data.json` (only when the database is empty), collects static files and
+starts gunicorn. Subsequent boots never overwrite content.
+
+### TLS with Caddy
+
+Put Caddy in front of the `web` container (change `WEB_PORT=8080` in `.env` so port 80 is free):
+
+```caddyfile
+kweadvisors.com {
+    reverse_proxy 127.0.0.1:8080
+}
+```
+
+Then set in `.env`: `ALLOWED_HOSTS=kweadvisors.com`, `CSRF_TRUSTED_ORIGINS=https://kweadvisors.com`,
+`SESSION_COOKIE_SECURE=True`, `CSRF_COOKIE_SECURE=True` and `make up` again.
+
+## Make targets
+
+| Target | What it does |
 | --- | --- |
-| `site` | brand name, tagline, email, LinkedIn URL, **hero video + poster image** |
-| `nav`, `footer`, `cta` | navigation links, footer columns, the CTA band on every page |
-| `home` | every Home section in order (hero, intro, stats, who we work with, challenge, traditional vs KWE, what we do, approach, team, testimonials, insights) |
-| `story`, `team`, `process` | Our Story, Our Team (members + profile pages), Our Process (stepper, why KWE, timeline, FAQ) |
-| `solutions.items[]` | the three solution pages — `slug` is the URL (`/solution/<slug>`) |
-| `caseStudies.items[]` | case studies — `slug` → `/case-study/<slug>`; `extraCards` are the placeholder cards in the grid |
-| `insights.items[]` | articles — `slug` → `/insight/<slug>`; `extraCards` as above |
-| `contact`, `legal`, `notFound` | Contact (form, offices, media contacts), Legal, 404 |
+| `make up` | build + start the production stack in the background |
+| `make dev` | dev stack: Django `runserver` on :8000 and Vite on :5173 with bind mounts |
+| `make logs` / `make down` / `make ps` | the usual |
+| `make backup-db` | `pg_dump` → `backups/kwe-<timestamp>.sql.gz` |
+| `make restore-db FILE=backups/kwe-….sql.gz` | restore a dump (stops backend during restore) |
+| `make backup-media` | tarball of uploaded files → `backups/media-<timestamp>.tar.gz` |
+| `make sync-seed` | copy `frontend/src/data.json` → `backend/seed/data.json` |
+| `make test` | backend `pytest` + frontend `tsc --noEmit` + `vite build` |
+| `make export-content` | print the live content JSON (same shape as data.json) |
+| `make createsuperuser` | add another admin user |
 
-Images are plain URLs (currently Unsplash). To use your own, drop files in `public/` and set the URL to `/filename.jpg`.
-Icons on cards are referenced by name (`target`, `people`, `doc`, `bank`, `globe`, `leaf`, `map`, `star`, `layers`, `check`, `puzzle`, `clock`, `chat`, `link`) — defined in `src/components/ui.tsx`.
+## Local development (without Docker)
 
-## Routes
+```bash
+# backend
+cd backend
+python3.12 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
+.venv/bin/python manage.py migrate
+.venv/bin/python manage.py import_content          # loads seed/data.json
+.venv/bin/python manage.py createsuperuser
+.venv/bin/python manage.py runserver               # :8000 (SQLite by default; set DATABASE_URL for Postgres)
 
-`/` · `/story` · `/team` · `/team/:slug` · `/process` · `/solutions` · `/solution/:slug` · `/case-studies` · `/case-study/:slug` · `/insights` · `/insight/:slug` · `/contact` · `/legal` · `*` (404)
+# frontend (second terminal)
+cd frontend && npm install && npm run dev          # :5173 — proxies /api, /media, /admin, /static → :8000
+```
 
-Deploy as a static SPA (Netlify / Vercel / S3+CloudFront): build `dist/` and add a rewrite of all paths to `index.html`.
+Open `http://localhost:5173/` for the site and `http://localhost:5173/admin/` for the CMS.
 
-## Filters & search
+Tests: `cd backend && .venv/bin/python -m pytest` (59 tests: round-trip contract, API, cache
+invalidation across worker processes, every admin page, history revert) and `cd frontend && npx tsc --noEmit && npm run build`.
 
-Team, Case Studies and Insights have working filters: dropdown pills (options come from `data.json`, e.g. `caseStudies.hero.filters[]`, `team.filters[]`, `insights.controls.categoriesOptions`), topic chips in the Insights hero, free-text "Search by name" on Team, "Clear filters", "Showing X of Y" and "Load more" (page size `controls.pageSize`). Items are matched on the fields named by each filter's `key` (e.g. `strategy`, `fundType`, `region`, `categoryGroup`, `team`, `focus`).
+## Environment variables
 
-## Motion
+| Variable | Purpose |
+| --- | --- |
+| `SECRET_KEY` | Django secret. Long random string. |
+| `DEBUG` | `False` in production. |
+| `ALLOWED_HOSTS` | Comma-separated hostnames. |
+| `CSRF_TRUSTED_ORIGINS` | Comma-separated origins with scheme (`https://example.com`). Required for admin login behind TLS. |
+| `SITE_URL` | Public site URL for the admin “View site”/“Preview” buttons. `/` means same host. |
+| `SESSION_COOKIE_SECURE`, `CSRF_COOKIE_SECURE` | Set `True` once served over HTTPS. |
+| `POSTGRES_DB`, `POSTGRES_USER`, `POSTGRES_PASSWORD` | Database; compose builds `DATABASE_URL` from these. |
+| `DATABASE_URL` | Used directly when running outside compose (defaults to SQLite). |
+| `MEDIA_ROOT` | `/data/media` in Docker (shared volume, served by nginx at `/media/`). |
+| `ADMIN_USERNAME`, `ADMIN_PASSWORD`, `ADMIN_EMAIL` | Initial superuser, created only if missing. |
+| `WEB_PORT` | Host port for nginx (default 80). |
+| `USE_S3` + `AWS_*` | Optional S3-compatible media storage (django-storages). Off by default. |
 
-The motion layer lives in `src/motion/index.tsx` (GSAP + ScrollTrigger + Lenis) and mirrors cinven.com's bundle — same easings (`joe.in/out/inOut`), timings and triggers:
+## How content is modelled
 
-- Lenis smooth scroll wired to ScrollTrigger; loader fade on first load; 0.4s page fade on route change.
-- Shy header: nav hides on scroll down, returns on scroll up (0.4s joe.in/out).
-- `<Lines>`: headings split into lines that rise in one after another (y 30, 0.8s, stagger 0.1, trigger top 90%).
-- `<EyebrowDraw>`: eyebrow words stagger in (0.02) while the hairline under it draws left→right.
-- `<FadeUp>`: generic fade-up (y 30 text / y 100 cards).
-- `<Parallax>`: image drifts yPercent 18 while its section scrolls; hero video drifts yPercent 36 + scales 1.17 (`usePinnedMedia`).
-- `<HorizontalScroll>`: card strip pins at centre and scrubs sideways, with a staggered rise-in on approach (Home testimonials, Case Studies perspectives).
-- `<PinnedStack>`: stacked cards — each pins while the next slides over and the pinned one scales to 0.6 (Home approach steps).
-- `useDriftGrid`: grid items drift at random speeds (Team grid). People columns scroll vertically on desktop (Home team).
-- Solutions list: cinven "sectors" hover — rows dim, the hovered row's image reveals (opacity .6s / transform .5s).
-- Hovers: button icon colour swap (0.3s), card images zoom 1.05, solution rows shift 16px, link underlines draw in (0.6s).
-- Process stepper, FAQ accordion, carousels and the case-study slider are interactive.
-- All of it respects `prefers-reduced-motion`.
-- The contact form is front-end only — wire `onSubmit` in `src/pages/ContactPage.tsx` to your form backend.
+Every top-level key of `data.json` is either a **page singleton** (one row, edited on one
+screen with tabs per section) or a **list model**:
+
+| data.json | Admin |
+| --- | --- |
+| `site`, `nav.cta`, `footer.*`, `cta`, `notFound` | Site → **Site settings** |
+| `nav.links[]` | Site → **Navigation** |
+| `footer.columns[]` (+ links) | Site → **Footer** |
+| `home`, `story`, `process`, `contact`, `legal` | Pages → Home / Our story / Our process / Contact / Legal |
+| `team.*`, `solutions.*`, `caseStudies.*`, `insights.*` (page copy, labels, page size) | Pages → … page settings |
+| `team.members[]` | Content → **Team members** |
+| `solutions.items[]` (+ deliverables, expectations) | Content → **Solutions** |
+| `caseStudies.items[]` (+ approach steps, result tiles) | Content → **Case studies** |
+| `insights.items[]` (+ stats) | Content → **Insights** |
+| `caseStudies.extraCards[]`, `insights.extraCards[]` | Content → **Extra cards** |
+| `team.filters[]`, `caseStudies.hero.filters[]`, `*.controls.categoriesOptions`, `insights.hero.chips`, `insights.controls.filterOptions` | Filters → **Filter groups** |
+
+Nested lists are inline tables with drag-and-drop ordering. Short string lists (title
+lines, bullets, address lines, bios) are “one item per line” text boxes. Images and videos are
+an upload **plus** an optional external URL; the upload wins when both are set.
+
+`backend/content/assemble.py::build_content()` rebuilds the JSON; `content/importer.py`
+is its inverse. `content/tests/test_roundtrip.py` imports the seed and asserts deep equality —
+that test is the contract that keeps the frontend's data access unchanged.
+
+## Editing guide for staff
+
+1. Go to `/admin/` and log in.
+2. The **Dashboard** shows quick links to every page and when each section was last changed.
+3. **Pages** (left sidebar) are single screens with a tab per section — e.g. Home → Hero, Intro,
+   Stats… Lists that belong to a section (stat tiles, cards, steps) are their own tabs.
+4. **Content** holds the things that have their own URLs: team members, solutions, case studies,
+   insights. “Add” creates a new one; the slug (URL) is filled in from the name/title.
+5. Drag the handle on the left of a row to reorder. Press **Save** — the site updates immediately
+   (reload the page in your browser).
+6. **Preview page** / **View site** buttons (top right of every edit screen) open the live page.
+7. **History** (top right) lists every change with who/when. Open an entry and press
+   **Revert** to restore that version.
+8. **Filters**: dropdown options on the Team / Case studies / Insights pages. An item is only
+   filterable when its value (e.g. a case study's Region) matches an option exactly.
+9. **Media library**: upload a file and copy its URL into any “external URL” field if you want to
+   reuse the same image in several places.
+
+Validation: slugs are unique, hero titles are required, images are limited to 10 MB and videos
+to 100 MB, and only web image/video file types are accepted.
+
+## Operations
+
+* **Change the admin password**: `/admin/password_change/` while logged in, or
+  `docker compose exec backend python manage.py changepassword admin`.
+* **Backups**: `make backup-db` and `make backup-media`; keep `backups/` off-box.
+* **Restore**: `make restore-db FILE=…` then `docker compose exec backend tar xzf - -C /data < backups/media-….tar.gz`.
+* **Re-seed from the JSON** (overwrites all content):
+  `docker compose exec backend python manage.py import_content` (optionally `path/to/data.json`).
+* **Export the live content** to update the committed seed/type source:
+  `make export-content > frontend/src/data.json && make sync-seed`.
+* **Logs**: `make logs`. Health checks: backend hits `/api/content/`, web hits `/`.
+* **Upgrades**: `git pull && make up` (images rebuild; migrations run on boot).
+
+## Repository layout
+
+```
+frontend/   Vite project (Dockerfile → nginx image, nginx.conf)
+backend/    Django project: kwe/ (settings, urls), content/ (models, admin, assemble, importer,
+            api, tests, management commands), seed/data.json, Dockerfile, entrypoint.sh
+docker-compose.yml  docker-compose.dev.yml  .env.example  Makefile
+```

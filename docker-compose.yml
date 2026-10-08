@@ -1,0 +1,49 @@
+name: kwe
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-kwe}
+      POSTGRES_USER: ${POSTGRES_USER:-kwe}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-kwe} -d ${POSTGRES_DB:-kwe}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-kwe}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-kwe}
+      MEDIA_ROOT: /data/media
+      STATIC_ROOT: /app/staticfiles
+    volumes:
+      - media:/data/media
+      - static:/app/staticfiles
+    depends_on:
+      db:
+        condition: service_healthy
+    expose:
+      - "8000"
+
+  web:
+    build: ./frontend
+    restart: unless-stopped
+    ports:
+      - "${WEB_PORT:-80}:80"
+    volumes:
+      - media:/data/media:ro
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+  media:
+  static:

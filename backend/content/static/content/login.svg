@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061B20"/>
+      <stop offset="0.6" stop-color="#2D4748"/>
+      <stop offset="1" stop-color="#3B1931"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1600" fill="url(#g)"/>
+  <circle cx="900" cy="1200" r="360" fill="#824270" fill-opacity="0.35"/>
+  <circle cx="260" cy="420" r="220" fill="#9CB5B9" fill-opacity="0.18"/>
+  <text x="100" y="1440" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#FFFFFF">kwe advisors</text>
+  <text x="100" y="1500" font-family="Inter, Helvetica, Arial, sans-serif" font-size="30" fill="#C5D4D7">Content management</text>
+</svg>

@@ -1,0 +1,32 @@
+# Development override: Django runserver + Vite dev server with bind mounts.
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+name: kwe
+
+services:
+  backend:
+    command: ["runserver"]
+    environment:
+      DEBUG: "True"
+      SKIP_COLLECTSTATIC: "1"
+    volumes:
+      - ./backend:/app
+      - media:/data/media
+    ports:
+      - "8000:8000"
+
+  web:
+    build:
+      context: ./frontend
+      target: build
+    command: ["sh", "-c", "npm install && npm run dev -- --host 0.0.0.0 --port 5173"]
+    working_dir: /app
+    environment:
+      VITE_API_PROXY: http://backend:8000
+    volumes:
+      - ./frontend:/app
+      - web_node_modules:/app/node_modules
+    ports:
+      - "5173:5173"
+
+volumes:
+  web_node_modules:
