@@ -1,8 +1,10 @@
 import { useState, type FormEvent } from "react";
 import { useContent } from "@/content/ContentProvider";
-import { EyebrowDraw, Lines } from "@/motion";
-import { ArrowRight, Hairline, Reveal, usePageTitle } from "@/components/ui";
-import { Section, VideoHero } from "@/components/sections";
+import { Button, TextLink, usePageTitle } from "@/components/primitives";
+import { Hero } from "@/components/blocks/Hero";
+import { Section } from "@/components/blocks/Section";
+import { PlainGrid } from "@/components/blocks/GridList";
+import { FadeUp } from "@/motion";
 
 export default function ContactPage() {
   const data = useContent();
@@ -13,70 +15,43 @@ export default function ContactPage() {
   const f = c.form.fields;
   return (
     <>
-      <VideoHero title={c.hero.title} subtitle={c.hero.subtitle} cueTarget="#form" />
+      <Hero title={c.hero.title} subtitle={c.hero.subtitle} cueTarget="#form" />
 
-      {/* Form panel */}
-      <Section id="form">
-        <Reveal className="panel bg-warm grid lg:grid-cols-[5fr_7fr] gap-10 lg:gap-24 lg:p-20">
-          <div>
-            <EyebrowDraw line={false}>{c.form.eyebrow}</EyebrowDraw><Hairline className="mt-5" />
-            <Lines as="h1" className="t-h1 text-g1 mt-12 mb-7">{c.form.title}</Lines>
-            <p className="text-gm text-[17px] lg:text-[20px] m-0" style={{ lineHeight: 1.6 }}>{c.form.body}</p>
-            <a href={`mailto:${c.form.email}`} className="inline-block text-g1 text-[19px] mt-10 no-underline">{c.form.email}</a>
-          </div>
-          <form onSubmit={onSubmit} className="rounded-[20px] bg-white p-7 lg:p-12 flex flex-col gap-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <Field label={f.name.label} placeholder={f.name.placeholder} name="name" />
-              <Field label={f.email.label} placeholder={f.email.placeholder} name="email" type="email" />
+      <Section id="form" label={c.form.eyebrow} title={c.form.title} intro={<>{c.form.body} <a href={`mailto:${c.form.email}`} className="inline-link">{c.form.email}</a></>}>
+        <FadeUp>
+          <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-x-6 gap-y-6 max-w-[880px]">
+            <Field label={f.name.label} placeholder={f.name.placeholder} name="name" autoComplete="name" />
+            <Field label={f.email.label} placeholder={f.email.placeholder} name="email" type="email" autoComplete="email" />
+            <Field label={f.company.label} placeholder={f.company.placeholder} name="company" autoComplete="organization" wide />
+            <Field label={f.message.label} placeholder={f.message.placeholder} name="message" textarea wide />
+            <div className="md:col-span-2 mt-4" aria-live="polite">
+              {sent ? <p className="t-body text-forest-900">{c.form.success}</p> : <Button type="submit">{c.form.submit}</Button>}
             </div>
-            <Field label={f.company.label} placeholder={f.company.placeholder} name="company" />
-            <Field label={f.message.label} placeholder={f.message.placeholder} name="message" textarea />
-            {sent ? (
-              <p className="text-g1 text-[16px] m-0 mt-2">{c.form.success}</p>
-            ) : (
-              <button type="submit" className="self-start inline-flex items-center gap-5 rounded-full bg-g1 text-white pl-10 pr-3 py-3 text-[20px] font-medium border-0 cursor-pointer mt-2"><span>{c.form.submit}</span><span className="w-[52px] h-[52px] rounded-full bg-berry text-white inline-flex items-center justify-center"><ArrowRight size={18} rotate={-45} /></span></button>
-            )}
           </form>
-        </Reveal>
+        </FadeUp>
       </Section>
 
-      {/* Offices + Media contacts */}
-      <Section>
-        <div className="max-w-[1000px] mx-auto">
-          <Reveal><h2 className="font-sans font-normal text-g1 text-[32px] lg:text-[44px] m-0" style={{ letterSpacing: "-0.01em" }}>{c.offices.title}</h2></Reveal>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-16 mt-16">
-            {c.offices.items.map((o, i) => (
-              <Reveal key={o.name} delay={i * 0.08}>
-                <div className="font-medium text-g1 text-[17px]">{o.name}</div>
-                <p className="text-g1 text-[15px] mt-3 mb-0" style={{ lineHeight: 1.5 }}>{o.address.map((l) => (<span key={l} className="block">{l}</span>))}</p>
-                <div className="text-gm text-[14px] mt-5">Tel</div><div className="text-g1 text-[15px] mt-1.5">{o.tel}</div>
-                <div className="text-gm text-[14px] mt-4">Email</div><a href={`mailto:${o.email}`} className="text-g1 text-[15px] mt-1.5 inline-block underline">{o.email}</a>
-                <a href={o.maps} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2.5 rounded-full bg-g1 text-white pl-4 pr-2 py-2 text-[13px] font-medium no-underline">{c.offices.mapsLabel}<span className="w-[22px] h-[22px] rounded-full bg-white text-g1 inline-flex items-center justify-center"><ArrowRight size={10} rotate={-45} /></span></a>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal className="mt-24"><h2 className="font-sans font-normal text-g1 text-[32px] lg:text-[44px] m-0" style={{ letterSpacing: "-0.01em" }}>{c.media.title}</h2></Reveal>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 mt-16">
-            {c.media.items.map((m, i) => (
-              <Reveal key={m.name} delay={i * 0.08}>
-                <div className="font-medium text-g1 text-[17px]">{m.name}</div><div className="text-g1 text-[15px] mt-2">{m.role}</div>
-                <div className="text-gm text-[14px] mt-5">Tel</div><div className="text-g1 text-[15px] mt-1.5">{m.tel}</div>
-                <div className="text-gm text-[14px] mt-4">Email</div><a href={`mailto:${m.email}`} className="text-g1 text-[15px] mt-1.5 inline-block underline">{m.email}</a>
-              </Reveal>
-            ))}
-          </div>
-        </div>
+      <Section label={c.offices.title}>
+        <PlainGrid items={c.offices.items.map((o) => ({
+          key: o.name, title: o.name,
+          lines: [...o.address, o.tel, <a href={`mailto:${o.email}`} className="inline-link">{o.email}</a>, <span className="inline-block mt-4"><TextLink href={o.maps} external>{c.offices.mapsLabel}</TextLink></span>],
+        }))} />
+      </Section>
+
+      <Section label={c.media.title}>
+        <PlainGrid items={c.media.items.map((m) => ({ key: m.name, title: m.name, lines: [m.role, m.tel, <a href={`mailto:${m.email}`} className="inline-link">{m.email}</a>] }))} />
       </Section>
     </>
   );
 }
 
-function Field({ label, placeholder, name, type = "text", textarea = false }: { label: string; placeholder: string; name: string; type?: string; textarea?: boolean }) {
-  const cls = "w-full rounded-xl border border-silver bg-white px-6 py-5 text-[18px] text-g1 placeholder:text-gl outline-none transition-colors duration-200 focus:border-g1";
+function Field({ label, placeholder, name, type = "text", textarea = false, wide = false, autoComplete }: { label: string; placeholder: string; name: string; type?: string; textarea?: boolean; wide?: boolean; autoComplete?: string }) {
   return (
-    <label className="flex flex-col gap-2.5">
-      <span className="text-gm text-[16px]">{label}</span>
-      {textarea ? <textarea name={name} placeholder={placeholder} rows={5} className={cls} required /> : <input name={name} type={type} placeholder={placeholder} className={cls} required />}
+    <label className={`flex flex-col gap-2 ${wide ? "md:col-span-2" : ""}`}>
+      <span className="t-small text-ink-2">{label}</span>
+      {textarea
+        ? <textarea name={name} placeholder={placeholder} rows={6} className="field" required />
+        : <input name={name} type={type} placeholder={placeholder} autoComplete={autoComplete} className="field" required />}
     </label>
   );
 }

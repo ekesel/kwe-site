@@ -25,6 +25,7 @@ def site_section(s: m.SiteSettings):
         "linkedin": s.linkedin,
         "heroVideo": s.hero_video_src,
         "heroPoster": s.hero_poster_src,
+        "flags": {"showTestimonials": s.show_testimonials},
     }
 
 
@@ -468,6 +469,7 @@ def insights_section():
             "metaLabels": lines(n.article_meta_labels),
             "initials": n.article_initials,
             "outline": n.article_outline,
+            "glossary": n.article_glossary,
             "related": n.article_related,
         },
         "items": [insight_item(x) for x in m.Insight.objects.all()],

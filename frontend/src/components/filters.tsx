@@ -1,15 +1,15 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Icon } from "./ui";
+import { Icon } from "./primitives";
 
 export type FilterDef = { label: string; key: string; options: string[] };
 export type FilterState = Record<string, string | null>;
 
-/** Dropdown pill. `dark` = glass pill (for dark backgrounds); otherwise outlined pill on light backgrounds.
+/** Filter dropdown: outlined pill (emerald when a value is active).
  *  The listbox is portalled to <body> with fixed positioning: card grids below use transforms (GSAP/framer
  *  layout) and overflow-hidden image wrappers, which create stacking contexts that would otherwise paint over it. */
-export function Dropdown({ label, options, value, onChange, dark = false, solid = false }: { label: string; options: string[]; value: string | null; onChange: (v: string | null) => void; dark?: boolean; solid?: boolean }) {
+export function Dropdown({ label, options, value, onChange, allLabel = "All" }: { label: string; options: string[]; value: string | null; onChange: (v: string | null) => void; allLabel?: string }) {
   const [open, setOpen] = useState(false);
   const [pos, setPos] = useState<{ left: number; top?: number; bottom?: number; maxHeight: number } | null>(null);
   const ref = useRef<HTMLDivElement>(null);
@@ -36,29 +36,22 @@ export function Dropdown({ label, options, value, onChange, dark = false, solid 
     return () => { document.removeEventListener("mousedown", onDoc); document.removeEventListener("keydown", onKey); };
   }, [open]);
   const active = value !== null;
-  const base = dark
-    ? `pill-ghost ${active ? "active" : ""}`
-    : solid
-      ? "inline-flex items-center gap-3 rounded-full bg-g1 pl-5 pr-3 py-3 text-[15px] font-medium text-white"
-      : `inline-flex items-center gap-3 rounded-full border pl-5 pr-2.5 py-2.5 text-[16px] font-medium transition-colors ${active ? "bg-g1 text-white border-g1" : "border-g1 text-g1 bg-transparent"}`;
   const pick = (v: string | null) => { onChange(v); setOpen(false); };
   return (
     <div ref={ref} className="relative">
-      <button type="button" className={`${base} cursor-pointer`} onClick={() => setOpen((o) => !o)} aria-haspopup="listbox" aria-expanded={open}>
+      <button type="button" className={`pill ${active ? "is-active" : ""}`} onClick={() => setOpen((o) => !o)} aria-haspopup="listbox" aria-expanded={open}>
         <span>{active ? value : label}</span>
-        <span className={dark ? "" : `w-7 h-7 rounded-full inline-flex items-center justify-center ${solid || active ? "bg-white text-g1" : "bg-g1 text-white"}`}>
-          <Icon name={solid ? "sliders" : "chevron"} size={12} className={`transition-transform duration-300 ${open && !solid ? "rotate-180" : ""}`} />
-        </span>
+        <Icon name="chevron" size={14} className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
       </button>
       {createPortal(
         <AnimatePresence>
           {open && pos && (
             <motion.ul ref={listRef} role="listbox" aria-label={label} data-lenis-prevent initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.2, ease: [0.2, 0, 0.1, 1] }}
               style={{ position: "fixed", left: pos.left, top: pos.top, bottom: pos.bottom, maxHeight: pos.maxHeight }}
-              className="z-[45] min-w-[220px] overflow-y-auto list-none m-0 p-2 rounded-2xl bg-white border border-silver shadow-[0_20px_50px_rgba(6,27,32,.15)] text-left">
-              <li><button type="button" onClick={() => pick(null)} className={`w-full text-left rounded-xl px-4 py-2.5 text-[15px] cursor-pointer bg-transparent border-0 hover:bg-off ${!active ? "text-g1 font-medium" : "text-gm"}`}>All</button></li>
+              className="z-[45] min-w-[240px] overflow-y-auto py-2 bg-white border border-rule text-left">
+              <li><button type="button" role="option" aria-selected={!active} onClick={() => pick(null)} className={`w-full text-left px-4 py-2 t-small hover:bg-sage-100 ${!active ? "text-emerald-600 font-medium" : "text-ink"}`}>{allLabel}</button></li>
               {options.map((o) => (
-                <li key={o}><button type="button" onClick={() => pick(o)} className={`w-full text-left rounded-xl px-4 py-2.5 text-[15px] cursor-pointer bg-transparent border-0 hover:bg-off ${value === o ? "text-g1 font-medium" : "text-gm"}`}>{o}</button></li>
+                <li key={o}><button type="button" role="option" aria-selected={value === o} onClick={() => pick(o)} className={`w-full text-left px-4 py-2 t-small hover:bg-sage-100 ${value === o ? "text-emerald-600 font-medium" : "text-ink"}`}>{o}</button></li>
               ))}
             </motion.ul>
           )}
@@ -69,18 +62,24 @@ export function Dropdown({ label, options, value, onChange, dark = false, solid 
   );
 }
 
-export function SearchBox({ value, onChange, placeholder, dark = false }: { value: string; onChange: (v: string) => void; placeholder: string; dark?: boolean }) {
+export function SearchBox({ value, onChange, placeholder }: { value: string; onChange: (v: string) => void; placeholder: string }) {
   return (
-    <label className={`inline-flex items-center gap-3 px-2 py-2.5 ${dark ? "text-white" : "text-gm"}`}>
-      <Icon name="search" size={18} className={dark ? "text-g5" : "text-g3"} />
-      <input type="search" value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} className={`bg-transparent border-0 outline-none text-[16px] w-[180px] md:w-[240px] ${dark ? "text-white placeholder:text-g5" : "text-g1 placeholder:text-gm"}`} />
+    <label className="inline-flex items-center gap-2 h-10 border-b border-forest-900 text-forest-900">
+      <Icon name="search" size={16} />
+      <input type="search" value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} aria-label={placeholder}
+        className="bg-transparent border-0 outline-none t-small w-[180px] md:w-[220px] text-ink placeholder:text-ink-2" />
     </label>
   );
 }
 
-export function ClearButton({ label, onClick, show, dark = false }: { label: string; onClick: () => void; show: boolean; dark?: boolean }) {
+export function ClearButton({ label, onClick, show }: { label: string; onClick: () => void; show: boolean }) {
   if (!show) return null;
-  return <button type="button" onClick={onClick} className={`text-[14px] underline bg-transparent border-0 cursor-pointer ${dark ? "text-g5 hover:text-white" : "text-gm hover:text-g1"}`}>{label}</button>;
+  return <button type="button" onClick={onClick} className="tlink">{label}</button>;
+}
+
+/** The controls row above every filtered grid. */
+export function FilterBar({ children }: { children: React.ReactNode }) {
+  return <div className="flex flex-wrap items-center gap-x-4 gap-y-4 mb-16">{children}</div>;
 }
 
 /** Generic matcher: every active filter must equal the item's field; search matches any string field. */

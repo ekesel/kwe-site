@@ -22,6 +22,7 @@ class SiteSettingsAdmin(SingletonAdmin):
             },
         ),
         ("Header button", {"classes": ["tab"], "fields": ("nav_cta_label", "nav_cta_to")}),
+        ("Visibility", {"classes": ["tab"], "fields": ("show_testimonials",), "description": "Switch sections on or off without deleting their content."}),
         ("Footer", {"classes": ["tab"], "fields": ("footer_email", "footer_linkedin_label", "footer_copyright"), "description": "Footer columns and links are edited under Site → Footer; the CTA block at the top of the footer is in the “Footer CTA” tab."}),
         (
             "Footer CTA",

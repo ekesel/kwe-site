@@ -17,6 +17,7 @@ class SiteSettings(SingletonModel):
     hero_video_url = models.CharField("Hero video URL", blank=True, max_length=500, help_text='Full URL or a path shipped with the site, e.g. "/media/hero.mp4" — used only when no file is uploaded.')
     hero_poster = image_field("Poster image shown before the hero video loads.")
     hero_poster_url = image_url_field()
+    show_testimonials = models.BooleanField("Show testimonials & Trusted by", default=True, help_text="Untick to hide the Home testimonials and the Trusted-by names while client approval is pending.")
 
     # nav.cta
     nav_cta_label = models.CharField("Header button label", max_length=80, help_text='The pill button in the navigation bar, e.g. "Arrange a conversation".')

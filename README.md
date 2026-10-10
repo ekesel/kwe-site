@@ -17,7 +17,8 @@ django-unfold) and served from PostgreSQL. One `docker compose up` runs everythi
                                                    └────────────────────┘
 ```
 
-* **frontend/** — Vite 6, React 19, TypeScript, Tailwind v4, react-router 7. On load it fetches
+* **frontend/** — Vite 6, React 19, TypeScript, Tailwind v4, react-router 7. The visual system (grid, type, colour, blocks,
+  motion) is documented in `docs/design-system.md`; pages are composed only from `src/components/blocks/`. On load it fetches
   `GET /api/content/` once and renders from that object (`useContent()`); the public site is
   otherwise unchanged from the static version.
 * **backend/** — Django 5.2, DRF, PostgreSQL 16, django-unfold admin, django-solo (page
@@ -127,7 +128,8 @@ screen with tabs per section) or a **list model**:
 | `home.testimonials.logos[]` (`name`, `icon` — placeholder glyphs until real logos) | Pages → Home → “Trusted by — logos” |
 | `story.hero.kicker` | Pages → Story → Hero (stored, not shown in the hero) |
 | `team.hero.subtitle`, `solutions.whyKwe` (`title`, `body`), `insights.hero.subtitle` | Pages → … page settings → Hero / List |
-| `insights.article.metaLabels[]`, `insights.article.outline` | Pages → Insights page settings → Article page labels |
+| `insights.article.metaLabels[]`, `insights.article.outline`, `insights.article.glossary` (outline entry for an A–Z glossary's single-letter headings) | Pages → Insights page settings → Article page labels |
+| `site.flags.showTestimonials` (hide the Home testimonials + Trusted-by names pending approval) | Site → Site settings → Visibility |
 | `legal.draftNote`, `legal.documents[]` (`slug`, `eyebrow`, `title`, `updated`, `intro`, `sections[]`, `disclaimer`, `complianceNote`) — served at `/legal/<slug>` | Pages → Legal (draft note) and Pages → **Legal documents** |
 | `team.*`, `solutions.*`, `caseStudies.*`, `insights.*` (page copy, labels, page size) | Pages → … page settings |
 | `team.members[]` (incl. `credential`) | Content → **Team members** |

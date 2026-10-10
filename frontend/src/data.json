@@ -5,7 +5,10 @@
     "email": "hello@kweadvisors.com",
     "linkedin": "https://www.linkedin.com/company/kwe-advisors",
     "heroVideo": "/media/hero.mp4",
-    "heroPoster": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80"
+    "heroPoster": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80",
+    "flags": {
+      "showTestimonials": true
+    }
   },
   "nav": {
     "links": [
@@ -581,14 +584,14 @@
         "slug": "katherine-wentrup",
         "name": "Katherine Wentrup-Estupinan",
         "role": "Fundraising",
-        "credential": "Raised +$3bn of capital",
+        "credential": "Raised $3bn+ of capital",
         "focus": "Capital formation",
         "firms": [
           "HSBC",
           "BlueBay",
           "La Française"
         ],
-        "image": "https://images.unsplash.com/photo-1758600587839-56ba05596c69?auto=format&fit=crop&w=1200&q=80",
+        "image": "",
         "span": 5,
         "bio": [
           "Katherine has over 20 years of experience in institutional credit markets, spanning portfolio management, investor relations, and capital formation advisory.",
@@ -602,14 +605,14 @@
         "slug": "olaf-wentrup",
         "name": "Olaf Wentrup",
         "role": "Senior Advisor",
-        "credential": "+ $2BN in capital formation",
+        "credential": "$2bn+ in capital formation",
         "focus": "Process infrastructure",
         "firms": [
           "Moelis",
           "Investcorp-Tages",
           "Mesirow"
         ],
-        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80",
+        "image": "",
         "span": 6,
         "bio": [
           "Olaf brings extensive experience in private credit structuring, fund finance, and LP advisory from senior roles at Moelis, Investcorp-Tages, and Mesirow.",
@@ -622,14 +625,14 @@
         "slug": "selim-rekaibi",
         "name": "Sélim Rekaibi, CFA",
         "role": "Senior Advisor / Manager Selection",
-        "credential": "+ 20 yrs of portfolio management and allocator experience",
+        "credential": "20+ years of portfolio management and allocator experience",
         "focus": "Positioning & materials",
         "firms": [
           "Apax",
           "EY",
           "Citigroup"
         ],
-        "image": "https://images.unsplash.com/photo-1652471943570-f3590a4e52ed?auto=format&fit=crop&w=1200&q=80",
+        "image": "",
         "span": 5,
         "bio": [
           "Sélim's background spans private equity and credit at Apax, financial services advisory at EY, and investment banking at Citigroup.",
@@ -642,10 +645,10 @@
         "slug": "anna-jerstrom",
         "name": "Anna Jerstrom",
         "role": "Senior Advisor",
-        "credential": "+ $2BN in capital formation",
+        "credential": "$2bn+ in capital formation",
         "focus": "Capital formation",
         "firms": [],
-        "image": "https://images.unsplash.com/photo-1701096374092-bb70915fdc5c?auto=format&fit=crop&w=1200&q=80",
+        "image": "",
         "span": 5,
         "bio": [],
         "team": "Senior Advisors",
@@ -655,10 +658,10 @@
         "slug": "suzanne-milleer",
         "name": "Suzanne Milleer",
         "role": "IR Communications",
-        "credential": "20 yrs of Global IR",
+        "credential": "20 years of Global IR",
         "focus": "Investor relations",
         "firms": [],
-        "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80",
+        "image": "",
         "span": 6,
         "bio": [],
         "team": "IR Communications",
@@ -668,13 +671,13 @@
         "slug": "duyen-jade-vo",
         "name": "Duyên Võ, CFA",
         "role": "Project Manager",
-        "credential": "+ 7 yrs of experience Korea Investment Securities",
+        "credential": "7+ years of experience Korea Investment Securities",
         "focus": "Investor relations",
         "firms": [
           "La Française",
           "EY"
         ],
-        "image": "https://images.unsplash.com/photo-1770058443069-e384cd001e9b?auto=format&fit=crop&w=1200&q=80",
+        "image": "",
         "span": 5,
         "bio": [
           "Duyen brings institutional investor relations experience from La Française and financial advisory expertise from EY.",
@@ -1349,6 +1352,7 @@
       ],
       "initials": "KW",
       "outline": "Contents",
+      "glossary": "Glossary A–Z",
       "related": "Related insights"
     },
     "items": [

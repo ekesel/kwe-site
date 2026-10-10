@@ -1,7 +1,8 @@
 import { useContent } from "@/content/ContentProvider";
-import { EyebrowDraw, Lines, Parallax } from "@/motion";
-import { Eyebrow, Hairline, Reveal, usePageTitle } from "@/components/ui";
-import { VideoHero } from "@/components/sections";
+import { usePageTitle } from "@/components/primitives";
+import { Hero } from "@/components/blocks/Hero";
+import { Article } from "@/components/blocks/Article";
+import { RichText, slugify } from "@/components/richtext";
 
 export default function LegalPage() {
   const data = useContent();
@@ -9,18 +10,15 @@ export default function LegalPage() {
   usePageTitle(l.title);
   return (
     <>
-      <VideoHero title={l.title} subtitle={l.updated} />
-      <section id="content" className="section container-x">
-        <div className="max-w-[760px] mx-auto">
-          {l.sections.map((s, i) => (
-            <Reveal key={s.heading} delay={i * 0.06} className="mb-12">
-              <h2 className="t-h3 text-g1 mb-4">{s.heading}</h2>
-              <Hairline />
-              <p className="text-gm text-[16px] mt-5 mb-0" style={{ lineHeight: 1.7 }}>{s.body}</p>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <Hero title={l.title} subtitle={l.updated} />
+      <Article contentKey="legal" outline={{ label: data.insights.article.outline, glossaryLabel: data.insights.article.glossary }}>
+        {l.sections.map((s) => (
+          <div key={s.heading} className="mt-16 first:mt-0">
+            <h2 id={slugify(s.heading)} className="t-h2 text-forest-900 mb-6 scroll-mt-28">{s.heading}</h2>
+            <RichText text={s.body} />
+          </div>
+        ))}
+      </Article>
     </>
   );
 }

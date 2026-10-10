@@ -57,6 +57,7 @@ def import_site(d):
         linkedin=site["linkedin"],
         hero_video_url=site["heroVideo"] if _is_external(site["heroVideo"]) else s.hero_video_url,
         hero_poster_url=site["heroPoster"] if _is_external(site["heroPoster"]) else s.hero_poster_url,
+        show_testimonials=site["flags"]["showTestimonials"],
         nav_cta_label=nav["cta"]["label"],
         nav_cta_to=nav["cta"]["to"],
         footer_email=footer["email"],
@@ -418,6 +419,7 @@ def import_insights(d):
         article_meta_labels=join_lines(art["metaLabels"]),
         article_initials=art["initials"],
         article_outline=art["outline"],
+        article_glossary=art["glossary"],
         article_related=art["related"],
     )
     _replace(n.press_contacts, fo["contacts"], page=n)

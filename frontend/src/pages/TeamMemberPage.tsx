@@ -1,8 +1,9 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useContent } from "@/content/ContentProvider";
-import { EyebrowDraw, Lines, Parallax } from "@/motion";
-import { ArrowRight, Hairline, Reveal, usePageTitle } from "@/components/ui";
-import { Section } from "@/components/sections";
+import { InitialsPortrait, Media, TextLink, usePageTitle } from "@/components/primitives";
+import { Icon } from "@/components/primitives";
+import { Link } from "react-router-dom";
+import { FadeUp, Lines } from "@/motion";
 import NotFoundPage from "./NotFoundPage";
 
 export default function TeamMemberPage() {
@@ -13,31 +14,31 @@ export default function TeamMemberPage() {
   if (!m) return <NotFoundPage />;
   const p = data.team.profile;
   return (
-    <>
-      <Section className="pt-32 lg:pt-40">
-        <div className="grid lg:grid-cols-[7fr_8fr] gap-10 lg:gap-16 items-start">
-          <Reveal className="order-2 lg:order-1">
-            <Link to="/team" className="inline-flex items-center gap-2.5 rounded-full bg-off pl-3.5 pr-4 py-2.5 text-[15px] font-medium text-g1 no-underline hover:bg-silver transition-colors"><ArrowRight rotate={180} size={14} />{p.back}</Link>
-            <h1 className="font-sans font-normal text-g1 text-[36px] md:text-[44px] lg:text-[56px] mt-8 mb-3" style={{ lineHeight: 1.05, letterSpacing: "-0.02em" }}>{m.name}</h1>
-            <p className="text-g1 text-[20px] m-0">{m.role}</p>
-            <p className="text-g3 text-[17px] mt-2 mb-0">{m.credential}</p>
-            <Hairline className="mt-14 mb-7" />
-            <div className="grid grid-cols-2 gap-6">
-              <div><div className="font-medium text-[17px] text-g1">{p.focusLabel}</div><div className="text-[17px] text-g1 mt-1.5">{m.focus}</div></div>
-              <div><div className="font-medium text-[17px] text-g1">{p.connectLabel}</div><a href={data.site.linkedin} target="_blank" rel="noreferrer" className="text-[17px] text-g1 underline mt-1.5 inline-block">{p.connectValue}</a></div>
+    <section>
+      <div className="wrap section-full !pt-40 lg:!pt-56">
+        <div className="grid-12 gap-y-10">
+          <div className="lead-col"><Link to="/team" className="tlink"><Icon name="arrow" size={14} className="rotate-180" />{p.back}</Link></div>
+          <div className="main-col grid md:grid-cols-[minmax(0,5fr)_minmax(0,4fr)] gap-10 lg:gap-16 items-start">
+            <div>
+              <Lines as="h1" className="t-h1 text-forest-900">{m.name}</Lines>
+              <p className="t-body text-forest-900 mt-6">{m.role}</p>
+              {m.credential && <p className="t-body text-ink-2">{m.credential}</p>}
+              <dl className="grid grid-cols-2 rule-t rule-b mt-10">
+                <div className="py-4 pr-6"><dt className="t-eyebrow text-ink-2">{p.focusLabel}</dt><dd className="t-small text-forest-900 mt-2">{m.focus}</dd></div>
+                <div className="py-4 pr-6"><dt className="t-eyebrow text-ink-2">{p.connectLabel}</dt><dd className="mt-2"><TextLink href={data.site.linkedin} external>{p.connectValue}</TextLink></dd></div>
+              </dl>
+              {m.bio.length > 0 && <FadeUp className="mt-10 space-y-6">{m.bio.map((para, i) => (<p key={i} className="t-body text-ink">{para}</p>))}</FadeUp>}
+              {m.firms.length > 0 && (
+                <FadeUp className="mt-16">
+                  <h2 className="t-eyebrow text-ink-2 pb-4">{p.firmsLabel}</h2>
+                  <ul className="rule-b">{m.firms.map((f) => (<li key={f} className="rule-t py-4 t-body text-forest-900">{f}</li>))}</ul>
+                </FadeUp>
+              )}
             </div>
-            {m.bio.length > 0 && <div className="mt-14 space-y-5">
-              {m.bio.map((para, i) => (<p key={i} className="text-g1 text-[18px] m-0" style={{ lineHeight: 1.55 }}>{para}</p>))}
-            </div>}
-            {m.firms.length > 0 && <>
-              <div className="mt-16 text-[15px] font-medium uppercase tracking-[0.02em] text-g1">{p.firmsLabel}</div>
-              <Hairline className="mt-3 mb-7" />
-              <ul className="list-none p-0 m-0 space-y-2.5">{m.firms.map((f) => (<li key={f} className="text-g1 text-[18px]">{f}</li>))}</ul>
-            </>}
-          </Reveal>
-          <Reveal className="order-1 lg:order-2 img-zoom rounded-lg grad-dark" style={{ aspectRatio: "0.72" }}>{m.image && <img src={m.image} alt={m.name} />}</Reveal>
+            <FadeUp>{m.image ? <Media src={m.image} alt={m.name} ratio="4x5" portrait eager /> : <InitialsPortrait name={m.name} />}</FadeUp>
+          </div>
         </div>
-      </Section>
-    </>
+      </div>
+    </section>
   );
 }

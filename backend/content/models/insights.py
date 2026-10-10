@@ -31,6 +31,7 @@ class InsightsPageSettings(SingletonModel):
     article_meta_labels = LinesField("Meta row labels", help_text="Labels of the row under the article hero, in order: date, read time, author.")
     article_initials = models.CharField("Author initials", max_length=4)
     article_outline = models.CharField("Outline label", max_length=40, default="Contents", help_text="Heading of the article outline (built automatically from the article's ## / ### headings).")
+    article_glossary = models.CharField("Glossary outline label", max_length=40, default="Glossary A–Z", help_text="Outline entry that stands for an article's single-letter (A–Z) headings.")
     article_related = models.CharField("Related heading", max_length=80)
 
     history = HistoricalRecords()

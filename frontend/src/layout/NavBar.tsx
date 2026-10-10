@@ -1,69 +1,64 @@
 import { useEffect, useRef, useState } from "react";
-import { useShyHeader } from "@/motion";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useContent } from "@/content/ContentProvider";
-import { Button, Icon, Logo } from "@/components/ui";
+import { useShyHeader } from "@/motion";
+import { Icon, Logo } from "@/components/primitives";
 
+/** Full-width header: transparent over the hero, paper with a hairline after it; hides on scroll down, returns on scroll up. */
 export default function NavBar() {
   const data = useContent();
-  const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
-  const navRef = useRef<HTMLElement>(null);
-  useShyHeader(navRef);
+  const [open, setOpen] = useState(false);
+  const [overHero, setOverHero] = useState(true);
+  const ref = useRef<HTMLElement>(null);
+  useShyHeader(ref);
   useEffect(() => { setOpen(false); }, [pathname]);
   useEffect(() => { document.body.style.overflow = open ? "hidden" : ""; return () => { document.body.style.overflow = ""; }; }, [open]);
-
+  useEffect(() => {
+    const update = () => {
+      const hero = document.querySelector<HTMLElement>("[data-hero]");
+      setOverHero(!!hero && hero.getBoundingClientRect().bottom > 80);
+    };
+    update(); const t = window.setTimeout(update, 400);
+    window.addEventListener("scroll", update, { passive: true }); window.addEventListener("resize", update);
+    return () => { window.clearTimeout(t); window.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
+  }, [pathname]);
+  const light = overHero && !open; // white type on the video
   return (
     <>
-      <nav
-        ref={navRef}
-        aria-label="Main navigation"
-        className="fixed left-1/2 -translate-x-1/2 z-50 flex items-center"
-        style={{ top: 24, width: "min(1280px, calc(100% - 48px))", height: 68, borderRadius: 24, background: "rgba(6,27,32,0.92)", backdropFilter: "blur(24px)", WebkitBackdropFilter: "blur(24px)", paddingLeft: 28, paddingRight: 12 }}
-      >
-        <Link to="/" aria-label="KWE Advisors home" className="shrink-0"><Logo inverted size={22} /></Link>
-
-        <div className="hidden lg:flex flex-1 items-center justify-center gap-9">
-          {data.nav.links.map((l) => (
-            <NavLink key={l.to} to={l.to} className={({ isActive }) => `nav-link relative text-[15px] font-medium text-white no-underline transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-85 hover:opacity-100"}`}>
-              {({ isActive }) => (<><span>{l.label}</span><span className="absolute left-0 right-0 -bottom-1 h-px bg-white origin-left transition-transform duration-[600ms]" style={{ transform: isActive ? "scaleX(1)" : "scaleX(0)", transitionTimingFunction: "cubic-bezier(.87,0,.13,1)" }} /></>)}
-            </NavLink>
-          ))}
+      <header ref={ref} className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${light ? "bg-transparent text-white on-dark" : open ? "bg-forest-950 text-white on-dark" : "bg-paper text-forest-900 rule-b"}`}>
+        <div className="wrap h-20 flex items-center justify-between gap-10">
+          <Link to="/" aria-label="KWE Advisors — home" className="shrink-0"><Logo size={24} /></Link>
+          <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-8">
+            {data.nav.links.map((l) => (
+              <NavLink key={l.to} to={l.to} className={({ isActive }) => `t-small font-medium relative py-1 after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-current after:origin-left after:transition-transform after:duration-500 hover:after:scale-x-100 ${isActive ? "after:scale-x-100" : "after:scale-x-0"}`}>{l.label}</NavLink>
+            ))}
+            <Link to={data.nav.cta.to} className={`tlink ${light ? "text-white" : ""}`}>{data.nav.cta.label}<Icon name="arrow" size={14} /></Link>
+          </nav>
+          <button type="button" className="lg:hidden inline-flex items-center gap-3 t-small font-medium" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen((v) => !v)}>
+            <span>{open ? "Close" : "Menu"}</span>
+            <span className="relative block w-5 h-3" aria-hidden>
+              <span className="absolute left-0 right-0 h-px bg-current transition-transform duration-300" style={{ top: open ? 6 : 0, transform: open ? "rotate(45deg)" : "none" }} />
+              <span className="absolute left-0 right-0 h-px bg-current transition-transform duration-300" style={{ top: open ? 6 : 12, transform: open ? "rotate(-45deg)" : "none" }} />
+            </span>
+          </button>
         </div>
-
-        <div className="hidden lg:flex items-center gap-4 ml-auto">
-          <a href={data.site.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-g5 hover:text-white transition-colors"><Icon name="linkedin" size={18} /></a>
-          <Link to={data.nav.cta.to} className="inline-flex items-center rounded-full bg-white text-g1 text-[14px] font-medium px-5 py-3 no-underline transition-colors hover:bg-g6">{data.nav.cta.label}</Link>
-        </div>
-
-        <button className="lg:hidden ml-auto inline-flex items-center justify-center w-11 h-11 rounded-full bg-white/10 text-white" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen((v) => !v)}>
-          <span className="relative block w-5 h-3">
-            <span className="absolute left-0 right-0 h-px bg-white transition-transform duration-300" style={{ top: open ? 6 : 0, transform: open ? "rotate(45deg)" : "none" }} />
-            <span className="absolute left-0 right-0 h-px bg-white transition-opacity duration-300" style={{ top: 6, opacity: open ? 0 : 1 }} />
-            <span className="absolute left-0 right-0 h-px bg-white transition-transform duration-300" style={{ top: open ? 6 : 12, transform: open ? "rotate(-45deg)" : "none" }} />
-          </span>
-        </button>
-      </nav>
+      </header>
 
       <AnimatePresence>
         {open && (
-          <motion.div
-            className="fixed inset-0 z-40 bg-g1 flex flex-col overflow-y-auto"
-            initial={{ y: "-100%" }} animate={{ y: 0 }} exit={{ y: "-100%" }}
-            transition={{ duration: 0.6, ease: [0.87, 0, 0.13, 1] }}
-          >
-            <div className="flex-1 flex flex-col justify-center px-8 pt-32 pb-10 gap-6">
-              {data.nav.links.map((l, i) => (
-                <motion.div key={l.to} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 + i * 0.06, duration: 0.5, ease: [0.2, 0, 0.1, 1] }}>
-                  <NavLink to={l.to} className="serif text-white text-[34px] leading-none no-underline">{l.label}</NavLink>
-                </motion.div>
+          <motion.div id="mobile-menu" className="fixed inset-0 z-40 bg-forest-950 text-white on-dark overflow-y-auto"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4, ease: [0.2, 0, 0.1, 1] }}>
+            <nav aria-label="Mobile navigation" className="wrap pt-32 pb-16 flex flex-col">
+              {data.nav.links.map((l) => (
+                <NavLink key={l.to} to={l.to} className="t-h2 text-white py-4 rule-b">{l.label}</NavLink>
               ))}
-            </div>
-            <div className="px-8 pb-10 flex flex-col gap-4">
-              <Button to={data.nav.cta.to} variant="ondark">{data.nav.cta.label}</Button>
-              <a href={`mailto:${data.site.email}`} className="text-g5 text-sm">{data.site.email}</a>
-            </div>
+              <div className="mt-10 flex flex-col gap-4">
+                <Link to={data.nav.cta.to} className="tlink">{data.nav.cta.label}<Icon name="arrow" size={14} /></Link>
+                <a href={`mailto:${data.site.email}`} className="t-small text-white/70">{data.site.email}</a>
+              </div>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>

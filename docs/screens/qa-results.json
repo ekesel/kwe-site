@@ -1,0 +1,2969 @@
+{
+ "/@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Three capabilities. One execut",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Fundraising as an ongoing capa",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(12, 46, 38)": {
+    "ratio": 7.84,
+    "need": 3,
+    "sample": "DV",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/story@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Strong strategies deserve an e",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "We close that gap. Working as ",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/team@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(12, 46, 38)": {
+    "ratio": 7.84,
+    "need": 3,
+    "sample": "DV",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/process@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "18\u201336 months from initial enga",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/solutions@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Capital Formation Advisory",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "End-to-end fundraising support",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/case-studies@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/insights@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/contact@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(30, 106, 82)": {
+    "ratio": 6.48,
+    "need": 4.5,
+    "sample": "Submit",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/legal@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/legal/privacy@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/legal/terms@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/team/katherine-wentrup@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "72px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(74, 90, 85, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 6.67,
+    "need": 4.5,
+    "sample": "Prior firms",
+    "pass": true
+   },
+   "rgba(15, 27, 24, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 16.16,
+    "need": 4.5,
+    "sample": "Katherine has over 20 years of",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(12, 46, 38)": {
+    "ratio": 7.84,
+    "need": 3,
+    "sample": "KW",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/solution/capital-formation-advisory@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/case-study/german-private-credit@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/insight/abc-of-private-credit@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/insight/lps-challenging-gps-on-differentiation-2025@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "96px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/does-not-exist@1440": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   398
+  ],
+  "headingSizes": [
+   "72px",
+   "48px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(74, 90, 85, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 6.67,
+    "need": 4.5,
+    "sample": "The link may be out of date, o",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Three capabilities. One execut",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Fundraising as an ongoing capa",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(12, 46, 38)": {
+    "ratio": 7.84,
+    "need": 3,
+    "sample": "DV",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/story@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Strong strategies deserve an e",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "We close that gap. Working as ",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/team@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(12, 46, 38)": {
+    "ratio": 7.84,
+    "need": 3,
+    "sample": "DV",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/process@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "18\u201336 months from initial enga",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/solutions@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Capital Formation Advisory",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "End-to-end fundraising support",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/case-studies@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/insights@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/contact@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(30, 106, 82)": {
+    "ratio": 6.48,
+    "need": 4.5,
+    "sample": "Submit",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/legal@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/legal/privacy@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/legal/terms@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/team/katherine-wentrup@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "52px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "View all team members",
+    "pass": true
+   },
+   "rgba(74, 90, 85, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 6.67,
+    "need": 4.5,
+    "sample": "Prior firms",
+    "pass": true
+   },
+   "rgba(15, 27, 24, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 16.16,
+    "need": 4.5,
+    "sample": "Katherine has over 20 years of",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(12, 46, 38)": {
+    "ratio": 7.84,
+    "need": 3,
+    "sample": "KW",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/solution/capital-formation-advisory@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/case-study/german-private-credit@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/insight/abc-of-private-credit@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/insight/lps-challenging-gps-on-differentiation-2025@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "64px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/does-not-exist@768": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   40
+  ],
+  "headingSizes": [
+   "52px",
+   "36px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(74, 90, 85, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 6.67,
+    "need": 4.5,
+    "sample": "The link may be out of date, o",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Back to home",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Three capabilities. One execut",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Fundraising as an ongoing capa",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(12, 46, 38)": {
+    "ratio": 7.84,
+    "need": 3,
+    "sample": "DV",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/story@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Strong strategies deserve an e",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "We close that gap. Working as ",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/team@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(12, 46, 38)": {
+    "ratio": 7.84,
+    "need": 3,
+    "sample": "DV",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/process@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "18\u201336 months from initial enga",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/solutions@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)",
+   "rgb(7, 31, 26)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Capital Formation Advisory",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "End-to-end fundraising support",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/case-studies@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/insights@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/contact@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(30, 106, 82)": {
+    "ratio": 6.48,
+    "need": 4.5,
+    "sample": "Submit",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/legal@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/legal/privacy@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/legal/terms@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/team/katherine-wentrup@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "38px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "View all team members",
+    "pass": true
+   },
+   "rgba(74, 90, 85, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 6.67,
+    "need": 4.5,
+    "sample": "Prior firms",
+    "pass": true
+   },
+   "rgba(15, 27, 24, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 16.16,
+    "need": 4.5,
+    "sample": "Katherine has over 20 years of",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(12, 46, 38)": {
+    "ratio": 7.84,
+    "need": 3,
+    "sample": "KW",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/solution/capital-formation-advisory@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/case-study/german-private-credit@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/insight/abc-of-private-credit@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/insight/lps-challenging-gps-on-differentiation-2025@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "44px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ },
+ "/does-not-exist@390": {
+  "roundedPanels": [],
+  "backgrounds": [
+   "rgb(246, 245, 240)"
+  ],
+  "leftEdges": [
+   20
+  ],
+  "headingSizes": [
+   "38px",
+   "28px"
+  ],
+  "accentMisuse": [],
+  "overflowX": 0,
+  "contrast": {
+   "rgba(12, 46, 38, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 13.41,
+    "need": 4.5,
+    "sample": "kwe advisors",
+    "pass": true
+   },
+   "rgba(74, 90, 85, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 6.67,
+    "need": 4.5,
+    "sample": "The link may be out of date, o",
+    "pass": true
+   },
+   "rgba(30, 106, 82, 1.00) on rgb(246, 245, 240)": {
+    "ratio": 5.94,
+    "need": 4.5,
+    "sample": "Back to home",
+    "pass": true
+   },
+   "rgba(169, 196, 180, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 9.22,
+    "need": 4.5,
+    "sample": "LinkedIn",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 1.00) on rgb(7, 31, 26)": {
+    "ratio": 17.21,
+    "need": 3,
+    "sample": "Ready to transform your busine",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.70) on rgb(7, 31, 26)": {
+    "ratio": 8.84,
+    "need": 4.5,
+    "sample": "Speak with us about whether an",
+    "pass": true
+   },
+   "rgba(12, 46, 38, 1.00) on rgb(255, 255, 255)": {
+    "ratio": 14.64,
+    "need": 4.5,
+    "sample": "Arrange a conversation",
+    "pass": true
+   },
+   "rgba(255, 255, 255, 0.80) on rgb(7, 31, 26)": {
+    "ratio": 11.29,
+    "need": 4.5,
+    "sample": "Disclosures",
+    "pass": true
+   }
+  }
+ }
+}

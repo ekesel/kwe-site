@@ -311,5 +311,5 @@ class InsightsPageSettingsAdmin(SingletonAdmin):
         tab("Hero", ("hero_eyebrow", "hero_title", "hero_subtitle")),
         tab("Controls", ("controls_categories", "controls_filter", "controls_read_more", "controls_showing", "controls_load_more", "controls_tag_primary", "controls_clear", "controls_no_results", "page_size")),
         tab("Follow", ("follow_statement", "follow_button", "follow_media_label"), "Contact lines are edited in the “Follow — media contacts” tab."),
-        tab("Article page labels", ("article_back", "article_author", "article_meta_labels", "article_initials", "article_outline", "article_related")),
+        tab("Article page labels", ("article_back", "article_author", "article_meta_labels", "article_initials", "article_outline", "article_glossary", "article_related")),
     )
