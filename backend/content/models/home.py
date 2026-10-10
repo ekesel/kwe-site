@@ -2,7 +2,7 @@ from django.db import models
 from simple_history.models import HistoricalRecords
 from solo.models import SingletonModel
 
-from .base import ICON_CHOICES, TONE_CHOICES, LinesField, Ordered
+from .base import ICON_CHOICES, TONE_CHOICES, ImageMixin, LinesField, Ordered, image_field, image_url_field, media_src
 
 
 class HomePage(SingletonModel):
@@ -10,7 +10,8 @@ class HomePage(SingletonModel):
 
     # hero
     hero_title = LinesField("Hero title", help_text="Each line is rendered on its own line of the headline.")
-    hero_scroll_cue = models.CharField("Scroll cue", max_length=60, help_text='Small label under the hero, e.g. "Scroll to discover". Also reused on other hero pages.')
+    hero_subtitle = models.TextField("Hero subtitle", blank=True, help_text="Supporting line under the headline.")
+    hero_scroll_cue = models.CharField("Scroll cue", max_length=60, help_text='Small label at the bottom of the hero, e.g. "Scroll to discover". Used by the hero on every page.')
 
     # intro
     intro_eyebrow = models.CharField("Eyebrow", max_length=80)
@@ -31,11 +32,14 @@ class HomePage(SingletonModel):
     challenge_title = models.CharField("Title", max_length=200)
     challenge_body = models.TextField("Body")
 
-    # diptych
-    diptych_traditional_label = models.CharField("Left column label", max_length=80, help_text='e.g. "Traditional approach"')
-    diptych_traditional_items = LinesField("Left column bullets")
-    diptych_kwe_label = models.CharField("Right column label", max_length=80, help_text='e.g. "The KWE model"')
-    diptych_kwe_items = LinesField("Right column bullets")
+    # traditional vs KWE comparison
+    comparison_title = models.CharField("Heading", max_length=200, default="")
+    comparison_traditional_label = models.CharField("Left column label", max_length=80, default="", help_text='e.g. "Traditional approach"')
+    comparison_kwe_label = models.CharField("Right column label", max_length=80, default="", help_text='e.g. "The KWE model"')
+    comparison_traditional_image = image_field("Background photo of the left column.")
+    comparison_traditional_image_url = image_url_field()
+    comparison_kwe_image = image_field("Background photo of the right column.")
+    comparison_kwe_image_url = image_url_field()
 
     # what we do
     what_eyebrow = models.CharField("Eyebrow", max_length=80)
@@ -47,15 +51,10 @@ class HomePage(SingletonModel):
     cases_title = models.CharField("Title", max_length=200)
     cases_link_label = models.CharField("Card link label", max_length=80, help_text='Label of the link on each case-study slide, e.g. "Read case study".')
 
-    # approach
-    approach_eyebrow = models.CharField("Eyebrow", max_length=80)
-    approach_title = models.TextField("Title")
-    approach_link_label = models.CharField("Link label", max_length=80)
-    approach_link_to = models.CharField("Link route", max_length=200)
-
     # team teaser
     team_eyebrow = models.CharField("Eyebrow", max_length=80)
     team_title = models.CharField("Title", max_length=200)
+    team_subtitle = models.TextField("Subtitle", blank=True)
     team_link_label = models.CharField("Link label", max_length=80)
     team_link_to = models.CharField("Link route", max_length=200)
 
@@ -64,7 +63,6 @@ class HomePage(SingletonModel):
     testimonials_title = models.CharField("Title", max_length=200)
     trusted_eyebrow = models.CharField("Trusted-by eyebrow", max_length=80, help_text='e.g. "We work with"')
     trusted_title = models.CharField("Trusted-by title", max_length=120, help_text='e.g. "Trusted by"')
-    logos = LinesField("Trusted-by logos", help_text="Firm names shown in the logo marquee.")
 
     # insights teaser
     insights_label = models.CharField("Eyebrow", max_length=80)
@@ -82,8 +80,16 @@ class HomePage(SingletonModel):
     def __str__(self):
         return "Home page"
 
+    @property
+    def comparison_traditional_image_src(self):
+        return media_src(self.comparison_traditional_image, self.comparison_traditional_image_url)
 
-class HomeStat(Ordered):
+    @property
+    def comparison_kwe_image_src(self):
+        return media_src(self.comparison_kwe_image, self.comparison_kwe_image_url)
+
+
+class HomeStat(Ordered, ImageMixin):
     """home.stats.items[]"""
 
     page = models.ForeignKey(HomePage, related_name="stats", on_delete=models.CASCADE)
@@ -100,10 +106,11 @@ class HomeStat(Ordered):
         return f"{self.figure} {self.label}"
 
 
-class HomeWhoTile(Ordered):
-    """home.who.tiles[]"""
+class HomeWhoTile(Ordered, ImageMixin):
+    """home.who.groups[].tiles[] — consecutive tiles with the same group label form one group."""
 
     page = models.ForeignKey(HomePage, related_name="who_tiles", on_delete=models.CASCADE)
+    group = models.CharField(max_length=80, default="", help_text='Group heading, e.g. "Private equity". Tiles with the same group are shown together.')
     label = models.CharField(max_length=80)
     tone = models.CharField(max_length=10, choices=TONE_CHOICES, default="g1")
     history = HistoricalRecords()
@@ -133,7 +140,24 @@ class HomeChallengeItem(Ordered):
         return self.title
 
 
-class HomeWhatCard(Ordered):
+class HomeComparisonRow(Ordered):
+    """home.comparison.rows[]"""
+
+    page = models.ForeignKey(HomePage, related_name="comparison_rows", on_delete=models.CASCADE)
+    label = models.CharField(max_length=80, help_text='Row label, e.g. "Coverage".')
+    traditional = models.CharField("Traditional approach", max_length=200)
+    kwe = models.CharField("KWE model", max_length=200)
+    history = HistoricalRecords()
+
+    class Meta(Ordered.Meta):
+        verbose_name = "Comparison row"
+        verbose_name_plural = "Comparison rows"
+
+    def __str__(self):
+        return self.label
+
+
+class HomeWhatCard(Ordered, ImageMixin):
     """home.whatWeDo.cards[]"""
 
     page = models.ForeignKey(HomePage, related_name="what_cards", on_delete=models.CASCADE)
@@ -152,25 +176,7 @@ class HomeWhatCard(Ordered):
         return f"{self.n} {self.title}"
 
 
-class HomeApproachStep(Ordered):
-    """home.approach.steps[]"""
-
-    page = models.ForeignKey(HomePage, related_name="approach_steps", on_delete=models.CASCADE)
-    n = models.CharField("Number", max_length=4)
-    title = models.CharField(max_length=160)
-    body = models.TextField()
-    tone = models.CharField(max_length=10, choices=TONE_CHOICES, default="g1", help_text="Card background colour.")
-    history = HistoricalRecords()
-
-    class Meta(Ordered.Meta):
-        verbose_name = "Approach step"
-        verbose_name_plural = "Approach steps"
-
-    def __str__(self):
-        return f"{self.n} {self.title}"
-
-
-class HomeTestimonial(Ordered):
+class HomeTestimonial(Ordered, ImageMixin):
     """home.testimonials.items[]"""
 
     page = models.ForeignKey(HomePage, related_name="testimonials", on_delete=models.CASCADE)
@@ -178,7 +184,7 @@ class HomeTestimonial(Ordered):
     quote = models.TextField()
     name = models.CharField(max_length=120)
     role = models.CharField(max_length=200)
-    tone = models.CharField(max_length=10, choices=TONE_CHOICES, default="aub", help_text="Card gradient.")
+    tone = models.CharField(max_length=10, choices=TONE_CHOICES, default="g1", help_text="Card gradient.")
     history = HistoricalRecords()
 
     class Meta(Ordered.Meta):
@@ -187,3 +193,19 @@ class HomeTestimonial(Ordered):
 
     def __str__(self):
         return f"{self.name} — {self.firm}"
+
+
+class HomeTrustedLogo(Ordered):
+    """home.testimonials.logos[] — placeholder logo row (firm-type glyph + name) until real client logos are supplied."""
+
+    page = models.ForeignKey(HomePage, related_name="trusted_logos", on_delete=models.CASCADE)
+    name = models.CharField(max_length=80)
+    icon = models.CharField(max_length=20, choices=ICON_CHOICES, default="bank", help_text="Generic firm-type glyph shown next to the name.")
+    history = HistoricalRecords()
+
+    class Meta(Ordered.Meta):
+        verbose_name = "Trusted-by logo"
+        verbose_name_plural = "Trusted-by logos"
+
+    def __str__(self):
+        return self.name

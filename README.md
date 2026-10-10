@@ -87,8 +87,9 @@ cd frontend && npm install && npm run dev          # :5173 — proxies /api, /me
 
 Open `http://localhost:5173/` for the site and `http://localhost:5173/admin/` for the CMS.
 
-Tests: `cd backend && .venv/bin/python -m pytest` (59 tests: round-trip contract, API, cache
-invalidation across worker processes, every admin page, history revert) and `cd frontend && npx tsc --noEmit && npm run build`.
+Tests: `cd backend && .venv/bin/python -m pytest` (62 tests: round-trip contract, API, cache
+invalidation across worker processes, every admin page, history revert, `import_content --force`, and a check that
+the seed fits Postgres column lengths — SQLite does not enforce them) and `cd frontend && npx tsc --noEmit && npm run build`.
 
 ## Environment variables
 
@@ -114,21 +115,35 @@ screen with tabs per section) or a **list model**:
 
 | data.json | Admin |
 | --- | --- |
-| `site`, `nav.cta`, `footer.*`, `cta`, `notFound` | Site → **Site settings** |
+| `site` (incl. `heroVideo` — the one hero video used on every page), `nav.cta`, `footer.email` / `linkedinLabel` / `copyright`, `cta` (the CTA block at the top of the footer), `notFound` | Site → **Site settings** |
 | `nav.links[]` | Site → **Navigation** |
 | `footer.columns[]` (+ links) | Site → **Footer** |
-| `home`, `story`, `process`, `contact`, `legal` | Pages → Home / Our story / Our process / Contact / Legal |
+| `home`, `story`, `process`, `contact`, `legal` | Pages → Home / Story / Process / Contact / Legal |
+| `home.hero.subtitle`, `home.team.subtitle` | Pages → Home → Hero / Team teaser |
+| `home.stats.items[]` (`figure`, `label`, `tone`, `image`) | Pages → Home → “Stats — tiles” |
+| `home.who.groups[]` (`label`, `tiles[]` with `label`, `tone`, `image`) | Pages → Home → “Who we work with — tiles” (tile `group` = group label) |
+| `home.comparison` (`title`, `traditionalLabel`, `kweLabel`, `traditionalImage`, `kweImage`, `rows[]` with `label` / `traditional` / `kwe`) | Pages → Home → “Traditional vs KWE” + “Traditional vs KWE — rows” |
+| `home.whatWeDo.cards[].image`, `home.testimonials.items[].image` | Pages → Home → card inlines |
+| `home.testimonials.logos[]` (`name`, `icon` — placeholder glyphs until real logos) | Pages → Home → “Trusted by — logos” |
+| `story.hero.kicker` | Pages → Story → Hero (stored, not shown in the hero) |
+| `team.hero.subtitle`, `solutions.whyKwe` (`title`, `body`), `insights.hero.subtitle` | Pages → … page settings → Hero / List |
+| `insights.article.metaLabels[]`, `insights.article.outline` | Pages → Insights page settings → Article page labels |
+| `legal.draftNote`, `legal.documents[]` (`slug`, `eyebrow`, `title`, `updated`, `intro`, `sections[]`, `disclaimer`, `complianceNote`) — served at `/legal/<slug>` | Pages → Legal (draft note) and Pages → **Legal documents** |
 | `team.*`, `solutions.*`, `caseStudies.*`, `insights.*` (page copy, labels, page size) | Pages → … page settings |
-| `team.members[]` | Content → **Team members** |
+| `team.members[]` (incl. `credential`) | Content → **Team members** |
 | `solutions.items[]` (+ deliverables, expectations) | Content → **Solutions** |
-| `caseStudies.items[]` (+ approach steps, result tiles) | Content → **Case studies** |
-| `insights.items[]` (+ stats) | Content → **Insights** |
-| `caseStudies.extraCards[]`, `insights.extraCards[]` | Content → **Extra cards** |
-| `team.filters[]`, `caseStudies.hero.filters[]`, `*.controls.categoriesOptions`, `insights.hero.chips`, `insights.controls.filterOptions` | Filters → **Filter groups** |
+| `caseStudies.items[]` (`meta[]` = Service / Client / Duration; `challenge`, `approach`, `results` each with a `heading` + rich-text `body`; approach `steps[]`) | Content → **Case studies** |
+| `insights.items[]` (`body` = the whole article as rich text; its `##` / `###` headings build the outline) | Content → **Insights** |
+| `team.filters[]`, `caseStudies.hero.filters[]` (rendered above the grid, not in the hero), `*.controls.categoriesOptions`, `insights.controls.filterOptions` | Filters → **Filter groups** |
+
+**Rich text** (legal sections, case-study bodies, insight bodies) is plain text: a blank line starts a new
+paragraph, lines starting with `- ` are bullets, `## ` / `### ` start a heading, `**text**` is bold.
 
 Nested lists are inline tables with drag-and-drop ordering. Short string lists (title
 lines, bullets, address lines, bios) are “one item per line” text boxes. Images and videos are
-an upload **plus** an optional external URL; the upload wins when both are set.
+an upload **plus** an optional external URL; the upload wins when both are set. A URL field may also hold a
+site path for a file shipped with the frontend build: `frontend/public/media/hero.mp4` is served at `/media/hero.mp4`
+(nginx tries the CMS upload volume first, then the bundled file).
 
 `backend/content/assemble.py::build_content()` rebuilds the JSON; `content/importer.py`
 is its inverse. `content/tests/test_roundtrip.py` imports the seed and asserts deep equality —
@@ -162,7 +177,9 @@ to 100 MB, and only web image/video file types are accepted.
 * **Backups**: `make backup-db` and `make backup-media`; keep `backups/` off-box.
 * **Restore**: `make restore-db FILE=…` then `docker compose exec backend tar xzf - -C /data < backups/media-….tar.gz`.
 * **Re-seed from the JSON** (overwrites all content):
-  `docker compose exec backend python manage.py import_content` (optionally `path/to/data.json`).
+  `make sync-seed && docker compose exec backend python manage.py import_content --force` (optionally `path/to/data.json`).
+  `--force` first empties every content table (singleton pages included) so nothing stale survives a schema change;
+  wipe and import run in one transaction, so a failed import leaves the existing content untouched.
 * **Export the live content** to update the committed seed/type source:
   `make export-content > frontend/src/data.json && make sync-seed`.
 * **Logs**: `make logs`. Health checks: backend hits `/api/content/`, web hits `/`.

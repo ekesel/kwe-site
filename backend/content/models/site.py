@@ -6,7 +6,7 @@ from .base import LinkFields, Ordered, image_field, image_url_field, media_src, 
 
 
 class SiteSettings(SingletonModel):
-    """site.*, nav.cta, footer text, the CTA band and the 404 page."""
+    """site.*, nav.cta, footer text, the footer CTA block (cta.*) and the 404 page."""
 
     # site
     name = models.CharField("Site name", max_length=80, help_text="Brand name as shown in the logo lock-up (lower case on the live site).")
@@ -14,7 +14,7 @@ class SiteSettings(SingletonModel):
     email = models.EmailField(help_text="Main contact email (navigation menu).")
     linkedin = models.URLField("LinkedIn URL", max_length=300, help_text="Used by every LinkedIn link/button on the site.")
     hero_video = video_field("Background video for the full-screen hero on every page.")
-    hero_video_url = models.URLField("Hero video external URL", blank=True, max_length=500, help_text="External video URL — used only when no file is uploaded.")
+    hero_video_url = models.CharField("Hero video URL", blank=True, max_length=500, help_text='Full URL or a path shipped with the site, e.g. "/media/hero.mp4" — used only when no file is uploaded.')
     hero_poster = image_field("Poster image shown before the hero video loads.")
     hero_poster_url = image_url_field()
 
@@ -23,10 +23,11 @@ class SiteSettings(SingletonModel):
     nav_cta_to = models.CharField("Header button link", max_length=200, help_text='Internal path, e.g. "/contact".')
 
     # footer
-    footer_disclosure = models.TextField("Footer disclosure", help_text="Regulatory disclosure text at the bottom of the footer.")
+    footer_email = models.EmailField("Footer email", default="", help_text="Shown in the footer's bottom row.")
+    footer_linkedin_label = models.CharField("Footer LinkedIn label", max_length=40, default="LinkedIn", help_text="Link text in the footer's bottom row (links to the LinkedIn URL above).")
     footer_copyright = models.CharField("Copyright line", max_length=200)
 
-    # cta band
+    # footer CTA block
     cta_eyebrow = models.CharField("CTA eyebrow", max_length=80)
     cta_title = models.CharField("CTA title", max_length=200)
     cta_body = models.TextField("CTA body")

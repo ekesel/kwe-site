@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useContent } from "@/content/ContentProvider";
-import { Hairline, Icon } from "@/components/ui";
-import { CTABand, NewsCard, Section, VideoHero } from "@/components/sections";
+import { Hairline, Icon, usePageTitle } from "@/components/ui";
+import { NewsCard, Section, VideoHero } from "@/components/sections";
 import { ClearButton, Dropdown } from "@/components/filters";
 import { FadeUp } from "@/motion";
 
@@ -11,9 +11,9 @@ type Card = { to: string; image: string; title: string; category: string; read: 
 export default function InsightsPage() {
   const data = useContent();
   const n = data.insights;
+  usePageTitle(n.hero.eyebrow);
   const all: Card[] = useMemo(() => [
     ...n.items.map((x) => ({ to: `/insight/${x.slug}`, image: x.image, title: x.title, category: x.category, read: x.read, date: x.date })),
-    ...n.extraCards.map((x) => ({ to: "/insights", image: x.image, title: x.title, category: x.category, read: x.read, date: x.date })),
   ], []);
   const [topic, setTopic] = useState<string | null>(null);
   const [readTime, setReadTime] = useState<string | null>(null);
@@ -31,9 +31,7 @@ export default function InsightsPage() {
 
   return (
     <>
-      <VideoHero eyebrow={n.hero.eyebrow} title={n.hero.title} scrollCue={n.hero.scrollCue} cueTarget="#content">
-        {n.hero.chips.map((ch) => (<button key={ch.label} type="button" onClick={() => { setTopic(ch.topic); setLimit(n.controls.pageSize); }} className={`pill-ghost cursor-pointer ${topic === ch.topic ? "active" : ""}`}>{ch.label}</button>))}
-      </VideoHero>
+      <VideoHero title={n.hero.title} subtitle={n.hero.subtitle} />
 
       <Section id="content">
         <FadeUp className="flex flex-wrap items-center gap-3">
@@ -44,10 +42,11 @@ export default function InsightsPage() {
         <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-16 gap-x-6 gap-y-12 mt-12 items-start">
           <AnimatePresence mode="popLayout">
             {shown.map((x, i) => {
-              const span = !active && i === 0 ? "lg:col-span-8 md:col-span-2" : i < 3 && !active ? "lg:col-span-4" : "lg:col-span-5";
+              const span = shown.length === 2 ? "lg:col-span-8" // two articles: split the row evenly
+                : !active && i === 0 ? "lg:col-span-8 md:col-span-2" : i < 3 && !active ? "lg:col-span-4" : "lg:col-span-5";
               return (
                 <motion.div key={x.title} layout initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} transition={{ duration: 0.5, ease: [0.2, 0, 0.1, 1], delay: i * 0.05 }} className={span}>
-                  <NewsCard to={x.to} image={x.image} title={x.title} tags={tags(x.category)} readMore={n.controls.readMore} big={!active && i === 0} ratio={active ? 0.8 : ratios[i % ratios.length]} />
+                  <NewsCard to={x.to} image={x.image} title={x.title} tags={tags(x.category)} readMore={n.controls.readMore} big={shown.length === 2 || (!active && i === 0)} ratio={shown.length === 2 ? 0.62 : active ? 0.8 : ratios[i % ratios.length]} />
                 </motion.div>
               );
             })}
@@ -80,8 +79,6 @@ export default function InsightsPage() {
           </div>
         </FadeUp>
       </Section>
-
-      <CTABand />
     </>
   );
 }

@@ -8,3 +8,4 @@ __pycache__/
 backend/media/
 backend/staticfiles/
 .pytest_cache/
+backend/db.sqlite3

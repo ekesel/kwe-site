@@ -1,15 +1,16 @@
 import { useContent } from "@/content/ContentProvider";
 import { EyebrowDraw, Lines, Parallax } from "@/motion";
-import { Eyebrow, Hairline, Reveal } from "@/components/ui";
-import { CTABand, VideoHero } from "@/components/sections";
+import { Eyebrow, Hairline, Reveal, usePageTitle } from "@/components/ui";
+import { VideoHero } from "@/components/sections";
 
 export default function LegalPage() {
   const data = useContent();
   const l = data.legal;
+  usePageTitle(l.title);
   return (
     <>
-      <VideoHero eyebrow={l.eyebrow} title={l.title} subtitle={l.updated} height="70svh" />
-      <section className="section container-x">
+      <VideoHero title={l.title} subtitle={l.updated} />
+      <section id="content" className="section container-x">
         <div className="max-w-[760px] mx-auto">
           {l.sections.map((s, i) => (
             <Reveal key={s.heading} delay={i * 0.06} className="mb-12">
@@ -20,7 +21,6 @@ export default function LegalPage() {
           ))}
         </div>
       </section>
-      <CTABand />
     </>
   );
 }

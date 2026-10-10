@@ -1,34 +1,35 @@
 import { Link } from "react-router-dom";
 import { useContent } from "@/content/ContentProvider";
 import { EyebrowDraw, Lines, Parallax } from "@/motion";
-import { Button, Eyebrow, Hairline, Reveal, TextLink } from "@/components/ui";
-import { CTABand, Section, VideoHero } from "@/components/sections";
+import { Button, Eyebrow, Hairline, Reveal, TextLink, usePageTitle } from "@/components/ui";
+import { Section, VideoHero } from "@/components/sections";
 
 export default function StoryPage() {
   const data = useContent();
   const s = data.story;
+  usePageTitle(s.hero.eyebrow);
   return (
     <>
-      <VideoHero eyebrow={s.hero.eyebrow} title={s.hero.title} subtitle={s.hero.subtitle} scrollCue={data.home.hero.scrollCue} cueTarget="#content">
-        {s.hero.anchors.map((a) => (<a key={a.href} href={a.href} className="pill-ghost">{a.label}</a>))}
-      </VideoHero>
+      <VideoHero title={s.hero.title} subtitle={s.hero.subtitle} />
 
       {/* Who we are */}
       <Section id="content">
         <Reveal className="panel grad-dark text-white">
-          <EyebrowDraw dark dot="berry" line={false}>{s.who.eyebrow}</EyebrowDraw>
+          <EyebrowDraw dark line={false}>{s.who.eyebrow}</EyebrowDraw>
           <Lines as="h2" className="t-h2 text-white mt-8 mb-16 max-w-[1000px]">{s.who.title}</Lines>
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-            {s.who.pillars.map((p) => (
-              <div key={p.title}>
-                <Hairline color={p.accent ? "#824270" : "#4C6569"} />
-                <h4 className="font-sans font-medium text-white text-[20px] lg:text-[24px] mt-6 mb-3">{p.title}</h4>
-                <p className="text-g5 text-[17px] lg:text-[20px] m-0" style={{ lineHeight: 1.5 }}>{p.body}</p>
-              </div>
-            ))}
-          </div>
-          <div className="flex gap-10 lg:gap-24 mt-14">
-            {s.who.stats.map((st) => (<div key={st.label}><div className="serif text-white text-[40px] lg:text-[56px] leading-none">{st.figure}</div><div className="text-g5 text-[16px] mt-2">{st.label}</div></div>))}
+          <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-start">
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
+              {s.who.pillars.map((p) => (
+                <div key={p.title}>
+                  <Hairline color={p.accent ? "#FFFFFF" : "#4C6569"} />
+                  <h4 className="font-sans font-medium text-white text-[20px] lg:text-[24px] mt-6 mb-3">{p.title}</h4>
+                  <p className="text-g5 text-[17px] lg:text-[20px] m-0" style={{ lineHeight: 1.5 }}>{p.body}</p>
+                </div>
+              ))}
+            </div>
+            <div className="flex lg:flex-col gap-10 lg:gap-12 lg:text-right lg:border-l lg:border-white/15 lg:pl-16">
+              {s.who.stats.map((st) => (<div key={st.label}><div className="serif text-white text-[40px] lg:text-[56px] leading-none">{st.figure}</div><div className="text-g5 text-[16px] mt-2">{st.label}</div></div>))}
+            </div>
           </div>
           <div className="mt-12"><Button to={s.who.button.to} variant="ondark">{s.who.button.label}</Button></div>
         </Reveal>
@@ -44,19 +45,19 @@ export default function StoryPage() {
 
       {/* Background */}
       <Section id="background">
-        <Reveal className="panel grad-aub text-white flex flex-col items-center">
-          <EyebrowDraw dark dot="berry" line={false}>{s.background.eyebrow}</EyebrowDraw>
+        <Reveal className="panel grad-dark text-white flex flex-col items-center">
+          <EyebrowDraw dark line={false}>{s.background.eyebrow}</EyebrowDraw>
           <Lines as="h2" className="t-h2 text-white text-center mt-5 mb-12">{s.background.title}</Lines>
           <div className="w-full max-w-[900px]">
-            <Hairline color="#5A3A52" />
+            <Hairline color="rgba(255,255,255,.15)" />
             {s.background.rows.map((r) => (
               <div key={r.n}>
                 <div className="grid lg:grid-cols-[72px_160px_1fr] gap-3 lg:gap-10 py-7">
-                  <div className="serif text-[28px] lg:text-[32px] leading-none" style={{ color: "#C48DB5" }}>{r.n}</div>
+                  <div className="serif text-[28px] lg:text-[32px] leading-none" style={{ color: "#9CB5B9" }}>{r.n}</div>
                   <div className="font-medium text-[19px] lg:text-[20px] text-white" style={{ lineHeight: 1.2 }}>{r.label}</div>
-                  <p className="text-[16px] m-0" style={{ lineHeight: 1.55, color: "#E7D6E1" }}>{r.body}</p>
+                  <p className="text-[16px] m-0" style={{ lineHeight: 1.55, color: "#C5D4D7" }}>{r.body}</p>
                 </div>
-                <Hairline color="#5A3A52" />
+                <Hairline color="rgba(255,255,255,.15)" />
               </div>
             ))}
           </div>
@@ -67,14 +68,14 @@ export default function StoryPage() {
       {/* How we respond */}
       <Section id="respond">
         <Reveal className="panel grad-dark text-white">
-          <EyebrowDraw dark dot="berry" line={false}>{s.respond.eyebrow}</EyebrowDraw>
+          <EyebrowDraw dark line={false}>{s.respond.eyebrow}</EyebrowDraw>
           <Lines as="h2" className="t-h1 text-white mt-7 mb-5 max-w-[760px]">{s.respond.title}</Lines>
           <p className="text-g5 text-[18px] lg:text-[22px] m-0">{s.respond.lead}</p>
           <div className="grid lg:grid-cols-4 gap-7 lg:gap-8 mt-14">
             {s.respond.steps.map((st, i) => (
               <div key={st.n}>
                 <div className="flex items-center gap-4 lg:gap-8">
-                  <span className={`w-11 h-11 rounded-full border-[1.5px] inline-flex items-center justify-center text-white font-medium shrink-0 ${i === 3 ? "border-berry" : "border-g4"}`}>{st.n}</span>
+                  <span className={`w-11 h-11 rounded-full border-[1.5px] inline-flex items-center justify-center text-white font-medium shrink-0 ${i === 3 ? "border-white" : "border-g4"}`}>{st.n}</span>
                   <span className={`h-px flex-1 bg-g3 ${i === 3 ? "lg:opacity-0" : ""}`} />
                 </div>
                 <h4 className="font-sans font-medium text-white text-[20px] lg:text-[24px] mt-7 mb-2.5">{st.title}</h4>
@@ -89,11 +90,10 @@ export default function StoryPage() {
       {/* Vision */}
       <Section id="vision">
         <Reveal className="panel bg-white border border-silver relative overflow-hidden lg:p-24">
-          <span className="serif absolute right-6 top-4 lg:right-20 lg:top-12 text-[140px] md:text-[200px] lg:text-[320px] leading-none select-none" style={{ color: "#EFEDE6" }} aria-hidden>{s.vision.index}</span>
           <div className="relative">
-            <EyebrowDraw dot="berry" line={false}>{s.vision.eyebrow}</EyebrowDraw>
+            <EyebrowDraw line={false}>{s.vision.eyebrow}</EyebrowDraw>
             <p className="serif text-g1 text-[32px] md:text-[44px] lg:text-[64px] mt-10 mb-0 max-w-[820px]" style={{ lineHeight: 1.12, letterSpacing: "-0.015em" }}>
-              {s.vision.before}<span className="text-berry">{s.vision.highlight}</span>{s.vision.after}
+              {s.vision.before}<span className="text-g3">{s.vision.highlight}</span>{s.vision.after}
             </p>
           </div>
         </Reveal>
@@ -102,12 +102,12 @@ export default function StoryPage() {
       {/* Milestones */}
       <Section>
         <Reveal className="panel grad-dark text-white">
-          <EyebrowDraw dark dot="berry" line={false}>{s.milestones.eyebrow}</EyebrowDraw>
+          <EyebrowDraw dark line={false}>{s.milestones.eyebrow}</EyebrowDraw>
           <Lines as="h2" className="t-h2 text-white mt-5 mb-14">{s.milestones.title}</Lines>
           <div className="hidden lg:flex items-center">
             {s.milestones.items.map((m) => (
               <div key={m.year} className="flex-1 flex items-center">
-                <span className={`w-4 h-4 rounded-full shrink-0 ${m.current ? "bg-berry" : "border-[1.5px] border-g5"}`} />
+                <span className={`w-4 h-4 rounded-full shrink-0 ${m.current ? "bg-white" : "border-[1.5px] border-g5"}`} />
                 <span className="h-px flex-1 bg-g3" />
               </div>
             ))}
@@ -116,12 +116,12 @@ export default function StoryPage() {
             {s.milestones.items.map((m, i) => (
               <div key={m.year} className="flex lg:block gap-5">
                 <div className="lg:hidden flex flex-col items-center">
-                  <span className={`w-4 h-4 rounded-full shrink-0 ${m.current ? "bg-berry" : "border-[1.5px] border-g5"}`} />
+                  <span className={`w-4 h-4 rounded-full shrink-0 ${m.current ? "bg-white" : "border-[1.5px] border-g5"}`} />
                   {i < s.milestones.items.length - 1 && <span className="w-px flex-1 bg-g3" />}
                 </div>
                 <div className="pb-8 lg:pb-0">
                   <div className="serif text-white text-[28px] lg:text-[32px] leading-none">{m.year}</div>
-                  <p className="text-[16px] mt-3 mb-0" style={{ lineHeight: 1.5, color: m.current ? "#D9A7C9" : "#C5D4D7" }}>{m.text}</p>
+                  <p className="text-[16px] mt-3 mb-0" style={{ lineHeight: 1.5, color: m.current ? "#FFFFFF" : "#C5D4D7" }}>{m.text}</p>
                 </div>
               </div>
             ))}
@@ -136,8 +136,6 @@ export default function StoryPage() {
           <Link to={s.teamTeaser.link.to} className="shrink-0"><TextLink to={s.teamTeaser.link.to}>{s.teamTeaser.link.label}</TextLink></Link>
         </Reveal>
       </Section>
-
-      <CTABand />
     </>
   );
 }

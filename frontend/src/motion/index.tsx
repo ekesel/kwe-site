@@ -37,7 +37,11 @@ export function SmoothScroll() {
 export function scrollToEl(target: string | HTMLElement, offset = -100) {
   const el = typeof target === "string" ? document.querySelector<HTMLElement>(target) : target;
   if (!el) return;
-  if (lenis) lenis.scrollTo(el, { offset, duration: 1.2, easing: (t) => 1 - Math.pow(1 - t, 3) });
+  if (lenis) {
+    // re-measure first and pass an absolute position: Lenis can hold a stale limit right after content renders
+    lenis.resize();
+    lenis.scrollTo(window.scrollY + el.getBoundingClientRect().top + offset, { duration: 1.2, easing: (t) => 1 - Math.pow(1 - t, 3) });
+  }
   else el.scrollIntoView({ behavior: "smooth" });
 }
 
@@ -70,7 +74,7 @@ function splitLines(el: HTMLElement) {
   el.innerHTML = "";
   const lineEls = lines.map((ws) => {
     const outer = document.createElement("span"); outer.className = "sl"; outer.style.cssText = "display:block;overflow:hidden";
-    const inner = document.createElement("span"); inner.className = "sl-in"; inner.style.cssText = "display:block;will-change:transform";
+    const inner = document.createElement("span"); inner.className = "sl-in"; inner.style.cssText = "display:block;white-space:nowrap;will-change:transform"; // measured to fit: never re-wrap (shrink-to-fit parents narrow to the longest line)
     inner.textContent = ws.map((w) => w.textContent).join(" ");
     outer.appendChild(inner); el.appendChild(outer); return inner;
   });
@@ -84,15 +88,29 @@ export function Lines({ as: Tag = "h2", children, className = "", style, stagger
   const ref = useRef<HTMLElement>(null);
   useLayoutEffect(() => {
     const el = ref.current; if (!el || reduced()) return;
-    const { lines, revert } = splitLines(el);
-    gsap.set(lines, { y, opacity: 0 });
+    // Lines are measured from the current layout, so they are only valid for this width and font. Until the reveal
+    // plays, re-split when web fonts finish loading or the window resizes; once it has played, restore the original
+    // text so it reflows naturally (otherwise desktop-width lines strand single words at narrower widths).
+    let split: ReturnType<typeof splitLines> | null = null;
+    let tw: gsap.core.Tween | null = null;
+    let started = false, finished = false;
     const vars = { y: 0, opacity: 1, duration: 0.8, ease: "joe.out", stagger, delay };
-    let st: ScrollTrigger | undefined;
-    const tw = immediate ? gsap.to(lines, vars) : gsap.to(lines, { ...vars, scrollTrigger: { trigger: el, start: "top 90%", once: true } });
-    st = tw.scrollTrigger;
-    const onResize = () => { /* keep split; lines re-measure only on full reload */ };
+    const finish = () => { finished = true; split?.revert(); split = null; };
+    const setup = () => {
+      tw?.scrollTrigger?.kill(); tw?.kill(); split?.revert();
+      split = splitLines(el);
+      gsap.set(split.lines, { y, opacity: 0 });
+      const v = { ...vars, onStart: () => { started = true; }, onComplete: finish };
+      tw = immediate ? gsap.to(split.lines, v) : gsap.to(split.lines, { ...v, scrollTrigger: { trigger: el, start: "top 90%", once: true } });
+    };
+    const remeasure = () => { if (!started && !finished) setup(); };
+    let t: number | undefined;
+    const onResize = () => { window.clearTimeout(t); t = window.setTimeout(remeasure, 150); };
+    setup();
+    let alive = true;
+    document.fonts?.ready.then(() => { if (alive) remeasure(); });
     window.addEventListener("resize", onResize);
-    return () => { st?.kill(); tw.kill(); window.removeEventListener("resize", onResize); revert(); };
+    return () => { alive = false; window.clearTimeout(t); tw?.scrollTrigger?.kill(); tw?.kill(); window.removeEventListener("resize", onResize); split?.revert(); };
   }, [children, stagger, delay, immediate, y]);
   const T = Tag as "div";
   return <T ref={ref as React.RefObject<HTMLDivElement>} className={className} style={style}>{children}</T>;
@@ -116,7 +134,7 @@ export function FadeUp({ children, className = "", style, y = 30, delay = 0, sta
 }
 
 /** Cinven eyebrow: words rise in (stagger .02) and the hairline under it draws left→right. */
-export function EyebrowDraw({ children, dark = false, dot = "g3", line = true, className = "" }: { children: string; dark?: boolean; dot?: "g3" | "berry" | "none"; line?: boolean; className?: string }) {
+export function EyebrowDraw({ children, dark = false, dot = "g3", line = true, className = "" }: { children: string; dark?: boolean; dot?: "g3" | "none"; line?: boolean; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
     const el = ref.current; if (!el || reduced()) return;
@@ -131,7 +149,7 @@ export function EyebrowDraw({ children, dark = false, dot = "g3", line = true, c
   return (
     <div ref={ref} className={`inline-block overflow-hidden ${className}`}>
       <span className={`eyebrow ${dark ? "dark" : ""}`}>
-        {dot !== "none" && <span className={`dot ${dot === "berry" ? "berry" : ""}`} />}
+        {dot !== "none" && <span className="dot" />}
         {children.split(" ").map((w, i) => (<span key={i} className="ew inline-block">{w}</span>))}
       </span>
       {line && <span className="er block h-px mt-1.5" style={{ background: dark ? "rgba(255,255,255,.25)" : "#BAD1D8" }} />}

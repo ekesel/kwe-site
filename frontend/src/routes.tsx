@@ -13,6 +13,7 @@ import InsightsPage from "./pages/InsightsPage";
 import InsightDetailPage from "./pages/InsightDetailPage";
 import ContactPage from "./pages/ContactPage";
 import LegalPage from "./pages/LegalPage";
+import LegalDocPage from "./pages/LegalDocPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 export const router = createBrowserRouter([
@@ -34,6 +35,7 @@ export const router = createBrowserRouter([
       { path: "insight/:slug", element: <InsightDetailPage /> },
       { path: "contact", element: <ContactPage /> },
       { path: "legal", element: <LegalPage /> },
+      { path: "legal/:slug", element: <LegalDocPage /> },
       { path: "*", element: <NotFoundPage /> },
     ],
   },

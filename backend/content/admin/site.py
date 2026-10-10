@@ -22,12 +22,12 @@ class SiteSettingsAdmin(SingletonAdmin):
             },
         ),
         ("Header button", {"classes": ["tab"], "fields": ("nav_cta_label", "nav_cta_to")}),
-        ("Footer", {"classes": ["tab"], "fields": ("footer_disclosure", "footer_copyright")}),
+        ("Footer", {"classes": ["tab"], "fields": ("footer_email", "footer_linkedin_label", "footer_copyright"), "description": "Footer columns and links are edited under Site → Footer; the CTA block at the top of the footer is in the “Footer CTA” tab."}),
         (
-            "CTA band",
+            "Footer CTA",
             {
                 "classes": ["tab"],
-                "description": "The “Ready to transform your business?” band shown above the footer on most pages.",
+                "description": "The “Ready to transform your business?” block at the top of the footer on every page.",
                 "fields": ("cta_eyebrow", "cta_title", "cta_body", "cta_button_label", "cta_button_to"),
             },
         ),

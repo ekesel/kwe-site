@@ -6,12 +6,11 @@ from .base import ICON_CHOICES, TONE_CHOICES, LinesField, Ordered
 
 
 class ProcessPage(SingletonModel):
-    """process.* — the Our Process page."""
+    """process.* — the Process page."""
 
     hero_eyebrow = models.CharField("Eyebrow", max_length=80)
     hero_title = models.CharField("Title", max_length=200)
     hero_subtitle = models.TextField("Subtitle")
-    hero_anchors = LinesField("Hero anchors", help_text='Short labels under the hero, e.g. "01 Analyze".')
 
     stepper_eyebrow = models.CharField("Eyebrow", max_length=80)
     stepper_next_label = models.CharField("Next button label", max_length=40)
@@ -29,11 +28,11 @@ class ProcessPage(SingletonModel):
     history = HistoricalRecords()
 
     class Meta:
-        verbose_name = "Our process page"
-        verbose_name_plural = "Our process page"
+        verbose_name = "Process page"
+        verbose_name_plural = "Process page"
 
     def __str__(self):
-        return "Our process page"
+        return "Process page"
 
 
 class ProcessStep(Ordered):

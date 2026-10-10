@@ -47,7 +47,8 @@ def footer_section(s: m.SiteSettings):
             {"title": col.title, "links": [_footer_link(ln) for ln in col.links.all()]}
             for col in m.FooterColumn.objects.prefetch_related("links")
         ],
-        "disclosure": s.footer_disclosure,
+        "email": s.footer_email,
+        "linkedinLabel": s.footer_linkedin_label,
         "copyright": s.footer_copyright,
     }
 
@@ -73,10 +74,19 @@ def not_found_section(s: m.SiteSettings):
 # --------------------------------------------------------------------------- home
 
 
+def _who_groups(h):
+    groups = []
+    for t in h.who_tiles.all():
+        if not groups or groups[-1]["label"] != t.group:
+            groups.append({"label": t.group, "tiles": []})
+        groups[-1]["tiles"].append({"label": t.label, "tone": t.tone, "image": t.image_src})
+    return groups
+
+
 def home_section():
     h = m.HomePage.get_solo()
     return {
-        "hero": {"title": lines(h.hero_title), "scrollCue": h.hero_scroll_cue},
+        "hero": {"title": lines(h.hero_title), "subtitle": h.hero_subtitle, "scrollCue": h.hero_scroll_cue},
         "intro": {
             "eyebrow": h.intro_eyebrow,
             "statement": h.intro_statement,
@@ -85,12 +95,12 @@ def home_section():
         "stats": {
             "eyebrow": h.stats_eyebrow,
             "title": h.stats_title,
-            "items": [{"figure": s.figure, "label": s.label, "tone": s.tone} for s in h.stats.all()],
+            "items": [{"figure": s.figure, "label": s.label, "tone": s.tone, "image": s.image_src} for s in h.stats.all()],
         },
         "who": {
             "eyebrow": h.who_eyebrow,
             "title": h.who_title,
-            "tiles": [{"label": t.label, "tone": t.tone} for t in h.who_tiles.all()],
+            "groups": _who_groups(h),
         },
         "challenge": {
             "eyebrow": h.challenge_eyebrow,
@@ -98,16 +108,20 @@ def home_section():
             "body": h.challenge_body,
             "items": [{"icon": i.icon, "title": i.title, "body": i.body} for i in h.challenge_items.all()],
         },
-        "diptych": {
-            "traditional": {"label": h.diptych_traditional_label, "items": lines(h.diptych_traditional_items)},
-            "kwe": {"label": h.diptych_kwe_label, "items": lines(h.diptych_kwe_items)},
+        "comparison": {
+            "title": h.comparison_title,
+            "traditionalLabel": h.comparison_traditional_label,
+            "kweLabel": h.comparison_kwe_label,
+            "traditionalImage": h.comparison_traditional_image_src,
+            "kweImage": h.comparison_kwe_image_src,
+            "rows": [{"label": r.label, "traditional": r.traditional, "kwe": r.kwe} for r in h.comparison_rows.all()],
         },
         "whatWeDo": {
             "eyebrow": h.what_eyebrow,
             "title": h.what_title,
             "body": h.what_body,
             "cards": [
-                {"n": c.n, "title": c.title, "subtitle": c.subtitle, "body": c.body, "to": c.to}
+                {"n": c.n, "title": c.title, "subtitle": c.subtitle, "body": c.body, "to": c.to, "image": c.image_src}
                 for c in h.what_cards.all()
             ],
         },
@@ -116,29 +130,22 @@ def home_section():
             "title": h.cases_title,
             "link": {"label": h.cases_link_label},
         },
-        "approach": {
-            "eyebrow": h.approach_eyebrow,
-            "title": h.approach_title,
-            "steps": [
-                {"n": s.n, "title": s.title, "body": s.body, "tone": s.tone} for s in h.approach_steps.all()
-            ],
-            "link": _link(h.approach_link_label, h.approach_link_to),
-        },
         "team": {
             "eyebrow": h.team_eyebrow,
             "title": h.team_title,
+            "subtitle": h.team_subtitle,
             "link": _link(h.team_link_label, h.team_link_to),
         },
         "testimonials": {
             "eyebrow": h.testimonials_eyebrow,
             "title": h.testimonials_title,
             "items": [
-                {"firm": t.firm, "quote": t.quote, "name": t.name, "role": t.role, "tone": t.tone}
+                {"firm": t.firm, "quote": t.quote, "name": t.name, "role": t.role, "tone": t.tone, "image": t.image_src}
                 for t in h.testimonials.all()
             ],
             "trustedEyebrow": h.trusted_eyebrow,
             "trustedTitle": h.trusted_title,
-            "logos": lines(h.logos),
+            "logos": [{"name": lg.name, "icon": lg.icon} for lg in h.trusted_logos.all()],
         },
         "insights": {
             "label": h.insights_label,
@@ -163,9 +170,9 @@ def story_section():
     return {
         "hero": {
             "eyebrow": s.hero_eyebrow,
+            "kicker": s.hero_kicker,
             "title": s.hero_title,
             "subtitle": lines(s.hero_subtitle),
-            "anchors": [{"label": a.label, "href": a.href} for a in s.anchors.all()],
         },
         "who": {
             "eyebrow": s.who_eyebrow,
@@ -190,7 +197,6 @@ def story_section():
         },
         "vision": {
             "eyebrow": s.vision_eyebrow,
-            "index": s.vision_index,
             "before": s.vision_before,
             "highlight": s.vision_highlight,
             "after": s.vision_after,
@@ -227,6 +233,7 @@ def team_member(t: m.TeamMember):
         "slug": t.slug,
         "name": t.name,
         "role": t.role,
+        "credential": t.credential,
         "focus": t.focus,
         "firms": lines(t.firms),
         "image": t.image_src,
@@ -243,8 +250,7 @@ def team_section():
         "hero": {
             "eyebrow": t.hero_eyebrow,
             "title": t.hero_title,
-            "anchor": {"label": t.hero_anchor_label, "href": t.hero_anchor_href},
-            "cta": _link(t.hero_cta_label, t.hero_cta_to),
+            "subtitle": t.hero_subtitle,
         },
         "filters": dropdown_filters("team"),
         "searchPlaceholder": t.search_placeholder,
@@ -277,7 +283,6 @@ def process_section():
             "eyebrow": p.hero_eyebrow,
             "title": p.hero_title,
             "subtitle": p.hero_subtitle,
-            "anchors": lines(p.hero_anchors),
         },
         "stepper": {
             "eyebrow": p.stepper_eyebrow,
@@ -341,11 +346,10 @@ def solutions_section():
         "expectEyebrow": s.expect_eyebrow,
         "moreEyebrow": s.more_eyebrow,
         "moreTitle": s.more_title,
-        "scrollCue": s.scroll_cue,
         "items": [
             solution_item(x) for x in m.Solution.objects.prefetch_related("deliverables", "expectations")
         ],
-        "header": {"title": s.header_title, "body": s.header_body},
+        "whyKwe": {"title": s.why_title, "body": s.why_body},
         "detailTitle": s.detail_title,
         "exploreLabel": s.explore_label,
     }
@@ -357,36 +361,22 @@ def solutions_section():
 def case_study_item(c: m.CaseStudy):
     return {
         "slug": c.slug,
-        "key": c.key,
         "category": c.category,
-        "tags": lines(c.tags),
         "image": c.image_src,
         "cardTitle": c.card_title,
         "title": c.title,
         "subtitle": c.subtitle,
-        "meta": lines(c.meta),
-        "challenge": c.challenge,
-        "approach": [{"title": a.title, "body": a.body} for a in c.approach_steps.all()],
-        "results": [{"big": r.big, "small": r.small, "label": r.label} for r in c.results.all()],
-        "outcome": c.outcome,
-        "quote": {"text": c.quote_text, "attribution": c.quote_attribution} if c.quote_text else None,
+        "meta": c.meta.replace("\r\n", "\n").split("\n") if c.meta else [],
+        "challenge": {"heading": c.challenge_heading, "body": c.challenge},
+        "approach": {
+            "heading": c.approach_heading,
+            "steps": [{"title": a.title, "body": a.body} for a in c.approach_steps.all()],
+        },
+        "results": {"heading": c.results_heading, "body": c.results},
         "strategy": c.strategy,
         "fundType": c.fund_type,
         "region": c.region,
         "categoryGroup": c.category_group,
-    }
-
-
-def case_extra_card(e: m.ExtraCard):
-    return {
-        "category": e.category,
-        "title": e.title,
-        "tags": lines(e.tags),
-        "image": e.image_src,
-        "strategy": e.strategy,
-        "fundType": e.fund_type,
-        "region": e.region,
-        "categoryGroup": e.category_group,
     }
 
 
@@ -398,11 +388,9 @@ def case_studies_section():
             "title": c.hero_title,
             "subtitle": c.hero_subtitle,
             "filters": dropdown_filters("caseStudies"),
-            "scrollCue": c.hero_scroll_cue,
         },
         "controls": {
             "categories": c.controls_categories,
-            "filter": c.controls_filter,
             "readMore": c.controls_read_more,
             "showing": c.controls_showing,
             "loadMore": c.controls_load_more,
@@ -422,17 +410,8 @@ def case_studies_section():
             "moreTitle": c.detail_more_title,
         },
         "items": [
-            case_study_item(x) for x in m.CaseStudy.objects.prefetch_related("approach_steps", "results")
+            case_study_item(x) for x in m.CaseStudy.objects.prefetch_related("approach_steps")
         ],
-        "extraCards": [case_extra_card(e) for e in m.ExtraCard.objects.filter(kind="caseStudies")],
-        "perspectives": {
-            "eyebrow": c.perspectives_eyebrow,
-            "title": c.perspectives_title,
-            "note": c.perspectives_note,
-            "items": [{"quote": p.quote, "name": p.name, "firm": p.firm} for p in c.perspectives.all()],
-            "compliance": c.perspectives_compliance,
-        },
-        "trusted": {"eyebrow": c.trusted_eyebrow, "logos": lines(c.trusted_logos), "note": c.trusted_note},
     }
 
 
@@ -448,32 +427,18 @@ def insight_item(i: m.Insight):
         "image": i.image_src,
         "title": i.title,
         "subtitle": i.subtitle,
-        "toc": lines(i.toc),
-        "h2": i.h2,
-        "p1": i.p1,
-        "stats": [{"big": s.big, "unit": s.unit, "label": s.label} for s in i.stats.all()],
-        "p2": i.p2,
-        "quote": i.quote,
-        "p3": i.p3,
+        "body": i.body,
     }
-
-
-def insight_extra_card(e: m.ExtraCard):
-    return {"category": e.category, "title": e.title, "image": e.image_src, "date": e.date, "read": e.read}
 
 
 def insights_section():
     n = m.InsightsPageSettings.get_solo()
-    chips_group = _groups("insights", "chips").first()
     readtime_group = _groups("insights", "readtime").first()
     return {
         "hero": {
             "eyebrow": n.hero_eyebrow,
             "title": n.hero_title,
-            "chips": [
-                {"label": o.label, "topic": o.value or None} for o in (chips_group.options.all() if chips_group else [])
-            ],
-            "scrollCue": n.hero_scroll_cue,
+            "subtitle": n.hero_subtitle,
         },
         "controls": {
             "categories": n.controls_categories,
@@ -500,12 +465,12 @@ def insights_section():
         "article": {
             "back": n.article_back,
             "author": n.article_author,
+            "metaLabels": lines(n.article_meta_labels),
             "initials": n.article_initials,
-            "toc": n.article_toc,
+            "outline": n.article_outline,
             "related": n.article_related,
         },
-        "items": [insight_item(x) for x in m.Insight.objects.prefetch_related("stats")],
-        "extraCards": [insight_extra_card(e) for e in m.ExtraCard.objects.filter(kind="insights")],
+        "items": [insight_item(x) for x in m.Insight.objects.all()],
     }
 
 
@@ -519,8 +484,6 @@ def contact_section():
             "eyebrow": c.hero_eyebrow,
             "title": c.hero_title,
             "subtitle": c.hero_subtitle,
-            "email": c.hero_email,
-            "linkedin": c.hero_linkedin,
         },
         "form": {
             "eyebrow": c.form_eyebrow,
@@ -560,6 +523,20 @@ def legal_section():
         "title": lg.title,
         "updated": lg.updated,
         "sections": [{"heading": s.heading, "body": s.body} for s in lg.sections.all()],
+        "draftNote": lg.draft_note,
+        "documents": [
+            {
+                "slug": doc.slug,
+                "eyebrow": doc.eyebrow,
+                "title": doc.title,
+                "updated": doc.updated,
+                "intro": doc.intro,
+                "sections": [{"heading": s.heading, "body": s.body} for s in doc.sections.all()],
+                "disclaimer": doc.disclaimer,
+                "complianceNote": doc.compliance_note,
+            }
+            for doc in m.LegalDocument.objects.prefetch_related("sections")
+        ],
     }
 
 

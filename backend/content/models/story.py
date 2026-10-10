@@ -6,9 +6,10 @@ from .base import LinesField, Ordered
 
 
 class StoryPage(SingletonModel):
-    """story.* — the Our Story page."""
+    """story.* — the Story page."""
 
     hero_eyebrow = models.CharField("Eyebrow", max_length=80)
+    hero_kicker = models.CharField("Kicker", max_length=120, blank=True, help_text='Short line above the title, e.g. "KWE Fundraising Experience".')
     hero_title = models.CharField("Title", max_length=200)
     hero_subtitle = LinesField("Subtitle", help_text="Each line renders on its own line.")
 
@@ -27,14 +28,13 @@ class StoryPage(SingletonModel):
 
     respond_eyebrow = models.CharField("Eyebrow", max_length=80)
     respond_title = models.CharField("Title", max_length=200)
-    respond_lead = models.CharField("Lead", max_length=200)
+    respond_lead = models.TextField("Lead", help_text="Paragraph under the heading.")
     respond_button_label = models.CharField("Button label", max_length=80)
     respond_button_to = models.CharField("Button route", max_length=200)
 
     vision_eyebrow = models.CharField("Eyebrow", max_length=80)
-    vision_index = models.CharField("Index", max_length=4, help_text='Section number shown beside the vision statement, e.g. "05".')
     vision_before = models.TextField("Text before highlight")
-    vision_highlight = models.CharField("Highlighted text", max_length=200, help_text="Rendered in the berry accent colour.")
+    vision_highlight = models.CharField("Highlighted text", max_length=200, help_text="Rendered in the accent colour.")
     vision_after = models.TextField("Text after highlight")
 
     milestones_eyebrow = models.CharField("Eyebrow", max_length=80)
@@ -47,27 +47,11 @@ class StoryPage(SingletonModel):
     history = HistoricalRecords()
 
     class Meta:
-        verbose_name = "Our story page"
-        verbose_name_plural = "Our story page"
+        verbose_name = "Story page"
+        verbose_name_plural = "Story page"
 
     def __str__(self):
-        return "Our story page"
-
-
-class StoryAnchor(Ordered):
-    """story.hero.anchors[] — jump links under the hero."""
-
-    page = models.ForeignKey(StoryPage, related_name="anchors", on_delete=models.CASCADE)
-    label = models.CharField(max_length=80)
-    href = models.CharField("Anchor", max_length=80, help_text='Section id, e.g. "#mission".')
-    history = HistoricalRecords()
-
-    class Meta(Ordered.Meta):
-        verbose_name = "Hero anchor link"
-        verbose_name_plural = "Hero anchor links"
-
-    def __str__(self):
-        return self.label
+        return "Story page"
 
 
 class StoryPillar(Ordered):
@@ -76,7 +60,7 @@ class StoryPillar(Ordered):
     page = models.ForeignKey(StoryPage, related_name="pillars", on_delete=models.CASCADE)
     title = models.CharField(max_length=120)
     body = models.TextField()
-    accent = models.BooleanField(default=False, help_text="Tick to draw the hairline in the berry accent colour.")
+    accent = models.BooleanField(default=False, help_text="Tick to draw the hairline in white (accent).")
     history = HistoricalRecords()
 
     class Meta(Ordered.Meta):
@@ -143,7 +127,7 @@ class StoryMilestone(Ordered):
     page = models.ForeignKey(StoryPage, related_name="milestones", on_delete=models.CASCADE)
     year = models.CharField(max_length=12)
     text = models.TextField()
-    current = models.BooleanField(default=False, help_text="Tick for the latest milestone (highlighted in berry).")
+    current = models.BooleanField(default=False, help_text="Tick for the latest milestone (highlighted in white).")
     history = HistoricalRecords()
 
     class Meta(Ordered.Meta):

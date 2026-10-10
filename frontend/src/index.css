@@ -8,7 +8,6 @@
   --color-g5: #9CB5B9;
   --color-g6: #C5D4D7;
   --color-berry: #824270;
-  --color-aub: #3B1931;
   --color-ink: #1C1C1C;
   --color-gm: #595959;
   --color-gl: #909090;
@@ -61,7 +60,7 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: 400; }
 .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #595959; }
 .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: #4C6569; }
 .eyebrow.dark { color: #9CB5B9; }
-.eyebrow .dot.berry { background: #824270; }
+.eyebrow.dark .dot { background: #fff; }
 
 /* Buttons */
 .btn { display: inline-flex; align-items: center; gap: 16px; padding: 6px 6px 6px 24px; border-radius: 999px; font-weight: 500; font-size: 15px; line-height: 1; text-decoration: none; cursor: pointer; border: 1px solid transparent; transition: background-color .3s var(--ease-hover), color .3s var(--ease-hover); white-space: nowrap; }
@@ -71,7 +70,8 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: 400; }
 .btn-ondark { background: #fff; color: #061B20; } .btn-ondark .ic { background: #061B20; color: #fff; } .btn-ondark:hover .ic { background: #4C6569; }
 .btn-accent { background: #fff; color: #061B20; } .btn-accent .ic { background: #824270; color: #fff; } .btn-accent:hover .ic { background: #3B1931; }
 
-/* Text link with drawing underline */
+/* Text link with drawing underline. Berry (#824270) is reserved for links and link-like controls only:
+   text-link hover, linked card titles, the arrow circle in the white CTA pill / submit button. */
 .tlink { position: relative; display: inline-flex; align-items: center; gap: 8px; font-weight: 500; font-size: 15px; text-decoration: none; padding-bottom: 4px; }
 .tlink::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .6s var(--ease-underline); }
 .tlink:hover::after { transform: scaleX(1); }
@@ -104,16 +104,26 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: 400; }
 .marquee-track { display: flex; width: max-content; animation: marquee var(--marquee-duration, 30s) linear infinite; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 
+/* Grain: subtle film-noise texture over solid panels (place inside a relative/overflow-hidden parent) */
+.grain { position: relative; isolation: isolate; }
+.grain::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .14; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.grad-green { background: linear-gradient(135deg, #061B20 0%, #2D4748 100%); }
+
+/* Footer panel: deep teal → near-black with a faint dot grid (docs/footer-reference.jpg) */
+.footer-panel {
+  background:
+    radial-gradient(rgba(255,255,255,.045) 1px, transparent 1.2px) 0 0 / 22px 22px,
+    linear-gradient(180deg, #12343B 0%, #0D2429 45%, #081316 100%);
+}
+
 /* Dark gradients */
 .grad-dark { background: linear-gradient(180deg, #061B20 0%, #2D4748 100%); }
-.grad-aub { background: linear-gradient(160deg, #3B1931 0%, #1C0D18 100%); }
-.grad-cta { background: linear-gradient(180deg, #4C6569 0%, #061B20 55%, #1C1C1C 100%); }
 
 /* Solution row */
 .sol-row { transition: transform .3s cubic-bezier(.65,0,.35,1); }
 .sol-row:hover .sol-title { transform: translateX(16px); }
 .sol-title { transition: transform .3s cubic-bezier(.65,0,.35,1); display: inline-block; }
-.sol-row:hover .sol-icon { background: #824270; border-color: #824270; color: #fff; }
+.sol-row:hover .sol-icon { background: #fff; border-color: #fff; color: #061B20; }
 .sol-icon { transition: all .3s cubic-bezier(.65,0,.35,1); }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; } }

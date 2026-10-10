@@ -1,7 +1,16 @@
+import { useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode, CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import { scrollToEl } from "@/motion";
+
+/* ───────── Document title: "<page> — KWE Advisors"; no label = the site default from index.html ───────── */
+const DEFAULT_TITLE = typeof document !== "undefined" ? document.title : "";
+export function usePageTitle(label?: string) {
+  useEffect(() => {
+    document.title = label ? `${label} — KWE Advisors` : DEFAULT_TITLE;
+  }, [label]);
+}
 
 /* ───────── Motion: cinven-style fadeUp reveals ───────── */
 export const EASE_OUT: [number, number, number, number] = [0.2, 0, 0.1, 1];
@@ -51,10 +60,10 @@ export const item = { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, t
 export const itemFar = { hidden: { opacity: 0, y: 100 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: EASE_OUT } } };
 
 /* ───────── Primitives ───────── */
-export function Eyebrow({ children, dark = false, dot = "g3", className = "" }: { children: ReactNode; dark?: boolean; dot?: "g3" | "berry" | "none"; className?: string }) {
+export function Eyebrow({ children, dark = false, dot = "g3", className = "" }: { children: ReactNode; dark?: boolean; dot?: "g3" | "none"; className?: string }) {
   return (
     <span className={`eyebrow ${dark ? "dark" : ""} ${className}`}>
-      {dot !== "none" && <span className={`dot ${dot === "berry" ? "berry" : ""}`} />}
+      {dot !== "none" && <span className="dot" />}
       {children}
     </span>
   );
@@ -120,6 +129,8 @@ const PATHS: Record<string, ReactNode> = {
   linkedin: <path d="M4.5 9h3v10h-3zM6 4a1.8 1.8 0 1 1 0 3.6A1.8 1.8 0 0 1 6 4zM9.5 9h2.9v1.4c.4-.8 1.4-1.6 3-1.6 3.2 0 3.6 2.1 3.6 4.8V19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3z" fill="currentColor" stroke="none" />,
   share: <><path d="M9 13l6-6" /><path d="M10 17l-2 2a3 3 0 0 1-4-4l2-2" /><path d="M14 7l2-2a3 3 0 0 1 4 4l-2 2" /></>,
   ne: <path d="M7 17L17 7M9 7h8v8" />,
+  chart: <><path d="M4 20V4" /><path d="M4 20h16" /><path d="M7 15l4-4 3 3 5-6" /></>,
+  shield: <><path d="M12 3l8 3v6c0 4.5-3.4 8.1-8 9-4.6-.9-8-4.5-8-9V6z" /><path d="M9 12l2 2 4-4" /></>,
 };
 export function Icon({ name, size = 24, className = "", strokeWidth = 1.6 }: { name: string; size?: number; className?: string; strokeWidth?: number }) {
   return (
@@ -143,8 +154,25 @@ export function Logo({ inverted = true, size = 22 }: { inverted?: boolean; size?
 }
 
 /* ───────── Tone helpers ───────── */
-export const TONE_BG: Record<string, string> = { g1: "#061B20", g2: "#2D4748", g3: "#4C6569", g4: "#729597", g5: "#9CB5B9", g6: "#C5D4D7", berry: "#824270", aub: "#3B1931", sage: "#DCE5E6", off: "#FAFAFA", white: "#fff" };
-export const TONE_FG: Record<string, string> = { g1: "#fff", g2: "#fff", g3: "#fff", g4: "#fff", g5: "#061B20", g6: "#061B20", berry: "#fff", aub: "#fff", sage: "#061B20", off: "#061B20", white: "#061B20" };
+export const TONE_BG: Record<string, string> = { g1: "#061B20", g2: "#2D4748", g3: "#4C6569", g4: "#729597", g5: "#9CB5B9", g6: "#C5D4D7", sage: "#DCE5E6", off: "#FAFAFA", white: "#fff" };
+export const TONE_FG: Record<string, string> = { g1: "#fff", g2: "#fff", g3: "#fff", g4: "#fff", g5: "#061B20", g6: "#061B20", sage: "#061B20", off: "#061B20", white: "#061B20" };
+/** Overlay that grades a photo towards a tile tone (dark tones → deep teal, light tones → pale wash) so text stays legible. */
+export function toneOverlay(tone: string) {
+  const hex = TONE_BG[tone] ?? TONE_BG.g1;
+  return TONE_FG[tone] === "#fff" ? `linear-gradient(180deg, ${hex}B3 0%, ${hex}F0 100%)` : `linear-gradient(180deg, ${hex}E0 0%, ${hex}F5 100%)`;
+}
+
+/** Full-bleed photo behind a card/tile (parent: relative + overflow-hidden; content above it: relative). Zooms on .card-hover. */
+export function Backdrop({ src, overlay = "linear-gradient(180deg, rgba(6,27,32,.55) 0%, rgba(6,27,32,.85) 100%)" }: { src?: string; overlay?: string }) {
+  if (!src) return null;
+  return (
+    <div className="img-zoom absolute inset-0" aria-hidden>
+      <img src={src} alt="" loading="lazy" />
+      <div className="absolute inset-0" style={{ background: overlay }} />
+    </div>
+  );
+}
+
 export const GRAD: Record<string, string> = {
-  g1: "linear-gradient(135deg,#061B20,#2D4748)", g2: "linear-gradient(135deg,#2D4748,#4C6569)", berry: "linear-gradient(135deg,#3B1931,#824270)", aub: "linear-gradient(180deg,#3B1931,#061B20)", g4: "linear-gradient(180deg,#729597,#061B20)",
+  g1: "linear-gradient(135deg,#061B20,#2D4748)", g2: "linear-gradient(135deg,#2D4748,#4C6569)", g4: "linear-gradient(180deg,#729597,#061B20)",
 };

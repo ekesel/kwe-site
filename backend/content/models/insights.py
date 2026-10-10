@@ -10,7 +10,7 @@ class InsightsPageSettings(SingletonModel):
 
     hero_eyebrow = models.CharField("Eyebrow", max_length=80)
     hero_title = models.CharField("Title", max_length=200)
-    hero_scroll_cue = models.CharField("Scroll cue", max_length=60)
+    hero_subtitle = models.TextField("Subtitle", blank=True)
 
     controls_categories = models.CharField("Categories label", max_length=40)
     controls_filter = models.CharField("Filter label", max_length=40)
@@ -28,8 +28,9 @@ class InsightsPageSettings(SingletonModel):
 
     article_back = models.CharField("Back link label", max_length=80)
     article_author = models.CharField("Author line", max_length=120, help_text="Shown on every article.")
+    article_meta_labels = LinesField("Meta row labels", help_text="Labels of the row under the article hero, in order: date, read time, author.")
     article_initials = models.CharField("Author initials", max_length=4)
-    article_toc = models.CharField("Contents label", max_length=40, help_text='e.g. "On this page"')
+    article_outline = models.CharField("Outline label", max_length=40, default="Contents", help_text="Heading of the article outline (built automatically from the article's ## / ### headings).")
     article_related = models.CharField("Related heading", max_length=80)
 
     history = HistoricalRecords()
@@ -63,16 +64,11 @@ class Insight(Ordered, ImageMixin):
 
     slug = models.SlugField(unique=True, help_text="URL of the article: /insight/<slug>.")
     category = models.CharField(max_length=60, help_text='Topic, e.g. "Market note". Must match a Categories filter option to be filterable.')
-    date = models.CharField(max_length=40, help_text='Display date, e.g. "18 Sep 2025".')
+    date = models.CharField(max_length=40, blank=True, help_text='Display date, e.g. "18 Sep 2025". Leave empty to hide.')
     read = models.CharField("Read time", max_length=40, help_text='e.g. "8 min read" — the number drives the Read time filter.')
     title = models.CharField(max_length=200)
     subtitle = models.TextField(help_text="Standfirst in the article hero.")
-    toc = LinesField("Contents", help_text="Section titles shown in the sidebar.")
-    h2 = models.CharField("Section heading", max_length=200)
-    p1 = models.TextField("Paragraph 1")
-    p2 = models.TextField("Paragraph 2")
-    quote = models.TextField("Pull quote")
-    p3 = models.TextField("Paragraph 3")
+    body = models.TextField(default="", help_text="Article text. Lines starting with “## ” / “### ” are section headings (they build the outline in the sidebar). Blank line = new paragraph, lines starting with “- ” are bullets, **text** is bold.")
     history = HistoricalRecords()
 
     class Meta(Ordered.Meta):
@@ -81,20 +77,3 @@ class Insight(Ordered, ImageMixin):
 
     def __str__(self):
         return self.title
-
-
-class InsightStat(Ordered):
-    """insights.items[].stats[]"""
-
-    insight = models.ForeignKey(Insight, related_name="stats", on_delete=models.CASCADE)
-    big = models.CharField("Big figure", max_length=20)
-    unit = models.CharField(max_length=10, blank=True, help_text='e.g. "%", "×", "bps". Leave blank for none.')
-    label = models.CharField(max_length=120)
-    history = HistoricalRecords()
-
-    class Meta(Ordered.Meta):
-        verbose_name = "Stat"
-        verbose_name_plural = "Stats"
-
-    def __str__(self):
-        return f"{self.big}{self.unit} {self.label}"

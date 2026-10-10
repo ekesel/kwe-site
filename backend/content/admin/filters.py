@@ -27,9 +27,8 @@ class FilterGroupAdmin(SortableAdmin):
             {
                 "fields": ("page", "kind", "label", "key"),
                 "description": (
-                    "Hero dropdown: label + key (the item field it filters on). "
-                    "Categories dropdown: options only. Topic chips (Insights): label shown, value = topic to match "
-                    "(blank for “All”). Read-time dropdown (Insights): label + the two options."
+                    "Filter dropdown: label + key (the item field it filters on). "
+                    "Categories dropdown: options only. Read-time dropdown (Insights): label + the two options."
                 ),
             },
         ),

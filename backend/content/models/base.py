@@ -19,6 +19,7 @@ from django.db import models
 from content.validators import validate_image_size, validate_video_size
 
 # Colour "tones" understood by the frontend (TONE_BG / TONE_FG / GRAD in ui.tsx).
+# Berry is deliberately absent: it is reserved for links and link-like controls.
 TONE_CHOICES = [
     ("g1", "G1 — dark green (#061B20)"),
     ("g2", "G2 (#2D4748)"),
@@ -26,10 +27,7 @@ TONE_CHOICES = [
     ("g4", "G4 (#729597)"),
     ("g5", "G5 (#9CB5B9)"),
     ("g6", "G6 — light (#C5D4D7)"),
-    ("berry", "Berry (#824270)"),
-    ("aub", "Aubergine (#3B1931)"),
     ("sage", "Sage (#DCE5E6)"),
-    ("blush", "Blush"),
     ("off", "Off-white (#FAFAFA)"),
     ("white", "White"),
 ]
@@ -50,6 +48,8 @@ ICON_CHOICES = [
     ("clock", "Clock"),
     ("chat", "Chat"),
     ("link", "Link"),
+    ("chart", "Chart (asset manager)"),
+    ("shield", "Shield (insurer / bank)"),
 ]
 
 IMAGE_EXTENSIONS = ["jpg", "jpeg", "png", "webp", "gif", "svg", "avif"]

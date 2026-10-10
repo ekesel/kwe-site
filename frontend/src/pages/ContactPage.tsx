@@ -1,39 +1,25 @@
 import { useState, type FormEvent } from "react";
-import { motion, useReducedMotion } from "framer-motion";
 import { useContent } from "@/content/ContentProvider";
-import { EyebrowDraw, Lines, Parallax } from "@/motion";
-import { ArrowRight, EASE_OUT, Eyebrow, Hairline, Icon, Reveal, ScrollCue } from "@/components/ui";
-import { Section } from "@/components/sections";
+import { EyebrowDraw, Lines } from "@/motion";
+import { ArrowRight, Hairline, Reveal, usePageTitle } from "@/components/ui";
+import { Section, VideoHero } from "@/components/sections";
 
 export default function ContactPage() {
   const data = useContent();
   const c = data.contact;
-  const reduced = useReducedMotion();
+  usePageTitle(c.hero.eyebrow);
   const [sent, setSent] = useState(false);
   const onSubmit = (e: FormEvent) => { e.preventDefault(); setSent(true); };
   const f = c.form.fields;
   return (
     <>
-      {/* Hero — concentric signal rings */}
-      <section className="relative grad-dark text-white overflow-hidden flex flex-col items-center justify-center text-center container-x" style={{ minHeight: "100svh", paddingTop: 140, paddingBottom: 120 }}>
-        <div className="absolute inset-0 pointer-events-none" aria-hidden>
-          {[0.45, 0.7, 0.95, 1.2].map((k) => (<span key={k} className="absolute rounded-full border border-white/[0.08]" style={{ width: `${k * 200}vw`, height: `${k * 200}vw`, left: "50%", top: "72%", transform: "translate(-50%,-50%)" }} />))}
-        </div>
-        <motion.div className="relative" initial={reduced ? false : { opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE_OUT, delay: 0.4 }}><EyebrowDraw dark dot="berry" line={false}>{c.hero.eyebrow}</EyebrowDraw></motion.div>
-        <motion.h1 className="relative t-display text-white mt-6 mb-0 max-w-[1000px]" initial={reduced ? false : { opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE_OUT, delay: 0.55 }}>{c.hero.title}</motion.h1>
-        <motion.p className="relative t-lead text-g6 mt-7 mb-0 max-w-[720px]" initial={reduced ? false : { opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE_OUT, delay: 0.75 }}>{c.hero.subtitle}</motion.p>
-        <motion.div className="relative flex flex-wrap justify-center gap-4 mt-12" initial={reduced ? false : { opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE_OUT, delay: 0.9 }}>
-          <a href="#form" className="inline-flex items-center gap-5 rounded-full bg-white text-g1 pl-8 pr-3 py-3 text-[17px] lg:text-[20px] font-medium no-underline"><span>{c.hero.email}</span><span className="w-12 h-12 rounded-full bg-g1 text-white inline-flex items-center justify-center"><ArrowRight size={18} /></span></a>
-          <a href={data.site.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/30 text-white px-9 py-6 text-[17px] lg:text-[20px] font-medium no-underline hover:bg-white/10 transition-colors"><Icon name="linkedin" size={18} />{c.hero.linkedin}</a>
-        </motion.div>
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-7 lg:bottom-10"><ScrollCue label={data.home.hero.scrollCue} href="#form" /></div>
-      </section>
+      <VideoHero title={c.hero.title} subtitle={c.hero.subtitle} cueTarget="#form" />
 
       {/* Form panel */}
       <Section id="form">
         <Reveal className="panel bg-warm grid lg:grid-cols-[5fr_7fr] gap-10 lg:gap-24 lg:p-20">
           <div>
-            <EyebrowDraw dot="berry" line={false}>{c.form.eyebrow}</EyebrowDraw><Hairline className="mt-5" />
+            <EyebrowDraw line={false}>{c.form.eyebrow}</EyebrowDraw><Hairline className="mt-5" />
             <Lines as="h1" className="t-h1 text-g1 mt-12 mb-7">{c.form.title}</Lines>
             <p className="text-gm text-[17px] lg:text-[20px] m-0" style={{ lineHeight: 1.6 }}>{c.form.body}</p>
             <a href={`mailto:${c.form.email}`} className="inline-block text-g1 text-[19px] mt-10 no-underline">{c.form.email}</a>

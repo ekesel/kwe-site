@@ -1,25 +1,26 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useContent } from "@/content/ContentProvider";
-import { ArrowRight, Hairline, TextLink } from "@/components/ui";
-import { CTABand, Section, VideoHero } from "@/components/sections";
+import { ArrowRight, Hairline, TextLink, usePageTitle } from "@/components/ui";
+import { Section, VideoHero } from "@/components/sections";
 import { EyebrowDraw, FadeUp, Lines, Parallax } from "@/motion";
 
 export default function SolutionsPage() {
   const data = useContent();
   const s = data.solutions;
+  usePageTitle(s.hero.eyebrow);
   const [hover, setHover] = useState(1);
   return (
     <>
-      <VideoHero eyebrow={s.hero.eyebrow} title={s.hero.title} scrollCue={data.home.hero.scrollCue} cueTarget="#content" />
+      <VideoHero title={s.hero.title} subtitle={s.hero.subtitle} />
 
-      {/* Page header statement */}
+      {/* Why KWE Advisors */}
       <Section id="content">
         <div className="grid lg:grid-cols-16 gap-6">
-          <FadeUp className="lg:col-span-4"><EyebrowDraw dot="berry">{s.hero.eyebrow}</EyebrowDraw></FadeUp>
+          <FadeUp className="lg:col-span-4"><EyebrowDraw>{s.hero.eyebrow}</EyebrowDraw></FadeUp>
           <div className="lg:col-span-11 lg:col-start-6">
-            <Lines as="h2" className="t-h2 text-g1 m-0" stagger={0.08}>{s.header.title}</Lines>
-            <FadeUp delay={0.2}><p className="t-lead text-gm mt-7 mb-0 max-w-[720px]">{s.header.body}</p></FadeUp>
+            <Lines as="h2" className="t-h2 text-g1 m-0" stagger={0.08}>{s.whyKwe.title}</Lines>
+            <FadeUp delay={0.2}><p className="t-lead text-gm mt-7 mb-0 max-w-[820px]">{s.whyKwe.body}</p></FadeUp>
           </div>
         </div>
       </Section>
@@ -31,8 +32,9 @@ export default function SolutionsPage() {
             <div className="border-t border-white/10">
               {s.items.map((it, i) => (
                 <Link key={it.slug} to={`/solution/${it.slug}`} onMouseEnter={() => setHover(i)} className={`sol-row block no-underline border-b border-white/10 py-7 lg:py-9 transition-opacity duration-200 ${hover !== i ? "lg:opacity-60" : "opacity-100"}`} style={{ transitionTimingFunction: "cubic-bezier(.65,0,.35,1)" }}>
-                  <div className="grid grid-cols-[40px_1fr_56px] lg:grid-cols-[48px_1fr_260px_56px] gap-4 lg:gap-6 items-center">
+                  <div className="grid grid-cols-[40px_64px_1fr_56px] lg:grid-cols-[48px_88px_1fr_260px_56px] gap-4 lg:gap-6 items-center">
                     <span className="text-g5 text-[14px]">{it.n}</span>
+                    <span className="block rounded-lg overflow-hidden h-12 lg:h-16"><img src={it.image} alt="" loading="lazy" className="w-full h-full object-cover" style={{ filter: "grayscale(1)" }} /></span>
                     <span className="sol-title serif text-white text-[26px] md:text-[30px] lg:text-[36px]" style={{ lineHeight: 1.1 }}>{it.title}</span>
                     <span className="hidden lg:block text-g5 text-[15px]" style={{ lineHeight: 1.45 }}>{it.tagline}</span>
                     <span className="sol-icon w-14 h-14 rounded-full border border-white/40 text-white inline-flex items-center justify-center"><ArrowRight size={18} /></span>
@@ -97,8 +99,6 @@ export default function SolutionsPage() {
           </div>
         </FadeUp>
       </Section>
-
-      <CTABand />
     </>
   );
 }

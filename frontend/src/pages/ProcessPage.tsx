@@ -2,17 +2,16 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useContent } from "@/content/ContentProvider";
 import { EyebrowDraw, Lines, Parallax } from "@/motion";
-import { ArrowRight, Eyebrow, Hairline, Icon, Reveal } from "@/components/ui";
-import { CTABand, Section, VideoHero } from "@/components/sections";
+import { ArrowRight, Eyebrow, Hairline, Icon, Reveal, usePageTitle } from "@/components/ui";
+import { Section, VideoHero } from "@/components/sections";
 
 export default function ProcessPage() {
   const data = useContent();
   const p = data.process;
+  usePageTitle(p.hero.eyebrow);
   return (
     <>
-      <VideoHero eyebrow={p.hero.eyebrow} title={p.hero.title} subtitle={p.hero.subtitle} scrollCue={data.home.hero.scrollCue} cueTarget="#phases">
-        {p.hero.anchors.map((a) => (<a key={a} href="#phases" className="pill-ghost">{a}</a>))}
-      </VideoHero>
+      <VideoHero title={p.hero.title} subtitle={p.hero.subtitle} cueTarget="#phases" />
 
       {/* Phases — dark index rail */}
       <Section id="phases"><Reveal><Stepper /></Reveal></Section>
@@ -20,12 +19,12 @@ export default function ProcessPage() {
       {/* Why KWE */}
       <Section>
         <Reveal className="panel bg-off flex flex-col items-center lg:p-20">
-          <EyebrowDraw dot="berry" line={false}>{p.why.eyebrow}</EyebrowDraw>
+          <EyebrowDraw line={false}>{p.why.eyebrow}</EyebrowDraw>
           <Lines as="h2" className="t-h2 text-g1 text-center mt-5 mb-14 max-w-[600px]">{p.why.title}</Lines>
           <div className="grid lg:grid-cols-2 gap-6 w-full max-w-[1000px]">
             {p.why.cards.map((c) => (
               <div key={c.title} className="rounded-2xl bg-white border border-silver p-7 lg:p-12">
-                <div className="w-[72px] h-[72px] rounded-2xl inline-flex items-center justify-center" style={{ background: c.tone === "blush" ? "#EFE1EA" : "#E4E9EA", color: c.tone === "blush" ? "#824270" : "#4C6569" }}><Icon name={c.icon} size={30} /></div>
+                <div className="w-[72px] h-[72px] rounded-2xl inline-flex items-center justify-center" style={{ background: "#E4E9EA", color: "#4C6569" }}><Icon name={c.icon} size={30} /></div>
                 <h3 className="font-sans font-medium text-g1 text-[21px] lg:text-[26px] mt-7 mb-4" style={{ lineHeight: 1.2 }}>{c.title}</h3>
                 <p className="text-gm text-[16px] lg:text-[18px] m-0" style={{ lineHeight: 1.55 }}>{c.body}</p>
               </div>
@@ -58,8 +57,6 @@ export default function ProcessPage() {
         <Reveal delay={0.1}><Lines as="h2" className="t-h2 text-g1 mt-12 mb-10">{p.faq.title}</Lines></Reveal>
         <Reveal className="max-w-[820px]"><FAQ /></Reveal>
       </Section>
-
-      <CTABand />
     </>
   );
 }
@@ -74,13 +71,13 @@ function Stepper() {
   return (
     <div className="grid lg:grid-cols-[5fr_11fr] rounded-[24px] overflow-hidden border border-silver bg-white">
       <div className="grad-dark text-white p-6 lg:p-10">
-        <Eyebrow dark dot="berry" className="mb-6 lg:mb-10">{st.eyebrow}</Eyebrow>
+        <Eyebrow dark className="mb-6 lg:mb-10">{st.eyebrow}</Eyebrow>
         <div className="flex flex-wrap lg:flex-col gap-2">
           {st.steps.map((x, k) => {
             const on = k === i;
             return (
               <button key={x.n} onClick={() => setI(k)} className={`text-left rounded-xl px-4 py-3 lg:px-7 lg:py-6 transition-colors duration-300 border ${on ? "bg-white/10 border-white/20" : "bg-transparent border-transparent hover:bg-white/5"}`}>
-                <div className="serif text-[14px] lg:text-[18px]" style={{ color: on ? "#C48DB5" : "#9CB5B9" }}>{x.n}</div>
+                <div className="serif text-[14px] lg:text-[18px]" style={{ color: on ? "#FFFFFF" : "#9CB5B9" }}>{x.n}</div>
                 <div className={`text-[15px] lg:text-[20px] mt-1 ${on ? "text-white font-medium" : "text-g5"}`}>{x.short}</div>
               </button>
             );
@@ -113,7 +110,7 @@ function FAQ() {
           <div key={f.q} className="border-b border-silver">
             <button onClick={() => setOpen(on ? null : k)} className="w-full flex items-center justify-between gap-6 py-6 text-left bg-transparent border-0 cursor-pointer" aria-expanded={on}>
               <span className="text-g1 text-[17px] lg:text-[19px] font-normal">{f.q}</span>
-              <span className={`shrink-0 transition-colors duration-300 ${on ? "text-berry" : "text-g1"}`}><Icon name={on ? "minus" : "plus"} size={18} /></span>
+              <span className={`shrink-0 transition-colors duration-300 ${on ? "text-g3" : "text-g1"}`}><Icon name={on ? "minus" : "plus"} size={18} /></span>
             </button>
             <AnimatePresence initial={false}>
               {on && (

@@ -2,16 +2,17 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useContent } from "@/content/ContentProvider";
-import { ArrowRight, Button, TextLink } from "@/components/ui";
-import { CTABand, Marquee, Section, VideoHero } from "@/components/sections";
+import { TextLink, usePageTitle } from "@/components/ui";
+import { Marquee, Section, VideoHero } from "@/components/sections";
 import { ClearButton, Dropdown, FilterState, SearchBox, matches } from "@/components/filters";
-import { EyebrowDraw, FadeUp, Lines, Parallax, scrollToEl, useDriftGrid } from "@/motion";
+import { EyebrowDraw, FadeUp, Lines, Parallax, useDriftGrid } from "@/motion";
 
-const SPAN: Record<number, string> = { 3: "lg:col-span-3", 4: "lg:col-span-4", 5: "lg:col-span-5" };
+const SPAN: Record<number, string> = { 3: "lg:col-span-3", 4: "lg:col-span-4", 5: "lg:col-span-5", 6: "lg:col-span-6" };
 
 export default function TeamPage() {
   const data = useContent();
   const t = data.team;
+  usePageTitle(t.hero.eyebrow);
   const [filters, setFilters] = useState<FilterState>({ team: null, focus: null, region: null });
   const [q, setQ] = useState("");
   const active = q !== "" || Object.values(filters).some((v) => v !== null);
@@ -20,10 +21,7 @@ export default function TeamPage() {
   useDriftGrid(grid);
   return (
     <>
-      <VideoHero eyebrow={t.hero.eyebrow} title={t.hero.title} scrollCue={data.home.hero.scrollCue} cueTarget="#people">
-        <button type="button" onClick={() => scrollToEl("#people")} className="pill-ghost cursor-pointer">{t.hero.anchor.label}<span className="w-8 h-8 rounded-full bg-white text-g1 inline-flex items-center justify-center"><ArrowRight size={14} rotate={90} /></span></button>
-        <Button to={t.hero.cta.to} variant="ondark">{t.hero.cta.label}</Button>
-      </VideoHero>
+      <VideoHero title={t.hero.title} subtitle={t.hero.subtitle} cueTarget="#people" />
 
       <Section id="people">
         <FadeUp className="flex flex-wrap items-center gap-3">
@@ -36,9 +34,10 @@ export default function TeamPage() {
             {list.map((m, i) => (
               <motion.div key={m.slug} layout initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} transition={{ duration: 0.8, ease: [0.2, 0, 0.1, 1], delay: i * 0.05 }} className={active ? "lg:col-span-4" : SPAN[m.span] ?? "lg:col-span-4"}>
                 <Link to={`/team/${m.slug}`} className="card-hover block no-underline">
-                  <Parallax className="img-zoom rounded-lg" style={{ aspectRatio: "0.73" }} amount={10}><img src={m.image} alt={m.name} loading="lazy" /></Parallax>
+                  <Parallax className="img-zoom rounded-lg grad-dark" style={{ aspectRatio: "0.73" }} amount={10}>{m.image && <img src={m.image} alt={m.name} loading="lazy" />}</Parallax>
                   <div className="card-title text-g1 text-[22px] lg:text-[26px] mt-5" style={{ lineHeight: 1.15, letterSpacing: "-0.01em" }}>{m.name}</div>
                   <div className="text-gm text-[16px] mt-1.5">{m.role}</div>
+                  <div className="text-g3 text-[15px] mt-1.5">{m.credential}</div>
                 </Link>
               </motion.div>
             ))}
@@ -53,13 +52,11 @@ export default function TeamPage() {
 
       <Section>
         <FadeUp className="panel grad-dark text-white flex flex-col items-center text-center lg:p-20">
-          <EyebrowDraw dark dot="berry" line={false}>{t.matters.eyebrow}</EyebrowDraw>
+          <EyebrowDraw dark line={false}>{t.matters.eyebrow}</EyebrowDraw>
           <Lines as="p" className="serif text-white text-[24px] md:text-[30px] lg:text-[40px] mt-6 mb-8 max-w-[760px]" style={{ lineHeight: 1.2 }}>{t.matters.statement}</Lines>
           <TextLink to={t.matters.link.to} tone="light">{t.matters.link.label}</TextLink>
         </FadeUp>
       </Section>
-
-      <CTABand />
     </>
   );
 }

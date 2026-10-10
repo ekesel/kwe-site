@@ -1,20 +1,19 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useContent } from "@/content/ContentProvider";
-import { Hairline, Icon } from "@/components/ui";
-import { CTABand, NewsCard, Section, VideoHero } from "@/components/sections";
+import { Icon, usePageTitle } from "@/components/ui";
+import { NewsCard, Section, VideoHero, caseBadges } from "@/components/sections";
 import { ClearButton, Dropdown, FilterState, matches } from "@/components/filters";
-import { EyebrowDraw, FadeUp, HorizontalScroll, Lines } from "@/motion";
+import { FadeUp } from "@/motion";
 
-const tagsOf = (tags: string[]) => tags.map((t, i) => ({ label: t, dot: i === 0 ? "#E3B341" : "#9CB5B9" }));
-type Card = { to: string; image: string; title: string; tags: string[]; strategy: string; fundType: string; region: string; categoryGroup: string };
+type Card = { to: string; image: string; title: string; strategy: string; fundType: string; region: string; categoryGroup: string };
 
 export default function CaseStudiesPage() {
   const data = useContent();
   const c = data.caseStudies;
+  usePageTitle(c.hero.eyebrow);
   const all: Card[] = useMemo(() => [
-    ...c.items.map((x) => ({ to: `/case-study/${x.slug}`, image: x.image, title: x.cardTitle, tags: x.tags, strategy: x.strategy, fundType: x.fundType, region: x.region, categoryGroup: x.categoryGroup })),
-    ...c.extraCards.map((x) => ({ to: "/case-studies", image: x.image, title: x.title, tags: x.tags, strategy: x.strategy, fundType: x.fundType, region: x.region, categoryGroup: x.categoryGroup })),
+    ...c.items.map((x) => ({ to: `/case-study/${x.slug}`, image: x.image, title: x.cardTitle, strategy: x.strategy, fundType: x.fundType, region: x.region, categoryGroup: x.categoryGroup })),
   ], []);
   const [filters, setFilters] = useState<FilterState>({ strategy: null, fundType: null, region: null, categoryGroup: null });
   const [limit, setLimit] = useState(c.controls.pageSize);
@@ -26,14 +25,12 @@ export default function CaseStudiesPage() {
 
   return (
     <>
-      <VideoHero eyebrow={c.hero.eyebrow} title={c.hero.title} subtitle={c.hero.subtitle} scrollCue={c.hero.scrollCue} cueTarget="#content">
-        {c.hero.filters.map((f) => (<Dropdown key={f.key} dark label={f.label} options={f.options} value={filters[f.key]} onChange={set(f.key)} />))}
-      </VideoHero>
+      <VideoHero title={c.hero.title} subtitle={c.hero.subtitle} />
 
       <Section id="content">
         <FadeUp className="flex flex-wrap items-center gap-3">
           <Dropdown label={c.controls.categories} options={c.controls.categoriesOptions} value={filters.categoryGroup} onChange={set("categoryGroup")} />
-          <Dropdown solid label={c.controls.filter} options={c.hero.filters[0].options} value={filters.strategy} onChange={set("strategy")} />
+          {c.hero.filters.map((f) => (<Dropdown key={f.key} label={f.label} options={f.options} value={filters[f.key]} onChange={set(f.key)} />))}
           <ClearButton label={c.controls.clear} show={active} onClick={() => setFilters({ strategy: null, fundType: null, region: null, categoryGroup: null })} />
         </FadeUp>
 
@@ -43,7 +40,7 @@ export default function CaseStudiesPage() {
               const span = !active && i === 0 ? "lg:col-span-8 md:col-span-2" : i < 3 && !active ? "lg:col-span-4" : "lg:col-span-5";
               return (
                 <motion.div key={x.title} layout initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} transition={{ duration: 0.5, ease: [0.2, 0, 0.1, 1], delay: i * 0.05 }} className={span}>
-                  <NewsCard to={x.to} image={x.image} title={x.title} tags={tagsOf(x.tags)} readMore={c.controls.readMore} big={!active && i === 0} ratio={active ? 0.8 : ratios[i % ratios.length]} />
+                  <NewsCard to={x.to} image={x.image} title={x.title} tags={caseBadges(x)} readMore={c.controls.readMore} big={!active && i === 0} ratio={active ? 0.8 : ratios[i % ratios.length]} />
                 </motion.div>
               );
             })}
@@ -61,33 +58,6 @@ export default function CaseStudiesPage() {
         </div>
       </Section>
 
-      {/* Client perspectives — pinned horizontal strip on desktop */}
-      <Section bg="#FAFAFA">
-        <div className="flex items-start justify-between gap-6">
-          <div><FadeUp><EyebrowDraw dot="berry">{c.perspectives.eyebrow}</EyebrowDraw></FadeUp><Lines as="h2" className="t-h2 text-g1 mt-6 mb-0">{c.perspectives.title}</Lines></div>
-          <span className="hidden md:inline-flex items-center gap-2 text-[12px] text-gm mt-2"><span className="w-1.5 h-1.5 rounded-full bg-berry" />{c.perspectives.note}</span>
-        </div>
-        <HorizontalScroll className="mt-12">
-          {c.perspectives.items.map((q) => (
-            <article key={q.firm} className="shrink-0 w-full md:w-[70vw] lg:w-[440px] rounded-2xl bg-white border border-silver p-7 lg:p-9 flex flex-col justify-between min-h-[300px] lg:min-h-[360px]">
-              <p className="serif text-g1 text-[20px] lg:text-[24px] m-0" style={{ lineHeight: 1.3 }}>“{q.quote}”</p>
-              <div className="mt-8"><div className="font-medium text-g1 text-[14px]">{q.name}</div><div className="text-gm text-[13px] mt-1">{q.firm}</div></div>
-            </article>
-          ))}
-        </HorizontalScroll>
-        <FadeUp className="mt-10"><Hairline /><p className="text-gl text-[12px] mt-4 mb-0 max-w-3xl" style={{ lineHeight: 1.5 }}>{c.perspectives.compliance}</p></FadeUp>
-      </Section>
-
-      {/* Trusted by */}
-      <Section>
-        <FadeUp><EyebrowDraw>{c.trusted.eyebrow}</EyebrowDraw></FadeUp>
-        <FadeUp stagger={0.08} className="flex flex-wrap gap-x-12 gap-y-4 lg:gap-x-20 mt-8">
-          {c.trusted.logos.map((l) => (<span key={l} className="serif text-g3 text-[28px] lg:text-[36px]">{l}</span>))}
-        </FadeUp>
-        <FadeUp><p className="text-gl text-[12px] mt-6 mb-0">{c.trusted.note}</p></FadeUp>
-      </Section>
-
-      <CTABand />
     </>
   );
 }

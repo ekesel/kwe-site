@@ -4,7 +4,7 @@ from solo.models import SingletonModel
 
 from .base import ImageMixin, LinesField, Ordered
 
-SPAN_CHOICES = [(3, "Narrow (3/12)"), (4, "Regular (4/12)"), (5, "Wide (5/12)")]
+SPAN_CHOICES = [(3, "Narrow (3/16)"), (4, "Regular (4/16)"), (5, "Wide (5/16)"), (6, "Extra wide (6/16)")]
 
 
 class TeamPageSettings(SingletonModel):
@@ -12,10 +12,7 @@ class TeamPageSettings(SingletonModel):
 
     hero_eyebrow = models.CharField("Eyebrow", max_length=80)
     hero_title = models.TextField("Title")
-    hero_anchor_label = models.CharField("Anchor label", max_length=80, help_text='Jump link under the hero, e.g. "Meet the team".')
-    hero_anchor_href = models.CharField("Anchor target", max_length=80, help_text='e.g. "#people"')
-    hero_cta_label = models.CharField("CTA label", max_length=80)
-    hero_cta_to = models.CharField("CTA route", max_length=200)
+    hero_subtitle = models.TextField("Subtitle", blank=True)
 
     search_placeholder = models.CharField(max_length=80, help_text="Placeholder of the name search box.")
     no_results = models.CharField("No-results message", max_length=160)
@@ -49,13 +46,14 @@ class TeamMember(Ordered, ImageMixin):
 
     slug = models.SlugField(unique=True, help_text="URL of the profile page: /team/<slug>.")
     name = models.CharField(max_length=120)
-    role = models.CharField(max_length=80, help_text='Job title shown on the card, e.g. "Founding Partner".')
+    role = models.CharField(max_length=80, help_text='Job title shown on the card, e.g. "Senior Advisor".')
+    credential = models.CharField(max_length=160, blank=True, help_text='One-line credential under the role, e.g. "Raised +$3bn of capital".')
     focus = models.CharField(max_length=80, help_text='Area of focus (also the "Role" filter value on the Team page).')
     firms = LinesField("Prior firms", help_text="Listed on the profile page.")
     span = models.PositiveSmallIntegerField(choices=SPAN_CHOICES, default=4, verbose_name="Card width", help_text="Width of the card in the Team grid on desktop.")
     bio = LinesField("Biography", help_text="One paragraph per line.")
-    team = models.CharField(max_length=60, help_text='"Team" filter value, e.g. "Founding Partners".')
-    region = models.CharField(max_length=60, help_text='"Region" filter value, e.g. "London".')
+    team = models.CharField(max_length=60, blank=True, help_text='"Team" filter value, e.g. "Founding Partners".')
+    region = models.CharField(max_length=60, blank=True, help_text='"Region" filter value, e.g. "London".')
     history = HistoricalRecords()
 
     class Meta(Ordered.Meta):

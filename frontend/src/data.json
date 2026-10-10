@@ -4,21 +4,21 @@
     "tagline": "Institutional capital formation advisory for private credit managers.",
     "email": "hello@kweadvisors.com",
     "linkedin": "https://www.linkedin.com/company/kwe-advisors",
-    "heroVideo": "https://assets.mixkit.co/videos/4170/4170-720.mp4",
+    "heroVideo": "/media/hero.mp4",
     "heroPoster": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80"
   },
   "nav": {
     "links": [
       {
-        "label": "Our Story",
+        "label": "Story",
         "to": "/story"
       },
       {
-        "label": "Our Team",
+        "label": "Team",
         "to": "/team"
       },
       {
-        "label": "Our Process",
+        "label": "Process",
         "to": "/process"
       },
       {
@@ -44,10 +44,6 @@
       {
         "title": "Solutions",
         "links": [
-          {
-            "label": "All Solutions",
-            "to": "/solutions"
-          },
           {
             "label": "Capital Formation",
             "to": "/solution/capital-formation-advisory"
@@ -79,51 +75,39 @@
         "title": "Company",
         "links": [
           {
-            "label": "Our Story",
+            "label": "Story",
             "to": "/story"
           },
           {
-            "label": "Our Team",
+            "label": "Team",
             "to": "/team"
           },
           {
-            "label": "Our Process",
+            "label": "Process",
             "to": "/process"
           }
         ]
       },
       {
-        "title": "Legal & Regulatory",
+        "title": "Legal",
         "links": [
           {
             "label": "Privacy Policy",
-            "to": "/legal"
+            "to": "/legal/privacy"
           },
           {
             "label": "Terms of Use",
-            "to": "/legal"
+            "to": "/legal/terms"
           },
           {
             "label": "Disclosures",
             "to": "/legal"
           }
         ]
-      },
-      {
-        "title": "Contact",
-        "links": [
-          {
-            "label": "Arrange a conversation",
-            "to": "/contact"
-          },
-          {
-            "label": "contact@kweadvisors.com",
-            "href": "mailto:contact@kweadvisors.com"
-          }
-        ]
       }
     ],
-    "disclosure": "Securities offered through GT Securities, Inc., member FINRA/SIPC. KWE Advisors is not a registered investment adviser. [Exact wording subject to compliance review — placeholder pending client sign-off]",
+    "email": "contact@kweadvisors.com",
+    "linkedinLabel": "LinkedIn",
     "copyright": "© 2026 KWE Advisors. All rights reserved."
   },
   "cta": {
@@ -138,16 +122,16 @@
   "home": {
     "hero": {
       "title": [
-        "You focus on investing.",
-        "We'll handle fundraising."
+        "Institutionalizing capital formation for high conviction managers"
       ],
+      "subtitle": "KWE Advisors embeds as a strategic operating partner to create a structurally different approach to capital formation.",
       "scrollCue": "Scroll to discover"
     },
     "intro": {
       "eyebrow": "Introducing KWE",
-      "statement": "Private credit has become one of the most important asset classes in institutional portfolios. The fundraising infrastructure supporting most credit managers has not kept pace.",
+      "statement": "We're a capital formation advisory firm that partners with high-conviction private equity and credit managers in the lower mid-market and mid-market. We embed as a strategic operating partner across the fundraising lifecycle — aligning strategy, positioning, and investor engagement into a single, disciplined approach that turns differentiated strategies into institutional commitments.",
       "link": {
-        "label": "Our story",
+        "label": "Story",
         "to": "/story"
       }
     },
@@ -157,173 +141,185 @@
       "items": [
         {
           "figure": "$7bn+",
-          "label": "Capital raised for clients",
-          "tone": "g1"
+          "label": "Capital raised",
+          "tone": "g1",
+          "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          "figure": "1,000+",
+          "label": "Investor relationships",
+          "tone": "g3",
+          "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=900&q=80"
         },
         {
           "figure": "20+",
-          "label": "Years in credit markets",
-          "tone": "g3"
+          "label": "Years in private equity and credit",
+          "tone": "sage",
+          "image": "https://images.unsplash.com/photo-1662473991701-c69c3b6bf6fb?auto=format&fit=crop&w=900&q=80"
         },
         {
           "figure": "10+",
           "label": "Countries covered",
-          "tone": "sage"
+          "tone": "g6",
+          "image": "https://images.unsplash.com/photo-1670056763246-d2782ba17fe0?auto=format&fit=crop&w=900&q=80"
         },
         {
           "figure": "4",
           "label": "Partners on every mandate",
-          "tone": "g6"
+          "tone": "g2",
+          "image": "https://images.unsplash.com/photo-1638376776402-9a4b75fe21bb?auto=format&fit=crop&w=900&q=80"
         }
       ]
     },
     "who": {
       "eyebrow": "Who we work with",
-      "title": "Managers with a differentiated investment process who need an equally rigorous approach to raising capital.",
-      "tiles": [
+      "title": "Managers with a differentiated strategy and the ambition to raise capital at institutional standard. We work with a select group across private equity and credit.",
+      "groups": [
         {
-          "label": "Direct lending",
-          "tone": "g1"
+          "label": "Private equity",
+          "tiles": [
+            {
+              "label": "Buyout",
+              "tone": "g1",
+              "image": "https://images.unsplash.com/photo-1725661817162-306d78c2228c?auto=format&fit=crop&w=900&q=80"
+            },
+            {
+              "label": "Growth",
+              "tone": "g3",
+              "image": "https://images.unsplash.com/photo-1565447614122-1856fdcc3898?auto=format&fit=crop&w=900&q=80"
+            },
+            {
+              "label": "Special situations",
+              "tone": "g2",
+              "image": "https://images.unsplash.com/photo-1620902740358-c07fe4916812?auto=format&fit=crop&w=900&q=80"
+            }
+          ]
         },
         {
-          "label": "Asset-backed credit",
-          "tone": "g3"
-        },
-        {
-          "label": "CLOs",
-          "tone": "berry"
-        },
-        {
-          "label": "Structured credit",
-          "tone": "aub"
-        },
-        {
-          "label": "Opportunistic",
-          "tone": "g2"
+          "label": "Private credit",
+          "tiles": [
+            {
+              "label": "Direct lending",
+              "tone": "g1",
+              "image": "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=900&q=80"
+            },
+            {
+              "label": "Asset-backed credit",
+              "tone": "g3",
+              "image": "https://images.unsplash.com/photo-1496236436299-cde70e3587cf?auto=format&fit=crop&w=900&q=80"
+            },
+            {
+              "label": "Structured & opportunistic",
+              "tone": "g2",
+              "image": "https://images.unsplash.com/photo-1546349851-64285be8e9fa?auto=format&fit=crop&w=900&q=80"
+            }
+          ]
         }
       ]
     },
     "challenge": {
       "eyebrow": "The challenge",
       "title": "Why traditional fundraising fails to scale",
-      "body": "Differentiated credit managers remain under-allocated — not for lack of merit, but because the capital-raising model hasn't evolved. The constraint is capital formation.",
+      "body": "As institutional capital consolidates around large-cap platforms, specialist private equity and credit managers stay under-allocated — not for lack of merit, but because the fundraising model hasn't evolved with how institutions allocate.",
       "items": [
         {
           "icon": "puzzle",
-          "title": "Fragmented Process",
-          "body": "Capital formation, marketing, and IR operate in silos, cut off from the data that drives conviction."
+          "title": "Fragmented process",
+          "body": "Capital formation, marketing, and investor relations operate in silos, cut off from the data that builds conviction."
         },
         {
           "icon": "clock",
-          "title": "Lengthy Timelines",
-          "body": "Raises stretch on, draining management time and creating investor uncertainty."
+          "title": "Lengthy timelines",
+          "body": "Raises stretch on, draining management time and creating uncertainty for investors."
         },
         {
           "icon": "chat",
-          "title": "Generic Investor Outreach",
-          "body": "Broad approaches that ignore investor mandates, timing, and allocation nuance."
+          "title": "Generic outreach",
+          "body": "Broad approaches that ignore investor mandates, timing, and the nuance of how allocators decide."
         },
         {
           "icon": "target",
-          "title": "Loss of Focus",
-          "body": "Senior time pulled from origination and the work that creates returns."
+          "title": "Loss of focus",
+          "body": "Senior time pulled away from investing and the work that actually creates returns."
         }
       ]
     },
-    "diptych": {
-      "traditional": {
-        "label": "Traditional approach",
-        "items": [
-          "Generalist placement agent covering multiple asset classes",
-          "Episodic engagement tied to specific fund closes",
-          "Relationship-driven with limited process infrastructure",
-          "LP communications managed reactively",
-          "Fragmented data across spreadsheets and email"
-        ]
-      },
-      "kwe": {
-        "label": "The KWE model",
-        "items": [
-          "Credit-specialist advisory — deep domain, not breadth",
-          "Continuous, embedded partnership across the capital formation lifecycle",
-          "Structured process with technology-enabled pipeline management",
-          "Proactive LP communications built around allocator workflows",
-          "Unified CRM and reporting platform, purpose-built for credit"
-        ]
-      }
+    "comparison": {
+      "title": "How we're different",
+      "traditionalLabel": "Traditional approach",
+      "kweLabel": "The KWE model",
+      "traditionalImage": "https://images.unsplash.com/photo-1462826303086-329426d1aef5?auto=format&fit=crop&w=1600&q=80",
+      "kweImage": "https://images.unsplash.com/photo-1710438399422-2fca27686bcd?auto=format&fit=crop&w=1600&q=80",
+      "rows": [
+        {
+          "label": "Coverage",
+          "traditional": "Generalist, multi-asset",
+          "kwe": "Specialist in private equity and credit"
+        },
+        {
+          "label": "Engagement",
+          "traditional": "Episodic, around closes",
+          "kwe": "Continuous and embedded"
+        },
+        {
+          "label": "Process",
+          "traditional": "Relationship-led, ad hoc",
+          "kwe": "Structured and technology-enabled"
+        },
+        {
+          "label": "Investors",
+          "traditional": "Managed reactively",
+          "kwe": "Engaged proactively"
+        },
+        {
+          "label": "Data",
+          "traditional": "Spreadsheets and email",
+          "kwe": "One unified platform"
+        }
+      ]
     },
     "whatWeDo": {
       "eyebrow": "What we do",
       "title": "Three capabilities. One execution model.",
-      "body": "A capital formation function, not a fundraising exercise. KWE operates across the full capital lifecycle — from positioning through fundraising to investor relations — with continuity and structure.",
+      "body": "Fundraising as an ongoing capability, not a one-off raise. KWE works across the full lifecycle — positioning, fundraising, and investor relations — as one continuous, structured engagement.",
       "cards": [
         {
           "n": "01",
           "title": "Capital Formation Advisory",
           "subtitle": "Investor insight-led execution",
           "body": "We define target markets, prioritise LP segments, build investor pipelines, and run the raise from first outreach through commitment.",
-          "to": "/solution/capital-formation-advisory"
+          "to": "/solution/capital-formation-advisory",
+          "image": "https://images.unsplash.com/photo-1462899006636-339e08d1844e?auto=format&fit=crop&w=1200&q=80"
         },
         {
           "n": "02",
           "title": "Strategic Messaging & Marketing",
-          "subtitle": "Built by experienced credit fundraisers",
+          "subtitle": "Built by experienced private equity and credit fundraisers",
           "body": "We develop and execute targeted marketing that articulates your edge and builds visibility among the right investor segments.",
-          "to": "/solution/strategic-messaging-and-marketing"
+          "to": "/solution/strategic-messaging-and-marketing",
+          "image": "https://images.unsplash.com/photo-1608501821300-4f99e58bba77?auto=format&fit=crop&w=1200&q=80"
         },
         {
           "n": "03",
           "title": "Investor Relations",
           "subtitle": "Beyond the raise",
           "body": "We manage relationships beyond the raise — across reporting cycles, allocation windows, and future fundraising periods.",
-          "to": "/solution/investor-relations"
+          "to": "/solution/investor-relations",
+          "image": "https://images.unsplash.com/photo-1638262052640-82e94d64664a?auto=format&fit=crop&w=1200&q=80"
         }
       ]
     },
     "caseStudies": {
       "eyebrow": "Case studies",
-      "title": "Mandates executed with precision.",
+      "title": "Selected mandates",
       "link": {
         "label": "Read case study"
       }
     },
-    "approach": {
-      "eyebrow": "Our approach",
-      "title": "A disciplined framework that introduces structure, alignment, and accountability to execution.",
-      "steps": [
-        {
-          "n": "01",
-          "title": "Analyze & Frame the Challenge",
-          "body": "Institutional, investor-grade diagnosis of your private credit strategy, risk profile, and investment case.",
-          "tone": "g1"
-        },
-        {
-          "n": "02",
-          "title": "Research & Evaluate the Opportunity",
-          "body": "We build the analytical foundation of your fundraising strategy.",
-          "tone": "g2"
-        },
-        {
-          "n": "03",
-          "title": "Design & Execute the Fundraising Plan",
-          "body": "A fund manager-specific plan, built to execute.",
-          "tone": "g1"
-        },
-        {
-          "n": "04",
-          "title": "Sustain & Compound Investor Relationships",
-          "body": "Beyond the raise.",
-          "tone": "berry"
-        }
-      ],
-      "link": {
-        "label": "Learn about our approach",
-        "to": "/process"
-      }
-    },
     "team": {
       "eyebrow": "The team",
-      "title": "Built from the allocator side.",
+      "title": "Carefully selected team of functional specialists and industry experts",
+      "subtitle": "A globally connected team spanning investing, tech, capital formation, marketing, and investor relations",
       "link": {
         "label": "Meet the team",
         "to": "/team"
@@ -338,42 +334,58 @@
           "quote": "Katherine is the queen of the $1mm–50mm tickets. Her tenacity and network make her the perfect partner for raising assets in Europe. Her endearing nature earns client trust and helps build lasting relationships.",
           "name": "Marc Stacey",
           "role": "Partner & Senior Portfolio Manager (Private Credit & Alternative Fixed Income)",
-          "tone": "aub"
+          "tone": "g1",
+          "image": "https://images.unsplash.com/photo-1611323340350-bdcc0e6cfae5?auto=format&fit=crop&w=1200&q=80"
         },
         {
           "firm": "HSBC",
           "quote": "Katherine is highly professional and talented. In client-facing roles, she's shown strong networking and sales skills.",
           "name": "Christopher Harrocks",
           "role": "Regional Treasury (Institutional Treasury & Liquidity Solutions, based in Hong Kong)",
-          "tone": "g4"
+          "tone": "g4",
+          "image": "https://images.unsplash.com/photo-1701888992217-de0d3a468b16?auto=format&fit=crop&w=1200&q=80"
         },
         {
           "firm": "Bladex",
           "quote": "A proficient relationship manager with a strong understanding of financial products and client needs. Her analytical skills enable effective risk/return analysis and business development.",
           "name": "Eduardo Vivone",
           "role": "Executive Vice President, Head of Treasury & Capital Markets",
-          "tone": "aub"
+          "tone": "g1",
+          "image": "https://images.unsplash.com/photo-1692154600992-463fa9b27abd?auto=format&fit=crop&w=1200&q=80"
         },
         {
           "firm": "Commonwealth Bank",
           "quote": "Katherine is hard-working, driven, and quickly masters all aspects of her work. She's known for her integrity, polish, and excellent client service.",
           "name": "Patricia (Patti) Koo",
           "role": "Head of Banks Offshore (as listed in public directories, based in New York)",
-          "tone": "g4"
+          "tone": "g4",
+          "image": "https://images.unsplash.com/photo-1587608684699-8afac4c6c88c?auto=format&fit=crop&w=1200&q=80"
         }
       ],
       "trustedEyebrow": "We work with",
       "trustedTitle": "Trusted by",
       "logos": [
-        "BlueBay",
-        "Bladex",
-        "HSBC",
-        "Commonwealth Bank"
+        {
+          "name": "BlueBay",
+          "icon": "chart"
+        },
+        {
+          "name": "Bladex",
+          "icon": "globe"
+        },
+        {
+          "name": "HSBC",
+          "icon": "bank"
+        },
+        {
+          "name": "Commonwealth Bank",
+          "icon": "shield"
+        }
       ]
     },
     "insights": {
       "label": "News & insights",
-      "title": "Perspectives on capital formation.",
+      "title": "Our latest thinking",
       "button": {
         "label": "View all insights",
         "to": "/insights"
@@ -383,29 +395,11 @@
   },
   "story": {
     "hero": {
-      "eyebrow": "Our story",
-      "title": "Kwe — Credit Fundraising Experience",
+      "eyebrow": "Story",
+      "kicker": "KWE Fundraising Experience",
+      "title": "Built inside institutional private markets.",
       "subtitle": [
-        "Built inside institutional private credit.",
-        "Designed for managers who want to compete at that level."
-      ],
-      "anchors": [
-        {
-          "label": "Our mission",
-          "href": "#mission"
-        },
-        {
-          "label": "Our background",
-          "href": "#background"
-        },
-        {
-          "label": "How we respond",
-          "href": "#respond"
-        },
-        {
-          "label": "Our vision",
-          "href": "#vision"
-        }
+        "Built for managers who want to compete at that level."
       ]
     },
     "who": {
@@ -445,7 +439,7 @@
     },
     "mission": {
       "eyebrow": "Our mission",
-      "statement": "Our mission is to give private credit managers the clarity, structure and technology they need to fundraise at true institutional scale — matching the quality of their underwriting with an equally rigorous capital-formation platform."
+      "statement": "Our mission is to give specialist private equity and credit managers the clarity, structure, and technology they need to fundraise at true institutional scale, matching the quality of their investing with an equally rigorous approach to raising capital."
     },
     "background": {
       "eyebrow": "Our background",
@@ -454,17 +448,17 @@
         {
           "n": "01",
           "label": "Experience",
-          "body": "20+ years in institutional private credit, on both sides of the table — structuring and marketing strategies on the sell side, and assessing managers and allocations alongside LPs on the buy side."
+          "body": "Two decades in institutional private markets, on both sides of the table: raising capital, and allocating it."
         },
         {
           "n": "02",
           "label": "Responsibilities",
-          "body": "Designing and executing fundraising plans; positioning direct lending, special situations and niche strategies; coordinating global capital-raising; managing pipelines across pensions, insurers, sovereign wealth, endowments and family offices."
+          "body": "Fundraising strategy and execution across global investors, from pensions to family offices."
         },
         {
           "n": "03",
           "label": "Learnings",
-          "body": "How LPs actually screen and prioritise managers, what builds conviction beyond past performance, and where good managers consistently lose momentum."
+          "body": "How LPs build conviction, and where good managers lose momentum."
         }
       ],
       "button": {
@@ -474,45 +468,44 @@
     },
     "respond": {
       "eyebrow": "How we respond",
-      "title": "Not for lack of performance, but for lack of process.",
-      "lead": "We work with private credit managers to:",
+      "title": "Strong strategies deserve an equally strong process.",
+      "lead": "We close that gap. Working as an embedded partner to specialist private equity and credit managers, we turn a differentiated strategy into an institutional fundraising capability, so the quality of the raise matches the quality of the investing.",
       "steps": [
         {
           "n": "1",
           "title": "Clarify narrative",
-          "body": "Strategy and edge in the language LPs actually use."
+          "body": "We articulate your strategy and edge in the language allocators use to make decisions."
         },
         {
           "n": "2",
           "title": "Target the raise",
-          "body": "Plans by LP mandate fit, risk appetite and needs."
+          "body": "We map your targeting to investor mandate, appetite, and fit, so effort goes where it converts."
         },
         {
           "n": "3",
           "title": "Institutional materials",
-          "body": "Answering LP diligence and internal approvals."
+          "body": "We build institutional-grade materials ready for scrutiny and internal approval from day one."
         },
         {
           "n": "4",
-          "title": "AI-enabled workflows",
-          "body": "Efficient, reliable, scalable pipeline and reporting."
+          "title": "Infrastructure that scales",
+          "body": "We deploy technology-enabled pipeline and reporting that bring discipline to every stage."
         }
       ],
       "button": {
-        "label": "Learn about our approach",
+        "label": "Learn about the process",
         "to": "/process"
       }
     },
     "vision": {
       "eyebrow": "Our vision",
-      "index": "05",
-      "before": "KWE unifies and scales your market presence intelligently — giving niche managers the ",
-      "highlight": "clarity, structure and fuel",
-      "after": " to fundraise at true institutional scale."
+      "before": "A market where the best specialist managers win capital on the strength of their strategy, ",
+      "highlight": "not the size of their platform",
+      "after": ". We're building the fundraising capability that makes that possible."
     },
     "milestones": {
       "eyebrow": "Milestones",
-      "title": "Building the practice",
+      "title": "Our journey so far",
       "items": [
         {
           "year": "2018",
@@ -547,24 +540,19 @@
   },
   "team": {
     "hero": {
-      "eyebrow": "Our team",
-      "title": "Every KWE partner has operated within institutional investment management — the background that makes the advisory credible in allocator conversations.",
-      "anchor": {
-        "label": "Meet the team",
-        "href": "#people"
-      },
-      "cta": {
-        "label": "Arrange a conversation",
-        "to": "/contact"
-      }
+      "eyebrow": "Team",
+      "title": "Carefully selected team of functional specialists and industry experts",
+      "subtitle": "A globally connected team spanning investing, tech, capital formation, marketing, and investor relations"
     },
     "filters": [
       {
         "label": "Team",
         "key": "team",
         "options": [
-          "Founding Partners",
-          "Partners"
+          "Fundraising",
+          "Senior Advisors",
+          "IR Communications",
+          "Project Management"
         ]
       },
       {
@@ -591,8 +579,9 @@
     "members": [
       {
         "slug": "katherine-wentrup",
-        "name": "Katherine Wentrup",
-        "role": "Founding Partner",
+        "name": "Katherine Wentrup-Estupinan",
+        "role": "Fundraising",
+        "credential": "Raised +$3bn of capital",
         "focus": "Capital formation",
         "firms": [
           "HSBC",
@@ -600,19 +589,20 @@
           "La Française"
         ],
         "image": "https://images.unsplash.com/photo-1758600587839-56ba05596c69?auto=format&fit=crop&w=1200&q=80",
-        "span": 3,
+        "span": 5,
         "bio": [
           "Katherine has over 20 years of experience in institutional credit markets, spanning portfolio management, investor relations, and capital formation advisory.",
           "At HSBC and BlueBay, she developed deep relationships with global pension funds, insurance companies, and sovereign wealth funds across Europe, the Middle East, and Asia.",
           "She founded KWE to apply institutional-grade discipline to the fundraising process for credit managers."
         ],
-        "team": "Founding Partners",
+        "team": "Fundraising",
         "region": "London"
       },
       {
         "slug": "olaf-wentrup",
         "name": "Olaf Wentrup",
-        "role": "Founding Partner",
+        "role": "Senior Advisor",
+        "credential": "+ $2BN in capital formation",
         "focus": "Process infrastructure",
         "firms": [
           "Moelis",
@@ -620,18 +610,19 @@
           "Mesirow"
         ],
         "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80",
-        "span": 4,
+        "span": 6,
         "bio": [
           "Olaf brings extensive experience in private credit structuring, fund finance, and LP advisory from senior roles at Moelis, Investcorp-Tages, and Mesirow.",
           "His focus at KWE is on process infrastructure — building the operational backbone that enables credit managers to run disciplined, scalable fundraises."
         ],
-        "team": "Founding Partners",
+        "team": "Senior Advisors",
         "region": "Frankfurt"
       },
       {
         "slug": "selim-rekaibi",
-        "name": "Sélim Rekaibi",
-        "role": "Partner",
+        "name": "Sélim Rekaibi, CFA",
+        "role": "Senior Advisor / Manager Selection",
+        "credential": "+ 20 yrs of portfolio management and allocator experience",
         "focus": "Positioning & materials",
         "firms": [
           "Apax",
@@ -644,25 +635,52 @@
           "Sélim's background spans private equity and credit at Apax, financial services advisory at EY, and investment banking at Citigroup.",
           "At KWE, he leads positioning and materials — translating investment theses into allocator-facing narratives that communicate with precision."
         ],
-        "team": "Partners",
+        "team": "Senior Advisors",
         "region": "London"
       },
       {
+        "slug": "anna-jerstrom",
+        "name": "Anna Jerstrom",
+        "role": "Senior Advisor",
+        "credential": "+ $2BN in capital formation",
+        "focus": "Capital formation",
+        "firms": [],
+        "image": "https://images.unsplash.com/photo-1701096374092-bb70915fdc5c?auto=format&fit=crop&w=1200&q=80",
+        "span": 5,
+        "bio": [],
+        "team": "Senior Advisors",
+        "region": ""
+      },
+      {
+        "slug": "suzanne-milleer",
+        "name": "Suzanne Milleer",
+        "role": "IR Communications",
+        "credential": "20 yrs of Global IR",
+        "focus": "Investor relations",
+        "firms": [],
+        "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80",
+        "span": 6,
+        "bio": [],
+        "team": "IR Communications",
+        "region": ""
+      },
+      {
         "slug": "duyen-jade-vo",
-        "name": "Duyen Jade Vo",
-        "role": "Partner",
+        "name": "Duyên Võ, CFA",
+        "role": "Project Manager",
+        "credential": "+ 7 yrs of experience Korea Investment Securities",
         "focus": "Investor relations",
         "firms": [
           "La Française",
           "EY"
         ],
         "image": "https://images.unsplash.com/photo-1770058443069-e384cd001e9b?auto=format&fit=crop&w=1200&q=80",
-        "span": 4,
+        "span": 5,
         "bio": [
           "Duyen brings institutional investor relations experience from La Française and financial advisory expertise from EY.",
           "At KWE, she focuses on ongoing LP relationship management and the design of investor communications programs."
         ],
-        "team": "Partners",
+        "team": "Project Management",
         "region": "Luxembourg"
       }
     ],
@@ -686,9 +704,9 @@
     ],
     "matters": {
       "eyebrow": "Why it matters",
-      "statement": "We value judgment built from real allocation decisions — guided by shared discipline.",
+      "statement": "Our judgment is built on the other side of the table. Having made allocation decisions ourselves, we know how capital is really evaluated — and we bring that perspective, and a shared discipline, to every mandate.",
       "link": {
-        "label": "Read our story",
+        "label": "Read the story",
         "to": "/story"
       }
     },
@@ -697,47 +715,41 @@
   },
   "process": {
     "hero": {
-      "eyebrow": "Our process",
+      "eyebrow": "Process",
       "title": "A process built around how investors decide.",
-      "subtitle": "We analyze, plan, execute, and sustain — an integrated extension of your business across the full capital lifecycle.",
-      "anchors": [
-        "01 Analyze",
-        "02 Research",
-        "03 Design",
-        "04 Sustain"
-      ]
+      "subtitle": "We analyze, plan, execute, and sustain, operating as an integrated extension of your business across the full fundraising lifecycle."
     },
     "stepper": {
-      "eyebrow": "Our process",
+      "eyebrow": "Process",
       "nextLabel": "Next",
       "steps": [
         {
           "n": "01",
-          "short": "Analyze & Frame",
-          "title": "Analyze & Frame the Challenge",
-          "lead": "Institutional, investor-grade diagnosis of your private credit strategy, risk profile, and investment case.",
-          "body": "We assess how your platform takes risk, where alpha is created, and how governance supports it. The output is an institutional-grade investment case that allocators can underwrite: your portfolio role, return and risk parameters, and a clear decomposition of performance, process, and people."
+          "short": "Diagnose & frame",
+          "title": "Diagnose & frame",
+          "lead": "Establish structural clarity and competitive positioning.",
+          "body": "We assess how your strategy creates value, where your edge is real, and how your governance supports it. The output is an institutional-grade investment case that allocators can underwrite: your role in a portfolio, your return and risk profile, and a clear account of performance, process, and people."
         },
         {
           "n": "02",
-          "short": "Research & Evaluate",
-          "title": "Research & Evaluate the Opportunity",
-          "lead": "We build the analytical foundation of your fundraising strategy.",
-          "body": "We map the allocator universe for your strategy — by type, geography and mandate fit — and evaluate where demand, competition and timing align. The output is a target list with conviction behind it, and a clear view of what each allocator will need to see before they commit."
+          "short": "Design narrative & targeting strategy",
+          "title": "Design narrative & targeting strategy",
+          "lead": "Craft a differentiated story and define precise market focus.",
+          "body": "We translate your strategy into a sharp, defensible narrative and map the investor universe against it, segmenting by mandate fit, appetite, and timing. The result is a prioritised target list and a story built to resonate with the investors most likely to commit."
         },
         {
           "n": "03",
-          "short": "Design & Execute",
-          "title": "Design & Execute the Fundraising Plan",
-          "lead": "A fund manager-specific plan, built to execute.",
-          "body": "We design the raise around how your target allocators decide — sequencing, materials, data room and DDQ — then run structured outreach with full pipeline visibility, coordinating introductions, meeting preparation and follow-up cadences throughout."
+          "short": "Investor-led narrative & targeting architecture",
+          "title": "Investor-led narrative & targeting architecture",
+          "lead": "Deploy a scalable fundraising infrastructure.",
+          "body": "We stand up the infrastructure to run the raise at institutional standard: tiered investor pipelines, a channel plan aligned to how allocators decide, and the materials and workflows that keep outreach consistent and disciplined from first meeting to close."
         },
         {
           "n": "04",
-          "short": "Sustain & Compound",
-          "title": "Sustain & Compound Investor Relationships",
-          "lead": "Beyond the raise.",
-          "body": "As commitments close, we build the LP communications program that sustains the relationship: onboarding, quarterly reporting and re-up planning — so that the next raise starts from a stronger position than the last."
+          "short": "Performance orchestration & optimization",
+          "title": "Performance orchestration & optimization",
+          "lead": "Institutionalize measurement, automation, and continuous improvement.",
+          "body": "We manage the raise as a measured, continuously refined process, tracking engagement, capturing investor feedback, and tightening the approach as it runs, then carry that momentum into ongoing investor relations well beyond the close."
         }
       ]
     },
@@ -749,24 +761,24 @@
           "icon": "link",
           "tone": "sage",
           "title": "Embedded, not episodic",
-          "body": "An integrated part of your business — capital formation and IR run as one continuous function. Consistency builds conviction."
+          "body": "We operate as an integrated part of your business, running capital formation and investor relations as one continuous function. Consistency is what builds conviction."
         },
         {
           "icon": "target",
-          "tone": "blush",
+          "tone": "sage",
           "title": "Selectivity over volume",
-          "body": "We prioritise relevance over reach — and pause when conditions aren't right. Protecting long-term outcomes, never short-term activity."
+          "body": "We prioritise relevance over reach, and we pause when conditions aren't right. We protect long-term outcomes rather than manufacture short-term activity."
         }
       ]
     },
     "timeline": {
       "figure": "18–36",
-      "text": "months from initial engagement to final close — a typical full-cycle fundraise.",
+      "text": "months from initial engagement to final close, a typical full-cycle fundraise.",
       "nodes": [
         "Diagnostic & positioning",
         "Infrastructure & materials",
         "Outreach & pipeline management",
-        "Closing & LP relations"
+        "Closing & investor relations"
       ]
     },
     "faq": {
@@ -800,7 +812,7 @@
     "hero": {
       "eyebrow": "Solutions",
       "title": "Three capabilities, one integrated advisory.",
-      "subtitle": "Capital formation, messaging and investor relations — run as one continuous function across the full capital lifecycle."
+      "subtitle": "Fundraising challenges rarely come one at a time. We address them as a single, connected system."
     },
     "listEyebrow": "Capabilities",
     "detailEyebrow": "In detail",
@@ -869,7 +881,6 @@
     "expectEyebrow": "What you can expect",
     "moreEyebrow": "More solutions",
     "moreTitle": "See our other solutions",
-    "scrollCue": "Scroll to explore",
     "items": [
       {
         "slug": "capital-formation-advisory",
@@ -1022,7 +1033,7 @@
         "subtitle": "Beyond the raise",
         "lead": "We manage relationships beyond the raise — across reporting cycles, allocation windows, and future fundraising periods.",
         "cardBody": "LP relationships managed as the strategic asset they are.",
-        "tint": "#EFE1EA",
+        "tint": "#DCE5E6",
         "overview": {
           "before": "LP relationships managed as the ",
           "highlight": "strategic asset they are",
@@ -1085,9 +1096,9 @@
         "tag": "Capability 03"
       }
     ],
-    "header": {
-      "title": "Three capabilities, one integrated advisory.",
-      "body": "Most capital formation problems are not isolated — we address them as a system."
+    "whyKwe": {
+      "title": "Why KWE Advisors",
+      "body": "KWE Advisors helps a select group of high-conviction private equity and credit managers turn differentiated strategies into institutional, scalable propositions across EMEA. Our senior, hands-on approach combines deep LP relationships with a clear understanding of how capital is allocated, converting strategy into commitments."
     },
     "detailTitle": "What each capability delivers.",
     "exploreLabel": "Explore capability"
@@ -1096,7 +1107,7 @@
     "hero": {
       "eyebrow": "Case studies",
       "title": "Proof of what an embedded partnership delivers.",
-      "subtitle": "Selected engagements across strategy, fund type, and region — from first outreach to close and beyond.",
+      "subtitle": "Selected engagements across strategy, fund type, and region, from first outreach to close and beyond.",
       "filters": [
         {
           "label": "Strategy",
@@ -1104,9 +1115,7 @@
           "options": [
             "Direct lending",
             "Opportunistic credit",
-            "Macro",
-            "Structured credit",
-            "CLO"
+            "Macro"
           ]
         },
         {
@@ -1114,8 +1123,7 @@
           "key": "fundType",
           "options": [
             "Closed-end fund",
-            "Open-ended fund",
-            "Separately managed account"
+            "Open-ended fund"
           ]
         },
         {
@@ -1123,23 +1131,18 @@
           "key": "region",
           "options": [
             "EMEA",
-            "Europe",
-            "North America",
-            "Middle East"
+            "Europe"
           ]
         }
-      ],
-      "scrollCue": "Browse case studies"
+      ]
     },
     "controls": {
       "categories": "Categories",
-      "filter": "Filter",
       "readMore": "Read more",
       "showing": "Showing {shown} of {total}",
       "loadMore": "Load more",
       "categoriesOptions": [
         "Fundraising engagement & execution",
-        "Capital formation advisory",
         "Fund placement"
       ],
       "clear": "Clear filters",
@@ -1151,69 +1154,53 @@
       "tag": "Case study",
       "meta": [
         "Service",
-        "Duration",
-        "Strategy",
-        "Target market"
+        "Client",
+        "Duration"
       ],
-      "challenge": "The challenge",
-      "approach": "The approach",
-      "results": "The results",
+      "challenge": "The Challenge",
+      "approach": "Our Approach",
+      "results": "The Results",
       "moreEyebrow": "More case studies",
       "moreTitle": "Explore more work"
     },
     "items": [
       {
         "slug": "german-private-credit",
-        "key": "European specialist credit manager",
-        "category": "Direct lending · EMEA",
-        "tags": [
-          "Case study",
-          "Direct lending"
-        ],
-        "image": "https://images.unsplash.com/photo-1518112166137-85f9979a43aa?auto=format&fit=crop&w=1600&q=80",
-        "cardTitle": "Repositioning a German private credit manager for Northern European institutions",
-        "title": "Repositioning a German private credit manager for Northern European institutions",
-        "subtitle": "How we rebuilt the narrative and outreach for a DACH direct-lending specialist and opened Scandinavian, Benelux and UK allocators.",
+        "category": "Fundraising Engagement & Execution",
+        "image": "https://images.unsplash.com/photo-1569258592171-357ea26da4df?auto=format&fit=crop&w=1600&q=80",
+        "cardTitle": "Creating a Market for a Niche German Private Credit Manager",
+        "title": "Creating a Market for a Niche German Private Credit Manager",
+        "subtitle": "The client, a German private debt manager with a regional focus and specialization in subordinated loans, faced capital-raising constraints.",
         "meta": [
-          "Fundraising engagement & execution",
-          "24 months",
-          "Subordinated private credit (DACH)",
-          "Northern European institutions"
+          "Fundraising Engagement & Execution",
+          "Mid-market German Private Debt Manager Senior & Junior Debt",
+          "11 months"
         ],
-        "challenge": "A specialist direct lending manager operating primarily in the DACH region had a strong track record in subordinated corporate loans but limited visibility outside its domestic allocator base. The strategy was differentiated — regional depth, relationship-driven origination, low leverage — but the materials and outreach approach had not been built for international institutional audiences.",
-        "approach": [
-          {
-            "title": "Allocator segmentation",
-            "body": "Identified 60 target institutions across Scandinavia, the Benelux and the UK, mapped by type, mandate fit and appetite for regional private credit."
-          },
-          {
-            "title": "Narrative rebuild",
-            "body": "Replaced the strategy document with an allocator-facing deck that led with differentiation and risk management rather than deal-flow biography."
-          },
-          {
-            "title": "Structured outreach",
-            "body": "Configured a CRM and executed a six-month outreach calendar, coordinating and supporting all first- and second-level meetings."
-          }
-        ],
-        "results": [
-          {
-            "big": "60",
-            "small": "targets",
-            "label": "Institutions mapped and prioritised"
-          },
-          {
-            "big": "24",
-            "small": "mo",
-            "label": "Embedded advisory mandate"
-          },
-          {
-            "big": "3",
-            "small": "regions",
-            "label": "Scandinavia, Benelux, UK"
-          }
-        ],
-        "outcome": "Outcome figures pending client review and confirmation. The engagement established a Northern European allocator pipeline and a materials suite calibrated for international institutional diligence.",
-        "quote": null,
+        "challenge": {
+          "heading": "Overcoming “Too Niche” Perception to Unlock Institutional Capital",
+          "body": "The client, a German private debt manager with a regional focus and specialization in subordinated loans, faced capital-raising constraints.\n\nProspective Limited Partners (LPs) perceived the mandate as too narrow, raising concerns over scalability and diversification despite a strong performance record."
+        },
+        "approach": {
+          "heading": "From Positioning to Targeted Fundraising Execution",
+          "steps": [
+            {
+              "title": "Frame the challenge",
+              "body": "- Conducted detailed analysis to clarify the manager’s value proposition—highlighting proprietary sourcing, deep credit expertise, and high barriers to entry in the German market.\n- Benchmarked strengths and weaknesses versus competitors and directly addressed LP objections with fact-based positioning."
+            },
+            {
+              "title": "Research & Evaluate",
+              "body": "- Quantified the addressable market opportunity and mapped only the most relevant LPs, focusing on those open to specialist mandates.\n- Developed clear marketing objectives and a phased fundraising strategy to prioritize the highest-potential institutional investors."
+            },
+            {
+              "title": "Plan and Implement",
+              "body": "- Mapped and qualified 200+ prospective European LPs.\n- Executed targeted outreach focused exclusively on pre-qualified LPs with aligned mandates.\n- Set sales targets, delivered tailored materials, and tracked KPIs including pipeline value and conversion rates."
+            }
+          ]
+        },
+        "results": {
+          "heading": "Institutional Engagement and Validated Fundraising Momentum",
+          "body": "- Developed a targeted narrative addressing LP concerns on scale, geography, and strategy.\n- Implemented a comprehensive fundraising strategy with systematic outreach across DACH and the Nordics.\n- Established a pipeline exceeding €150 million in prospective LP commitments for follow-up.\n- Raised the manager’s profile among priority investor segments and strengthened credibility in European private credit."
+        },
         "strategy": "Direct lending",
         "fundType": "Closed-end fund",
         "region": "EMEA",
@@ -1221,225 +1208,95 @@
       },
       {
         "slug": "us-opportunistic-credit",
-        "key": "US opportunistic credit manager",
-        "category": "Opportunistic credit · Europe",
-        "tags": [
-          "Case study",
-          "Opportunistic"
-        ],
-        "image": "https://images.unsplash.com/photo-1591200146894-5a3f43fa951c?auto=format&fit=crop&w=1600&q=80",
-        "cardTitle": "Bringing a US opportunistic credit manager to European institutional capital",
-        "title": "Bringing a US opportunistic credit manager to European institutional capital",
-        "subtitle": "How we built a European market-entry strategy, localised the materials and ran a phased 18-month outreach across four markets.",
+        "category": "Fundraising Engagement & Execution",
+        "image": "https://images.unsplash.com/photo-1566866856854-a0b3d69a62c0?auto=format&fit=crop&w=1600&q=80",
+        "cardTitle": "Subinvestment Grade US Loans & Bonds - Lower Mid Market",
+        "title": "Subinvestment Grade US Loans & Bonds - Lower Mid Market",
+        "subtitle": "A US-based opportunistic credit manager sought to access European institutional capital but lacked brand visibility, investor relationships, and an established presence in the region.",
         "meta": [
-          "Capital formation advisory",
-          "18 months",
-          "Opportunistic credit (US)",
-          "UK, Germany, Netherlands, Switzerland"
+          "Fundraising Engagement & Execution",
+          "Opportunistic Credit Manager",
+          ""
         ],
-        "challenge": "An established US opportunistic credit manager with a strong domestic LP base wanted to diversify geographically and access European institutional capital. No prior European LP relationships existed, and the materials were calibrated entirely for a US audience.",
-        "approach": [
-          {
-            "title": "Landscape mapping",
-            "body": "Mapped the European allocator landscape for US opportunistic credit strategies, identifying 45 high-probability targets."
-          },
-          {
-            "title": "Materials localisation",
-            "body": "Rebuilt the deck for European regulatory, contractual and structural expectations that the existing materials did not address."
-          },
-          {
-            "title": "Phased outreach",
-            "body": "Executed an 18-month program beginning with the UK and the Netherlands, where appetite for US credit strategies was strongest."
-          }
-        ],
-        "results": [
-          {
-            "big": "45",
-            "small": "targets",
-            "label": "High-probability European allocators"
-          },
-          {
-            "big": "18",
-            "small": "mo",
-            "label": "Phased outreach program"
-          },
-          {
-            "big": "4",
-            "small": "markets",
-            "label": "UK, DE, NL, CH"
-          }
-        ],
-        "outcome": "Outcome figures pending client review and confirmation. The manager entered Europe with a localised materials suite and an active pipeline in its two strongest markets.",
-        "quote": null,
-        "strategy": "Opportunistic credit",
-        "fundType": "Closed-end fund",
-        "region": "Europe",
-        "categoryGroup": "Capital formation advisory"
-      },
-      {
-        "slug": "bladex-macro-fund",
-        "key": "Bladex Macro Fund",
-        "category": "Macro strategy · Europe",
-        "tags": [
-          "Case study",
-          "Macro"
-        ],
-        "image": "https://images.unsplash.com/photo-1515799251528-8e14681f214e?auto=format&fit=crop&w=1600&q=80",
-        "cardTitle": "Placing a Latin America–focused macro fund with European institutions",
-        "title": "Placing a Latin America–focused macro fund with European institutions",
-        "subtitle": "How we repositioned a concentrated macro strategy as a diversifying global allocation and built a European LP base from the ground up.",
-        "meta": [
-          "Fund placement, Europe",
-          "12 months",
-          "Discretionary macro (LatAm)",
-          "European institutions"
-        ],
-        "challenge": "European investors were hesitant toward a Latin America–concentrated macro fund — citing regional concentration risk, liquidity constraints, and limited familiarity with LatAm-focused managers. The fund needed a placement strategy that repositioned it as a diversifying global allocation and built credibility with institutions new to the strategy.",
-        "approach": [
-          {
-            "title": "Narrative refinement",
-            "body": "Repositioned the strategy as a diversifying global macro allocation, emphasising liquid instruments and risk discipline over regional focus."
-          },
-          {
-            "title": "Investor mapping",
-            "body": "Identified and prioritised European allocators with macro appetite — single-manager funds, funds of funds, family offices and private banks."
-          },
-          {
-            "title": "Hands-on execution",
-            "body": "Ran end-to-end fundraising — introductions, meetings, diligence support, and iterative feedback on messaging."
-          }
-        ],
-        "results": [
-          {
-            "big": "Multi-",
-            "small": "jurisdiction",
-            "label": "European LP base established"
-          },
-          {
-            "big": "12",
-            "small": "mo",
-            "label": "First close to European raise"
-          },
-          {
-            "big": "Long-term",
-            "small": "capital",
-            "label": "Institutional + private"
-          }
-        ],
-        "outcome": "The raise established a diversified European LP base across multiple jurisdictions, securing long-term institutional and sophisticated private capital — and elevating the fund's profile within the European macro community.",
-        "quote": {
-          "text": "KWE's understanding of European allocator expectations was critical. They knew exactly how to frame the strategy for an audience that had no prior framework for it.",
-          "attribution": "Bladex representative, Fund Manager · Bladex"
+        "challenge": {
+          "heading": "Entering the European Market and Establishing Institutional Visibility",
+          "body": "A US-based opportunistic credit manager sought to access European institutional capital but lacked brand visibility, investor relationships, and an established presence in the region. Despite a compelling performance track record, the manager was largely unknown to European allocators, who required a rigorous diligence framework and localized narrative. The primary challenge was to establish market credibility, initiate strategic dialogues, and generate meaningful capital commitments in a competitive landscape."
         },
-        "strategy": "Macro",
-        "fundType": "Open-ended fund",
-        "region": "Europe",
-        "categoryGroup": "Fund placement"
-      }
-    ],
-    "extraCards": [
-      {
-        "category": "Structured credit · Middle East",
-        "title": "Opening Gulf sovereign and family-office capital",
-        "tags": [
-          "Case study",
-          "Structured credit"
-        ],
-        "image": "https://images.unsplash.com/photo-1615141328086-72a5a01b1b25?auto=format&fit=crop&w=1600&q=80",
-        "strategy": "Structured credit",
-        "fundType": "Separately managed account",
-        "region": "Middle East",
-        "categoryGroup": "Fund placement"
-      },
-      {
-        "category": "Opportunistic · Europe",
-        "title": "Re-engaging LPs after a paused raise",
-        "tags": [
-          "Case study",
-          "Opportunistic"
-        ],
-        "image": "https://images.unsplash.com/photo-1630452606939-5f72e4b7dd20?auto=format&fit=crop&w=1600&q=80",
+        "approach": {
+          "heading": "Three-Phase Capital Formation Strategy",
+          "steps": [
+            {
+              "title": "Diagnose & Strategize",
+              "body": "We began by conducting a strategic diagnostic of the GP’s investment approach and positioning. Although the strategy was labeled as “US High Yield,” the underlying focus was far more specialized—targeting sub-$500 million issuance names that typically fall outside the scope of conventional high yield benchmarks. These credits often exhibit market inefficiencies due to limited sell-side coverage, information asymmetry, and reduced liquidity—creating a complexity and sourcing premium for experienced, sector-focused managers.\n\nHowever, the generic label risked underplaying the differentiated edge. To resonate with European allocators, we repositioned the narrative to emphasize the manager’s access advantage, sectoral expertise, and ability to monetize inefficiencies that are inaccessible to desk-based investors in Europe. This narrative reframing was essential to elevate the manager above a crowded high-yield landscape and command serious institutional attention."
+            },
+            {
+              "title": "Research & Evaluate",
+              "body": "We identified the most relevant LP segments, geographies, and access channels. Our team led the full fundraising execution—driving institutional engagement through structured outreach, narrative alignment, and coordinated investment, operational, and legal diligence."
+            },
+            {
+              "title": "Target & Execute",
+              "body": "We structured a capital formation plan—sequencing investor outreach by probability of conversion, ticket size, and decision timelines. This ensured the GP’s time and resources were allocated to the highest-value opportunities while maintaining broad coverage across priority LP channels.\n\nWe sequenced investor engagement based on probability of conversion, ticket size, and decision timelines, allowing the GP to focus on the most actionable opportunities. In parallel, we managed all diligence workstreams and prepared institution-grade materials to anticipate questions and remove friction from the evaluation process.\n\nOrganised roadshows across the DACH and Nordic  with high-priority LPs and created a clear progression from initial interest to deep diligence."
+            }
+          ]
+        },
+        "results": {
+          "heading": "Impact of Our Capital Formation Strategy",
+          "body": "Our execution delivered €800 million of new institutional commitments, supported by a €150 million re-up from an existing LP. The fundraising validated the manager’s differentiated sourcing edge, reinforced the strategy’s relevance to European allocators, and established a scalable platform for future capital formation."
+        },
         "strategy": "Opportunistic credit",
         "fundType": "Closed-end fund",
         "region": "Europe",
         "categoryGroup": "Fundraising engagement & execution"
       },
       {
-        "category": "CLO · North America",
-        "title": "Building a US allocator pipeline for a CLO manager",
-        "tags": [
-          "Case study",
-          "CLO"
+        "slug": "bladex-macro-fund",
+        "category": "Fund placement in Europe",
+        "image": "https://images.unsplash.com/photo-1600907055749-d6cc7e75efd4?auto=format&fit=crop&w=1600&q=80",
+        "cardTitle": "Macro Hedge Fund",
+        "title": "Macro Hedge Fund",
+        "subtitle": "Bladex Macro Fund pursued a discretionary macro strategy focused on Latin America, an opportunity set that remains underrepresented in European hedge fund allocations.",
+        "meta": [
+          "Fund placement in Europe",
+          "Bladex Macro Fund",
+          "12 months"
         ],
-        "image": "https://images.unsplash.com/photo-1521194263619-39ecc5b55c61?auto=format&fit=crop&w=1600&q=80",
-        "strategy": "CLO",
-        "fundType": "Closed-end fund",
-        "region": "North America",
-        "categoryGroup": "Capital formation advisory"
+        "challenge": {
+          "heading": "Positioning a Latin America–Focused Macro Strategy for European Allocators",
+          "body": "Bladex Macro Fund pursued a discretionary macro strategy focused on Latin America, an opportunity set that remains underrepresented in European hedge fund allocations. While the investment case was compelling, European institutional investors expressed concerns around regional concentration, liquidity, and manager access. The fund required a targeted placement strategy to educate allocators, position the strategy within global macro portfolios, and build credibility with institutions unfamiliar with LatAm-focused macro managers."
+        },
+        "approach": {
+          "heading": "Targeted Positioning and Investor Education",
+          "steps": [
+            {
+              "title": "Clarifying the Institutional Investment Narrative",
+              "body": "We refined the fund’s narrative to position the strategy as a diversifying global macro allocation rather than a regional satellite. We focused on macro dislocations, liquid instruments, and disciplined risk management, addressing common European allocator concerns around volatility and drawdowns."
+            },
+            {
+              "title": "Targeted European Investor Mapping and Outreach",
+              "body": "We mapped and prioritized European hedge fund allocators with demonstrated appetite for macro strategies, including single-manager funds, funds of hedge funds, family offices, and select private banks. Outreach focused on investors already allocating to global macro or emerging markets but seeking differentiated return drivers."
+            },
+            {
+              "title": "Hands-on placement execution",
+              "body": "We led the European fundraising process end-to-end, managing introductions, coordinating meetings, and supporting due diligence. We provided ongoing feedback to the manager on investor perceptions, helping fine-tune messaging and materials throughout the raise."
+            }
+          ]
+        },
+        "results": {
+          "heading": "Successful European Investor Base Expansion",
+          "body": "Bladex Macro Fund established a diversified European LP base across multiple jurisdictions. The fund secured long-term capital from institutional and sophisticated private investors, increasing geographic diversification of its investor base and raising its profile within the European macro hedge fund community."
+        },
+        "strategy": "Macro",
+        "fundType": "Open-ended fund",
+        "region": "Europe",
+        "categoryGroup": "Fund placement"
       }
-    ],
-    "perspectives": {
-      "eyebrow": "Client perspectives",
-      "title": "What our clients say.",
-      "note": "Pending compliance review",
-      "items": [
-        {
-          "quote": "KWE brought a level of institutional rigour to our fundraise that we had not encountered in the placement market before. The combination of deep allocator relationships and genuine process infrastructure made a material difference to the outcome.",
-          "name": "[Name — pending written consent]",
-          "firm": "HSBC"
-        },
-        {
-          "quote": "The positioning work KWE did on our strategy was the single most impactful deliverable of the engagement. Within three months we were having fundamentally different conversations with allocators.",
-          "name": "[Name — pending written consent]",
-          "firm": "Bladex"
-        },
-        {
-          "quote": "The difference with KWE was the infrastructure they built and left behind — our IR function is categorically stronger than it was.",
-          "name": "[Name — pending written consent]",
-          "firm": "Commonwealth Bank"
-        },
-        {
-          "quote": "KWE's understanding of how European allocators evaluate credit managers is unmatched. They knew exactly which questions to anticipate and how to build the answers into our materials.",
-          "name": "[Name — pending written consent]",
-          "firm": "BlueBay"
-        }
-      ],
-      "compliance": "Compliance notice: These testimonials and the “Trusted by” names are pending written consent from each named individual and firm, and pending compliance review under applicable SEC Marketing Rule requirements."
-    },
-    "trusted": {
-      "eyebrow": "Trusted by",
-      "logos": [
-        "BlueBay",
-        "Bladex",
-        "HSBC",
-        "Commonwealth Bank"
-      ],
-      "note": "[Client logos to be supplied. Logo usage rights and compliance clearance must be confirmed before display.]"
-    }
+    ]
   },
   "insights": {
     "hero": {
       "eyebrow": "Insights",
-      "title": "Our latest thinking on how credit managers raise capital.",
-      "chips": [
-        {
-          "label": "All",
-          "topic": null
-        },
-        {
-          "label": "Market notes",
-          "topic": "Market note"
-        },
-        {
-          "label": "LP behaviour",
-          "topic": "LP behaviour"
-        },
-        {
-          "label": "Case studies",
-          "topic": "Case study"
-        }
-      ],
-      "scrollCue": "Latest insights"
+      "title": "Our latest thinking on how managers raise institutional capital.",
+      "subtitle": "Perspectives on how allocators evaluate, how capital moves, and what it takes to raise at institutional standard."
     },
     "controls": {
       "categories": "Categories",
@@ -1449,10 +1306,8 @@
       "loadMore": "Load more",
       "tagPrimary": "KWE insights",
       "categoriesOptions": [
-        "Market note",
-        "LP behaviour",
-        "Practice note",
-        "Case study"
+        "Credit Market Commentary",
+        "Fundraising & Distribution"
       ],
       "clear": "Clear filters",
       "noResults": "No insights match these filters.",
@@ -1487,144 +1342,35 @@
     "article": {
       "back": "All insights",
       "author": "KWE Advisors · Research",
+      "metaLabels": [
+        "Published",
+        "Read time",
+        "Author"
+      ],
       "initials": "KW",
-      "toc": "On this page",
+      "outline": "Contents",
       "related": "Related insights"
     },
     "items": [
       {
-        "slug": "allocator-due-diligence-2025",
-        "category": "Market note",
-        "date": "18 Sep 2025",
+        "slug": "abc-of-private-credit",
+        "category": "Credit Market Commentary",
+        "date": "",
         "read": "8 min read",
-        "image": "https://images.unsplash.com/photo-1521194263619-39ecc5b55c61?auto=format&fit=crop&w=1600&q=80",
-        "title": "How allocator due diligence has changed for private credit managers",
-        "subtitle": "The operational due diligence process has become as rigorous as investment due diligence. Credit managers who underinvest in their IR infrastructure are paying for it in extended close timelines.",
-        "toc": [
-          "The structural shift",
-          "What allocators now ask for",
-          "The cost of being unprepared",
-          "What managers should do"
-        ],
-        "h2": "The structural shift: operational diligence in parallel with investment diligence",
-        "p1": "The private credit due diligence process has undergone a structural shift since 2020. What was once primarily an investment-led evaluation — returns, track record, team — now involves a parallel operational assessment that many managers are unprepared for.",
-        "stats": [
-          {
-            "big": "2020",
-            "unit": "",
-            "label": "Operational diligence becomes standard"
-          },
-          {
-            "big": "2",
-            "unit": "×",
-            "label": "Parallel evaluation tracks"
-          },
-          {
-            "big": "60",
-            "unit": "%",
-            "label": "Screened out on infrastructure"
-          }
-        ],
-        "p2": "Allocators at institutional quality — pension funds, insurance companies, sovereign wealth funds — now routinely request evidence of CRM systems, LP reporting infrastructure, and compliance documentation before proceeding past a first meeting.",
-        "quote": "Managers who cannot provide this documentation are screened out, regardless of investment quality.",
-        "p3": "The practical response is to build the infrastructure before the raise — a configured CRM, a documented reporting cadence and a DDQ library — so that the operational track moves as quickly as the investment track."
+        "image": "https://images.unsplash.com/photo-1720762256650-ea429f429226?auto=format&fit=crop&w=1600&q=80",
+        "title": "The ABC of Private Credit",
+        "subtitle": "A deeper look at the fundamentals of private credit, explaining key terms, structures, and drivers of the asset class in a way that helps investors navigate an increasingly complex market.",
+        "body": "## A\n\n**Amortisation**\nThe scheduled repayment of principal over the life of a loan, rather than a bullet at maturity.\nWhy it matters: More amortisation usually means lower risk and faster de-leveraging, but can reduce cash available to equity.\n\n**Asset-Based Lending (ABL)**\nLoans secured primarily on asset values (receivables, inventory, equipment), with borrowing capacity tied to a borrowing base. Why it matters: Appeals to LPs looking for collateral-heavy strategies with clear downside protection, but often lower yield.\n\n**AUM (Assets Under Management)**\nTotal capital managed across funds, SMAs, and co-investments.\nWhy it matters: LPs look for a balance between scale (stability, resources) and “right-sized” AUM relative to opportunity set.\n\n## B\n\n**Base Rate**\nThe reference rate used to price floating-rate loans (SOFR, SONIA, Euribor).\n Why it matters: Drives the all-in coupon. In a higher base-rate world, LPs focus more on spread stability and interest coverage.\n\n**Basis Points (bps)**\nOne hundredth of a percentage point (0.01%).\nWhy it matters: Spread compression is often measured in tens of bps, which can materially affect risk-adjusted returns in senior credit.\n\n**Broadly Syndicated Loan (BSL)**\nA large, typically covenant-lite loan syndicated to many institutional lenders.\nWhy it matters: Direct lending is often benchmarked against BSL pricing, structure and liquidity.\n\n## C\n\n**Capital Stack**\nThe hierarchy of claims on a borrower’s assets and cash flows (senior, unitranche, second lien, mezzanine, preferred, equity). Why it matters: LPs want clarity on where the fund sits in the stack and how that aligns with target returns and loss expectations.\n\n**Covenants**\nContractual terms that govern borrower behaviour and protect lenders (maintenance covenants, incurrence covenants, negative covenants).\nWhy it matters: Covenant strength is a core part of the risk story. LPs increasingly ask for evidence, not adjectives, on covenant quality.\n\n**Call Protection / Prepayment Penalties**\nFees payable if the borrower repays early (soft call, non-call periods, make-whole).\nWhy it matters: Helps protect lender returns in an early refi or sale environment, important for gross-to-net return stability.\n\n## D\n\n**DSCR (Debt Service Coverage Ratio)**\nMeasure of cash flow available to service debt (typically EBITDA or cash flow divided by interest and amortisation).\nWhy it matters: LPs use DSCR to understand resilience under stress and interest rate shocks.\n\n**Direct Lending**\nPrivate loans originated and held by non-bank lenders, typically to mid-market borrowers.\nWhy it matters: Core strategy in private credit allocations, often positioned as a floating-rate, income-generating substitute for loans or HY.\n\n**Default / Event of Default**\nContractual triggers that allow lenders to accelerate or enforce (missed payments, covenant breaches, insolvency events).\nWhy it matters: How quickly and effectively a manager uses default rights is central to realised recovery.\n\n## E\n\n**Evergreen Fund**\nOpen-ended or long-dated vehicle with ongoing subscriptions and redemptions, often with periodic liquidity windows.\nWhy it matters: Important for wealth / semi-liquid channels. LPs look closely at liquidity management and alignment with asset duration.\n\n**EBITDA Adjustments**\nNormalisations and add-backs to EBITDA (cost savings, synergies, run-rate adjustments).\nWhy it matters: Over-aggressive adjustments can mask leverage and weaken true credit quality.\n\n## F\n\n**First-Lien / Senior Secured**\nDebt with first claim on collateral and cash flows, ahead of other creditors.\nWhy it matters: Often sold to LPs as the “defensive” part of the private credit allocation. Loss history and structuring discipline must support that.\n\n**Fund-Level Leverage**\nLeverage at the fund or vehicle level (subscription lines, NAV facilities, leverage facilities).\nWhy it matters: Enhances returns but magnifies downside and liquidity management complexity. LPs want clarity on limits and usage.\n\n**Floating-Rate**\nCoupon that resets periodically based on a reference rate plus spread.\nWhy it matters: Key attraction for LPs concerned about inflation and duration, but increases borrower interest burden when rates rise.\n\n## G\n\n**Gross vs Net IRR**\nGross IRR is before fees and carry; net IRR is after all fund-level costs.\nWhy it matters: LPs increasingly focus on net returns relative to risk and liquidity, not headline gross figures.\n\n**Guarantees**\nAdditional credit support from sponsors, parents or affiliates.\nWhy it matters: Materially improves recovery in distress if enforceable and well-documented.\n\n## H\n\n**Hold Size / Ticket Size**\nThe amount a fund will commit and hold in a given deal.\nWhy it matters: Signals influence in negotiations and concentration risk at the position level.\n\n**Hurdle Rate**\nMinimum return required before carry is paid.\nWhy it matters: Part of the alignment discussion; LPs assess whether the hurdle is meaningful given the risk profile.\n\n## I\n\n**IC (Investment Committee)**\nBody that approves investments, often comprising senior partners and risk leaders.\nWhy it matters: LPs want assurance that the IC has independence, experience and a documented decision-making process.\n\n**Interest Coverage Ratio**\nEBITDA or cash flow divided by interest expense only.\nWhy it matters: A simple but important gauge of resilience to interest rate increases.\n\n## J\n\n**Junior Capital**\nDebt that ranks below senior claims (second lien, mezz, PIK instruments).\nWhy it matters: Higher yield, higher loss severity. LPs expect clear explanation of expected loss distribution and upside participation.\n\n## K\n\n**Key Person Clause**\nProvision in LPAs that triggers consequences if named individuals cease to be involved.\nWhy it matters: Central protection for LPs in people-driven strategies; GPs need to show succession and bench strength.\n\n## L\n\n**LTV / LTC (Loan-to-Value / Loan-to-Cost)**\nLoan amount relative to asset value or project cost.\nWhy it matters: Core risk metric in asset-backed and real assets credit. LPs benchmark these against historic loss and recovery data.\n\n**LGD (Loss Given Default)**\nPercentage of exposure lost after default and recovery.\nWhy it matters: More informative than default rate alone. LPs increasingly ask for realised LGD by strategy, sector and vintage.\n\n**Locked-Up Capital / Lock-Up**\nPeriod during which LPs cannot redeem or withdraw.\nWhy it matters: Needs to be coherent with asset duration and fund strategy, especially in evergreen or semi-liquid funds.\n\n## M\n\n**Margin / Spread**\nThe fixed number of basis points added to the base rate on a floating-rate loan.\nWhy it matters: Primary driver of income. Spread compression is central to current private credit debates.\n\n**Maintenance Covenant**\nCovenant tested regularly (e.g., quarterly leverage test).\nWhy it matters: Provides early warning and leverage to intervene. LPs often prefer genuine maintenance tests over light covenants.\n\n## N\n\n**NAV (Net Asset Value) Facility**\nLoan to a fund secured on the value of its underlying portfolio.\nWhy it matters: Useful tool for liquidity and pacing, but adds structural leverage and potential cross-contagion risk.\n\n## O\n\n**OID (Original Issue Discount)**\nDifference between par and issue price that increases effective yield.\nWhy it matters: Critical when comparing direct lending returns to BSLs; LPs should look at all-in yield, not margin alone.\n\n## P\n\n**PIK (Payment-in-Kind)\n**Interest that accrues to principal instead of being paid in cash.\nWhy it matters: Boosts near-term reported yield but raises leverage and risk if overused.\n\n**Portfolio Construction**\nHow positions are sized and combined (sector, geography, sponsor, instrument, leverage).\nWhy it matters: Major driver of diversification and tail risk. LPs evaluate this alongside deal-level underwriting.\n\n## Q\n\n**Quartile Performance**\nPerformance ranking vs peers (top quartile, second quartile, etc.).\nWhy it matters: Still a shorthand in LP conversations, but increasingly supplemented by risk and loss analytics.\n\n## R\n\n**Refinancing Risk / Maturity Wall**\nRisk that borrowers cannot refinance at or before maturity, often due to rates, spreads, or capital availability.\nWhy it matters: Hot topic for LPs in the current environment; directly linked to default and restructuring outcomes.\n\n**Recovery Rate**\nPercentage of principal recovered after a default.\nWhy it matters: Key input to loss expectations and risk budgeting.\n\n## S\n\n**Senior / Unitranche**\nSenior: first-lien debt. Unitranche: blended instrument that combines senior and junior economics into one facility.\nWhy it matters: Unitranche is common in sponsor deals; LPs want to understand how economics are split and where true risk sits.\n\n**SMAs (Separately Managed Accounts)**\nDedicated vehicles for a single LP.\nWhy it matters: Important for larger LPs seeking custom terms, co-investment access or strategy tilt.\n\n## T\n\n**Term Loan B (TLB)**\nLonger-dated institutional term loans, typically in the syndicated market.\nWhy it matters: Benchmark for direct lenders on pricing and structure in larger deals.\n\n**Track Record Cohort Analysis**\nAnalysis of performance by vintage, sector, structure or risk bucket.\nWhy it matters: LPs now ask for this as standard, to separate luck from process.\n\n## U\n\n**Underwriting Standards**\nThe criteria, assumptions and processes used to assess and approve a loan.\nWhy it matters: Core to differentiation. LPs expect concrete examples, not generic statements.\n\n## V\n\n**Vintage Year**\nYear in which a fund starts investing capital.\nWhy it matters: Cycles matter. LPs benchmark performance and loss outcomes versus peers in the same vintage.\n\n**Valuation Policy**\nRules governing how assets are marked, including independent checks and frequency.\nWhy it matters: Tied directly to trust in reported returns and risk metrics.\n\n## W\n\n**Workout / Restructuring**\nThe process of managing a stressed or defaulted credit to maximise recovery.\nWhy it matters: Critical to realised outcomes. LPs often consider workout capability a key source of alpha in credit.\n\n## Y\n\n**Yield-to-Maturity (YTM)**\n Annualised return if the loan is held to maturity, assuming all payments are made as scheduled.\n Why it matters: More complete measure of economics than margin alone, especially where OID or call features are present.\n\n## Z\n\n**Zero-Refi / “Money Good” Framing**\nInternal framing that assumes no refinancing is needed to get principal back, or that principal is fully covered by cash flows and collateral.\nWhy it matters: LPs appreciate managers who can show scenarios where returns are acceptable without relying on benign capital markets."
       },
       {
-        "slug": "european-lp-landscape-2025",
-        "category": "LP behaviour",
-        "date": "14 Jan 2025",
-        "read": "6 min read",
-        "image": "https://images.unsplash.com/photo-1630452606939-5f72e4b7dd20?auto=format&fit=crop&w=1600&q=80",
-        "title": "The European LP landscape for private credit: what has changed",
-        "subtitle": "European pension and insurance allocators increased private credit allocations through 2024. The resulting competition for relationships has raised the bar for how managers present themselves.",
-        "toc": [
-          "Allocations through 2024",
-          "A more organised field",
-          "What the bar looks like now",
-          "Implications for managers"
-        ],
-        "h2": "Allocations through 2024: yield, illiquidity premium and low volatility",
-        "p1": "European institutional allocators increased their private credit allocations meaningfully through 2024, driven by attractive all-in yields relative to public credit and the persistent appeal of illiquidity premiums in a low-volatility context.",
-        "stats": [
-          {
-            "big": "2024",
-            "unit": "",
-            "label": "Peak allocation year"
-          },
-          {
-            "big": "529",
-            "unit": "bps",
-            "label": "Avg. European spread"
-          },
-          {
-            "big": "54",
-            "unit": "%",
-            "label": "Market in €100–349m"
-          }
-        ],
-        "p2": "The competitive consequence is that managers seeking European LP relationships are now competing against a well-organised field of global brands and specialist boutiques.",
-        "quote": "The era of a relationship and a good pitch deck being sufficient has ended.",
-        "p3": "Managers entering Europe should expect a longer diligence cycle, a more structured materials request and a stronger preference for demonstrated process over relationship alone."
-      },
-      {
-        "slug": "positioning-in-credit-fundraising",
-        "category": "Practice note",
-        "date": "12 Nov 2024",
-        "read": "5 min read",
-        "image": "https://images.unsplash.com/photo-1615141328086-72a5a01b1b25?auto=format&fit=crop&w=1600&q=80",
-        "title": "Why positioning is the most under-invested capability in credit fundraising",
-        "subtitle": "Most credit managers have a genuine edge in investment — and struggle to translate it into language that institutional allocators find compelling. The gap is narrower than it appears.",
-        "toc": [
-          "Two audiences",
-          "The translation problem",
-          "Audience calibration",
-          "Closing the gap"
-        ],
-        "h2": "Two audiences: investment teams write for portfolio managers, IR teams write for allocators",
-        "p1": "Investment teams write for portfolio managers. Investor relations teams write for allocators. Most credit managers have only the first, and the translation problem shows up immediately in every allocator conversation.",
-        "stats": [
-          {
-            "big": "1",
-            "unit": "",
-            "label": "Audience most decks are written for"
-          },
-          {
-            "big": "3",
-            "unit": "Ps",
-            "label": "People, performance, process"
-          },
-          {
-            "big": "0",
-            "unit": "",
-            "label": "Positioning frameworks in most raises"
-          }
-        ],
-        "p2": "The gap between a compelling investment thesis and a compelling fundraising narrative is not about quality of the underlying strategy. It is about audience calibration.",
-        "quote": "The CIO of a European pension fund evaluates managers on different dimensions than a credit-specialist portfolio manager.",
-        "p3": "A positioning framework — differentiation, portfolio role, and risk narrative written for the decision-maker — is the highest-leverage investment most managers have not yet made."
-      }
-    ],
-    "extraCards": [
-      {
-        "category": "Market note",
-        "title": "Why capital formation is the real constraint in private credit",
-        "image": "https://images.unsplash.com/photo-1518112166137-85f9979a43aa?auto=format&fit=crop&w=1600&q=80",
-        "date": "2024",
-        "read": "5 min read"
-      },
-      {
-        "category": "LP behaviour",
-        "title": "How allocators build conviction beyond performance",
-        "image": "https://images.unsplash.com/photo-1591200146894-5a3f43fa951c?auto=format&fit=crop&w=1600&q=80",
-        "date": "2024",
-        "read": "5 min read"
-      },
-      {
-        "category": "Case study",
-        "title": "Repositioning a direct-lending raise for a crowded market",
-        "image": "https://images.unsplash.com/photo-1515799251528-8e14681f214e?auto=format&fit=crop&w=1600&q=80",
-        "date": "2024",
-        "read": "5 min read"
+        "slug": "lps-challenging-gps-on-differentiation-2025",
+        "category": "Fundraising & Distribution",
+        "date": "",
+        "read": "10 min read",
+        "image": "https://images.unsplash.com/photo-1485920694980-9c5db37b0d44?auto=format&fit=crop&w=1600&q=80",
+        "title": "One Market, One Story: PitchBook and Deloitte Reveal Why LPs Are Challenging GPs on Differentiation in 2025",
+        "subtitle": "Converging spreads, crowded mid-markets and rising correlation are reshaping how LPs evaluate underwriting skill and commitment readiness.",
+        "body": "There is a familiar moment in fundraising meetings these days, usually about a third of the way through a GP’s pitch, when the LP sitting across the table begins quietly comparing the story they are hearing with the one they heard an hour earlier. It is not cynicism. It is pattern recognition. The deals sound alike. The sectors are the same. The risk and return profiles barely move. And the spreads, once a defining feature of private credit, seem to be drifting toward the same midpoint.\n\nIf 2023 and 2024 were years of repricing and tightening standards, then 2025 is the year the market has settled into a kind of uniformity. PitchBook’s latest private credit data shows it clearly. Deloitte’s European deal tracker points in the same direction. And LPs, who sit with all of these reports on their desks, are now asking harder questions of GPs who insist their strategy is differentiated.\n\nThe point is not that private credit has lost its edge. It is that the burden of proof has shifted. GPs must now demonstrate what sets them apart in a market where economic signals offer fewer clues.\n\nThis is what LPs are seeing in the numbers, and what they expect GPs to understand before asking for a commitment.\n\n## I. The European Pattern: Spread Compression and the Narrowing Middle\n\nEurope offers the clearest picture of convergence.\n\nAccording to the PitchBook LCD European Private Credit Monitor (September 2025), market-wide spreads now average 529 basis points, with a median of 510 basis points. More than 60 percent of LBO transactions priced below 550 basis points, a level that would have seemed unlikely when the market was commanding far wider margins in 2022 and early 2023.\n\nLeverage has moved in the opposite direction of spreads. PitchBook’s leverage charts across deal sizes show a steady increase from post-tightening lows (EU Monitor, pages 12–14, chart references). When spreads tighten faster than credit quality improves, the premium for risk disappears. That is the core of the LP concern.\n\nThe same dataset shows meaningful declines in weighted average cash coupons on larger European loans, especially those above €50 million (EU Monitor, page 29 chart). Yields have slipped back into single-digit territory, narrowing the buffer that supports return targets and loss-absorbing capacity.\n\nMore revealing than pricing is the shape of the market. Transactions in the €100 million to €349 million segment now represent over 54 percent of total European private credit activity, the largest share ever recorded, according to PitchBook. This is not simply where most borrowers happen to sit. It is where displaced capital has accumulated because both smaller and larger opportunities have thinned out.\n\nTo an LP, this looks like convergence: same borrower size, similar leverage bands, familiar sectors, comparable structures. That sets the stage for the next layer of evidence.\n\n## II. Competition Without Differentiation: Insights Informed by Deloitte’s Data\n\nDeloitte’s Private Debt Deal Tracker Europe Autumn 2025 gives a clear illustration of how the European private credit market has become competitive in ways that do little to distinguish one lender from another. Our analysis of the underlying dataset shows a market where activity remains high, but differentiation is eroding.\n\nDeloitte recorded 421 private debt transactions across Europe in the first half of 2025, spanning the UK, France, Germany and the rest of the continent. This headline number masks a more important structural change. The UK, historically the most active private debt market in Europe, saw deal counts fall from 253 in mid-2023 to 164 in mid-2025. With fewer transactions in its deepest segment, lender attention has shifted to the same mid-market opportunities across continental Europe. This migration tightens competitive pressure rather than diversifying it.\n\nPricing data reinforces this. Deloitte notes that sub-5 percent pricing now dominates the European market, while spreads above 6 percent have largely disappeared as a meaningful band. Narrow bands like these leave LPs with limited ability to distinguish risk profiles through pricing alone. In a market where yield rarely signals risk, LPs look for differentiation in underwriting discipline, structural protections and the quality of sponsor relationships.\n\nMacro conditions and regulation add to this uniformity. Deloitte highlights tariff-related volatility that influences deal timelines and lender selectivity, as cross-border trade frictions and policy shifts affect visibility on earnings and cash flow. The report also references evolving banking rules such as Basel 3.1 and Solvency II recalibrations, which shape banks’ appetite and the niches where private lenders compete most aggressively. These external forces do not create convergence on their own, but they amplify it.\n\nThe dataset also shows that sponsor-backed deals continue to dominate activity. Deloitte’s breakdown indicates that sponsor-led transactions represent the majority of deal flow. Sponsor-backed credits often follow more standardised processes, increasing uniformity in diligence frameworks, governance expectations and leverage tolerance.\n\nOur interpretation is that Europe’s private credit market is not just busy, it is busy around the same types of deals. Structures converge. Pricing compresses. Lenders move in parallel. This is the environment LPs see when they evaluate commitments, and it is why they are challenging GPs more directly on what makes their approach meaningfully different.\n\n## III. The U.S. Has Its Own Path to Uniformity\n\nThe United States is not immune to the same gravitational pull. The mechanism is different, but the outcome rhymes.\n\nThe PitchBook LCD U.S. Private Credit Monitor (September 2025) notes that spreads between syndicated loans and direct lending continue to converge, including when adjusted for OID and related economics. In earlier cycles, direct lenders could rely on a comfortable premium over the broadly syndicated loan market. That cushion has narrowed.\n\nThe same report describes a “sourcing crisis” in U.S. private credit, where excess capital is targeted at too few high-quality opportunities. This dynamic mirrors Europe’s crowding in the €100–€349 million band. In both markets, lenders are driven toward the same borrowers at the same time, for similar reasons: fund deployment pressure, fundraising schedules and the need to maintain fee-bearing AUM.\n\nLeverage is also increasing in the United States, though in a pattern less uniform than Europe’s. But the direction is familiar. When leverage rises and spreads tighten, the underwriting edge that used to separate top-tier managers from median ones becomes harder to observe from the outside.\n\nLPs see this too. They look at the U.S. and Europe side by side, and the impression is the same: the middle of the market is crowded, and the dispersion of outcomes has narrowed.\n\n## IV. The Common Threads Across Both Markets\n\nTaken together, the PitchBook and Deloitte datasets point toward a common mechanism.\n\nFirst, the deals look more alike than ever. Borrower characteristics, leverage points and industry exposures often overlap. That means allocating across managers in different regions may not deliver the diversification LPs expect.\n\nSecond, pricing reflects competition more than risk. When European spreads cluster around 500 to 550 basis points and Deloitte reports sub-5 percent yields as the dominant band, pricing tells LPs less about the underlying risk profile and more about how aggressively lenders are bidding for assets.\n\nThird, correlation inside private credit portfolios is rising. Correlation is not just a statistic; it is the tendency for similar deals to behave similarly under stress. When managers fish in the same pool, sector and structure, their outcomes line up in both upswings and downturns.\n\nFourth, spreads are not adjusting for leverage in a way that preserves the risk premium. Across both geographies, leverage has risen from its most conservative post-tightening levels, without a corresponding re-widening of margins.\n\nFifth, deal structures are becoming standardised. Unitranche solutions, similar covenant packages and recurring revenue adjustments make it harder for LPs to see where a manager is genuinely conservative or creative.\n\nThe net result is a market that appears vibrant in activity but increasingly uniform in shape.\n\n## V. What LPs Expect GPs to Demonstrate Now\n\nBecause LPs see uniformity in the data, they expect GPs to prove they are not simply following the crowd. The questions LPs are asking have become more precise.\n\nA. Sourcing advantage must be quantified, not asserted.\nLPs want to see repeat-borrower ratios, exclusive mandates, share of lead roles and the mix of inbound versus outbound sourcing. “Proprietary dealflow” has to move from a slogan to a measurable characteristic.\n\nB. Leverage and structure discipline must show up in the numbers. When aggregate leverage is rising in both Europe and the U.S., LPs want to understand each GP’s internal guardrails: typical leverage bands, documented exceptions and how those compare to the broader PitchBook and Deloitte datasets.\n\nC. Covenant strength needs evidence across cycles.\nWith documentation standards drifting over time, LPs look for multi-year evidence on covenant packages, negotiating positions and how terms held up in past stress periods.\n\nD. Workout competence must be demonstrated.\nLPs increasingly ask for realised recovery rates, average time to resolution and examples of complex restructurings. They are looking for proof that a manager can manage downside, not just originate and close deals.\n\nE. Risk compensation must be transparent.\nIn a compressed spread environment, LPs expect a clear explanation of how they are being paid for incremental risk: loss-given-default assumptions, borrower distribution by rating quality, and how those assumptions stack up against observed outcomes.\n\nThese expectations reflect a shift in the LP mindset. When market-level data shows convergence, the focus moves from “what do you do?” to “how do you do it differently, and can you prove it?”\n\n## VI. What GPs Should Take Away From the PitchBook and Deloitte Data\n\nFor GPs, the combined message from the PitchBook and Deloitte reports is straightforward: private credit is still attractive, but the signalling environment has changed.\n\nIt is no longer enough to point to attractive spreads or growing AUM. LPs see that spreads have compressed in Europe to averages around 529 basis points, with median levels at 510 basis points, and that more than 60 percent of LBOs now price below 550 basis points. They see that sub-5 percent pricing has become the dominant band in Deloitte’s European dataset and that larger, higher-margin deals have migrated back to syndicated markets. They see that U.S. direct lending spreads are converging toward BSL levels, even as private credit capital continues to grow.\n\nThe question LPs bring into the GP meeting is increasingly: what do you see in this same data that informs your portfolio construction, and how does your behaviour differ from the rest of the market?\n\nGPs that can answer that with clarity and evidence will find LPs more willing to engage deeply. Those who cannot risk being grouped into the broad category of “competitive but undifferentiated capital,” especially in a year where many LPs are overallocated to private markets and are choosing carefully where to commit.\n\n## VII. Closing Perspective: Competing in a Market Where Everything Looks the Same\n\nPrivate credit’s appeal was built on the idea that lenders could access opportunities unavailable to the broader market, apply judgment that banks could not and generate returns that reflected discernible skill. The recent convergence seen across Europe and the United States challenges that premise. Capital has grown faster than origination, spreads have tightened beyond what leverage levels justify and deal structures have drifted toward uniformity.\n\nThis does not diminish the asset class, but it does shift the burden. LPs now evaluate GPs against a backdrop where the market looks increasingly homogeneous. When pricing, leverage and deal size all point in the same direction, LPs turn their attention to what they cannot see in a chart: underwriting discipline, documentation integrity, downside protection and decision-making under pressure.\n\nThe takeaway for GPs is simple. Differentiation can no longer be assumed. It must be demonstrated. The managers who will succeed in this environment will be those who can clearly articulate why their deals do not resemble everyone else’s, and who can support that claim with evidence, not anecdotes. LPs already see the convergence in the PitchBook and Deloitte datasets. They are asking GPs to show where the divergence still exists, and why it matters.\n\n## References\n\nPitchBook LCD — European Private Credit Monitor (September 2025)\n\n- Average spread 529 bps, median 510 bps\n- More than 60% of LBOs priced below 550 bps\n- €100m–€349m segment representing >54% of market\n- Leverage and coupon trends: leverage charts (pages 12–14) and coupon chart (page 29)\n\nPitchBook LCD — U.S. Private Credit Monitor (September 2025)\n\n- Spread convergence vs BSL including OID adjustments\n- “Sourcing crisis” due to excess capital vs dealflow\n\nDeloitte — Private Debt Deal Tracker Europe Autumn 2025\n\n- 421 deals in H1 2025 across Europe\n- UK deal count decline: 253 (2023) → 164 (2025)\n- Sub-5% pricing dominance; decline of spreads >6%\n- Tariff-related macro pressures\n- Regulatory recalibrations affecting lenders (Basel 3.1, Solvency II context)\n- Sponsor vs non-sponsor breakdown"
       }
     ]
   },
@@ -1632,9 +1378,7 @@
     "hero": {
       "eyebrow": "Contact",
       "title": "Let's arrange a conversation.",
-      "subtitle": "Speak with us about whether an embedded operating partnership is right for your firm.",
-      "email": "hello@kweadvisors.com",
-      "linkedin": "LinkedIn"
+      "subtitle": "Tell us about your strategy and your next raise, and we'll take it from there."
     },
     "form": {
       "eyebrow": "Contact us",
@@ -1718,7 +1462,7 @@
   },
   "legal": {
     "eyebrow": "Legal",
-    "title": "Privacy Policy & Disclosures",
+    "title": "Disclosures",
     "updated": "Last updated: [Date — placeholder pending compliance review]",
     "sections": [
       {
@@ -1726,16 +1470,97 @@
         "body": "Securities offered through GT Securities, Inc., member FINRA/SIPC. KWE Advisors is not a registered investment adviser. The information on this website is for informational purposes only and does not constitute an offer or solicitation to buy or sell any security. Past performance is not indicative of future results. [Exact wording to be confirmed with compliance contact before publication]"
       },
       {
-        "heading": "Privacy policy",
-        "body": "[Privacy policy content to be supplied by client's legal counsel. This is a placeholder.]"
-      },
-      {
-        "heading": "Terms of use",
-        "body": "[Terms of use content to be supplied by client's legal counsel. This is a placeholder.]"
-      },
-      {
         "heading": "Regulatory information",
         "body": "[Regulatory and compliance information to be supplied. Confirm applicable jurisdiction(s) with client.]"
+      }
+    ],
+    "draftNote": "Draft — pending counsel review",
+    "documents": [
+      {
+        "slug": "privacy",
+        "eyebrow": "Legal",
+        "title": "Privacy Policy",
+        "updated": "Effective Date: [Insert Date]",
+        "intro": "At KWE Advisors, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and safeguard your information when you interact with our services.",
+        "sections": [
+          {
+            "heading": "Information We Collect",
+            "body": "We may collect the following types of information:\n- Personal Information: This includes your name, email address, phone number, and company when you inquire about our services or complete forms on our website."
+          },
+          {
+            "heading": "How We Use Your Information",
+            "body": "We use your information for the following purposes:\n- To Provide Services: To respond to inquiries and provide information about our services.\n- Communication: To communicate with you, send updates, and offer support.\n- Marketing: To send you materials and updates that may be of interest to you (you may opt out at any time).\n- Improvement: To analyze data and improve our services and website functionality."
+          },
+          {
+            "heading": "Sharing Your Information",
+            "body": "We do not sell or rent your personal information to third parties. We may share your information in the following circumstances:\n- Service Providers: We may engage third-party service providers to assist with our operations. These providers have access to your information only to perform their tasks and are obligated to protect it.\n- Legal Compliance: We may disclose your information if required to do so by law or in response to valid requests by public authorities."
+          },
+          {
+            "heading": "Data Security",
+            "body": "We take the security of your personal information seriously and implement appropriate technical and organizational measures to protect it from unauthorized access, disclosure, alteration, or destruction.\n\nMeasures We Take:\n- Secure data storage using encrypted servers and firewalls.\n- HTTPS encryption for data transmission across our website.\n- Access controls to limit who can access personal data internally.\n- Regular security assessments and updates to identify and mitigate risks.\n\nDespite our efforts, please note that no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. If you believe your interaction with us is no longer secure, please contact us immediately at [your contact email]."
+          },
+          {
+            "heading": "Your Rights",
+            "body": "You have the right to:\n- Access the personal information we hold about you.\n- Request correction of any inaccurate or incomplete information.\n- Request deletion of your personal information, subject to certain legal obligations.\n- Opt out of receiving marketing communications at any time."
+          },
+          {
+            "heading": "Changes to This Privacy Policy",
+            "body": "We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically for any updates."
+          },
+          {
+            "heading": "Contact Us",
+            "body": "If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:\nKWE Advisors [Your Address] [Your Email] [Your Phone Number]"
+          }
+        ],
+        "disclaimer": "This draft is a starting point only and is not legal advice. Please consult a legal professional to ensure compliance with applicable laws and regulations before publishing.",
+        "complianceNote": "NOT counsel-approved. Relabelled from the old Stratwell template; construction/renovation references removed; placeholder fields remain for legal/ops to complete. Must be reviewed and approved by counsel before launch."
+      },
+      {
+        "slug": "terms",
+        "eyebrow": "Legal",
+        "title": "Terms & Conditions",
+        "updated": "Last Updated: [Insert Date]",
+        "intro": "Welcome to KWE Advisors. These Terms & Conditions (\"Terms\") govern your use of our website (the \"Site\") and any services, resources, or content provided by KWE Advisors (\"we,\" \"our,\" or \"us\"). By accessing or using this Site, you agree to be bound by these Terms. If you do not agree, please discontinue use immediately.",
+        "sections": [
+          {
+            "heading": "1. Use of Our Website",
+            "body": "- The content provided on this Site is for general informational purposes only.\n- You agree not to misuse the Site or engage in activities that could damage, disable, or impair functionality.\n- Unauthorized use of this Site may give rise to a claim for damages and/or be a criminal offense."
+          },
+          {
+            "heading": "2. Intellectual Property",
+            "body": "- All materials, including text, images, graphics, logos, and layouts, are owned or licensed by KWE Advisors and are protected by applicable copyright, trademark, and intellectual property laws.\n- You may not copy, reproduce, distribute, or exploit any content without prior written permission."
+          },
+          {
+            "heading": "3. No Professional Advice",
+            "body": "- The information provided on this Site does not constitute professional business, financial, or legal advice.\n- Advisory services are subject to a formal agreement between you and KWE Advisors."
+          },
+          {
+            "heading": "4. Third-Party Links",
+            "body": "- Our Site may contain links to external websites for reference or convenience.\n- We are not responsible for the content, accuracy, or practices of any third-party websites."
+          },
+          {
+            "heading": "5. Limitation of Liability",
+            "body": "- We strive to keep information accurate and up-to-date but make no warranties or representations regarding completeness, reliability, or suitability.\n- KWE Advisors will not be liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use our Site."
+          },
+          {
+            "heading": "6. Privacy",
+            "body": "- Your use of our Site is also governed by our [Privacy Policy].\n- By using our Site, you consent to the collection and use of information as described therein."
+          },
+          {
+            "heading": "7. Changes to These Terms",
+            "body": "- We may update these Terms at any time without prior notice.\n- Continued use of the Site following updates indicates acceptance of the revised Terms."
+          },
+          {
+            "heading": "8. Governing Law",
+            "body": "- These Terms shall be governed by and construed in accordance with the laws of [Insert Jurisdiction].\n- Any disputes will be subject to the exclusive jurisdiction of the courts in [Insert Location]."
+          },
+          {
+            "heading": "9. Contact Us",
+            "body": "For questions regarding these Terms, please contact us:\nKWE Advisors\nEmail: [Insert Email]\nPhone: [Insert Phone]"
+          }
+        ],
+        "disclaimer": "This draft is a starting point only and is not legal advice. Please consult a legal professional to ensure compliance with applicable laws and regulations before publishing.",
+        "complianceNote": "NOT counsel-approved. Relabelled from the old Stratwell Consulting template; placeholder fields remain for legal/ops to complete. Must be reviewed and approved by counsel before launch."
       }
     ]
   },

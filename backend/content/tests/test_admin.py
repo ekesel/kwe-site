@@ -1,6 +1,7 @@
 """Every registered content model's admin pages load for a logged-in superuser."""
 
 import pytest
+from django.db.models.fields.files import FieldFile
 from django.contrib import admin
 from django.urls import reverse
 
@@ -64,7 +65,7 @@ def test_edit_hero_title_via_admin_reaches_api(seeded, admin_client):
     data = {}
     for name, field in form.fields.items():
         value = form.initial.get(name, field.initial)
-        if value is None:
+        if value is None or isinstance(value, FieldFile):  # empty upload → no file posted
             value = ""
         data[name] = value
     # inline management forms
@@ -75,7 +76,7 @@ def test_edit_hero_title_via_admin_reaches_api(seeded, admin_client):
         for f in fs.formset.forms:
             for name, field in f.fields.items():
                 v = f.initial.get(name, field.initial)
-                if v is None:
+                if v is None or isinstance(v, FieldFile):
                     v = ""
                 data[f"{f.prefix}-{name}"] = v
     data["hero_title"] = "New headline\nSecond line"

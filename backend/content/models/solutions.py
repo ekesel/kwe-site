@@ -15,8 +15,8 @@ class SolutionsPageSettings(SingletonModel):
     hero_title = models.CharField("Title", max_length=200)
     hero_subtitle = models.TextField("Subtitle")
 
-    header_title = models.CharField("Intro title", max_length=200, help_text="Heading of the solutions list section.")
-    header_body = models.TextField("Intro body")
+    why_title = models.CharField("Why KWE title", max_length=200, default="", help_text='Heading of the intro section, e.g. "Why KWE Advisors".')
+    why_body = models.TextField("Why KWE body", default="")
     list_eyebrow = models.CharField("List eyebrow", max_length=80, help_text='Above the list of solutions, e.g. "Capabilities".')
     explore_label = models.CharField("Explore link label", max_length=80, help_text='Link on each solution row, e.g. "Explore capability".')
 
@@ -33,7 +33,6 @@ class SolutionsPageSettings(SingletonModel):
     expect_eyebrow = models.CharField("What-to-expect eyebrow", max_length=80, help_text="Solution detail page.")
     more_eyebrow = models.CharField("More-solutions eyebrow", max_length=80)
     more_title = models.CharField("More-solutions title", max_length=200)
-    scroll_cue = models.CharField("Scroll cue", max_length=60, help_text="Solution detail page hero.")
 
     history = HistoricalRecords()
 

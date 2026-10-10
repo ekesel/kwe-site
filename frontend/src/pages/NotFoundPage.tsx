@@ -1,9 +1,10 @@
 import { useContent } from "@/content/ContentProvider";
-import { Button } from "@/components/ui";
+import { Button, usePageTitle } from "@/components/ui";
 
 export default function NotFoundPage() {
   const data = useContent();
   const n = data.notFound;
+  usePageTitle(n.title);
   return (
     <section className="grad-dark text-white container-x flex flex-col items-center justify-center text-center" style={{ minHeight: "100svh", paddingTop: 140, paddingBottom: 120 }}>
       <div className="serif text-g5 text-[88px] lg:text-[160px] leading-none">{n.code}</div>

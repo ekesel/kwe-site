@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import NavBar from "./NavBar";
-import MegaFooter from "./MegaFooter";
+import Footer from "./Footer";
 import { Loader, PageTransition, SmoothScroll, scrollToEl } from "@/motion";
 
 export default function Root() {
@@ -19,7 +19,7 @@ export default function Root() {
         <main>
           <Outlet />
         </main>
-        <MegaFooter />
+        <Footer />
       </PageTransition>
     </>
   );

@@ -240,10 +240,11 @@ UNFOLD = {
                 "collapsible": False,
                 "items": [
                     {"title": "Home", "icon": "home", "link": reverse_lazy("admin:content_homepage_changelist")},
-                    {"title": "Our story", "icon": "auto_stories", "link": reverse_lazy("admin:content_storypage_changelist")},
-                    {"title": "Our process", "icon": "route", "link": reverse_lazy("admin:content_processpage_changelist")},
+                    {"title": "Story", "icon": "auto_stories", "link": reverse_lazy("admin:content_storypage_changelist")},
+                    {"title": "Process", "icon": "route", "link": reverse_lazy("admin:content_processpage_changelist")},
                     {"title": "Contact", "icon": "mail", "link": reverse_lazy("admin:content_contactpage_changelist")},
                     {"title": "Legal", "icon": "gavel", "link": reverse_lazy("admin:content_legalpage_changelist")},
+                    {"title": "Legal documents", "icon": "policy", "link": reverse_lazy("admin:content_legaldocument_changelist")},
                     {"title": "Team page settings", "icon": "groups", "link": reverse_lazy("admin:content_teampagesettings_changelist")},
                     {"title": "Solutions page settings", "icon": "grid_view", "link": reverse_lazy("admin:content_solutionspagesettings_changelist")},
                     {"title": "Case studies page settings", "icon": "work", "link": reverse_lazy("admin:content_casestudiespagesettings_changelist")},
@@ -258,7 +259,6 @@ UNFOLD = {
                     {"title": "Solutions", "icon": "category", "link": reverse_lazy("admin:content_solution_changelist")},
                     {"title": "Case studies", "icon": "cases", "link": reverse_lazy("admin:content_casestudy_changelist")},
                     {"title": "Insights", "icon": "article", "link": reverse_lazy("admin:content_insight_changelist")},
-                    {"title": "Extra cards", "icon": "view_agenda", "link": reverse_lazy("admin:content_extracard_changelist")},
                 ],
             },
             {

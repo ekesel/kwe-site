@@ -11,8 +11,6 @@ class ContactPage(SingletonModel):
     hero_eyebrow = models.CharField("Eyebrow", max_length=80)
     hero_title = models.CharField("Title", max_length=200)
     hero_subtitle = models.TextField("Subtitle")
-    hero_email = models.EmailField("Email", help_text="Email shown as a button in the hero.")
-    hero_linkedin = models.CharField("LinkedIn button label", max_length=40, help_text="Links to the site LinkedIn URL.")
 
     form_eyebrow = models.CharField("Eyebrow", max_length=80)
     form_title = models.CharField("Title", max_length=200)

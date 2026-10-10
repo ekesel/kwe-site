@@ -27,7 +27,20 @@ def _replace(manager_or_qs, rows: list[dict], **extra):
 
 
 def _is_external(url: str) -> bool:
-    return bool(url) and not url.startswith("/media/")
+    """True for anything that is not a CMS upload (uploads live under /media/uploads/ or /media/library/).
+    Absolute URLs and site-relative paths such as /media/hero.mp4 (shipped with the frontend) are kept as URLs."""
+    return bool(url) and not url.startswith(("/media/uploads/", "/media/library/"))
+
+
+def _ext(url: str) -> str:
+    return url if _is_external(url) else ""
+
+
+def _with_image(row: dict) -> dict:
+    """A JSON row with an "image" URL → model kwargs (image_url)."""
+    out = {k: v for k, v in row.items() if k != "image"}
+    out["image_url"] = _ext(row.get("image", ""))
+    return out
 
 
 # --------------------------------------------------------------------------- site
@@ -46,7 +59,8 @@ def import_site(d):
         hero_poster_url=site["heroPoster"] if _is_external(site["heroPoster"]) else s.hero_poster_url,
         nav_cta_label=nav["cta"]["label"],
         nav_cta_to=nav["cta"]["to"],
-        footer_disclosure=footer["disclosure"],
+        footer_email=footer["email"],
+        footer_linkedin_label=footer["linkedinLabel"],
         footer_copyright=footer["copyright"],
         cta_eyebrow=cta["eyebrow"],
         cta_title=cta["title"],
@@ -77,6 +91,7 @@ def import_home(d):
     _set(
         h,
         hero_title=join_lines(d["hero"]["title"]),
+        hero_subtitle=d["hero"]["subtitle"],
         hero_scroll_cue=d["hero"]["scrollCue"],
         intro_eyebrow=d["intro"]["eyebrow"],
         intro_statement=d["intro"]["statement"],
@@ -89,41 +104,39 @@ def import_home(d):
         challenge_eyebrow=d["challenge"]["eyebrow"],
         challenge_title=d["challenge"]["title"],
         challenge_body=d["challenge"]["body"],
-        diptych_traditional_label=d["diptych"]["traditional"]["label"],
-        diptych_traditional_items=join_lines(d["diptych"]["traditional"]["items"]),
-        diptych_kwe_label=d["diptych"]["kwe"]["label"],
-        diptych_kwe_items=join_lines(d["diptych"]["kwe"]["items"]),
+        comparison_title=d["comparison"]["title"],
+        comparison_traditional_label=d["comparison"]["traditionalLabel"],
+        comparison_kwe_label=d["comparison"]["kweLabel"],
+        comparison_traditional_image_url=_ext(d["comparison"]["traditionalImage"]),
+        comparison_kwe_image_url=_ext(d["comparison"]["kweImage"]),
         what_eyebrow=d["whatWeDo"]["eyebrow"],
         what_title=d["whatWeDo"]["title"],
         what_body=d["whatWeDo"]["body"],
         cases_eyebrow=d["caseStudies"]["eyebrow"],
         cases_title=d["caseStudies"]["title"],
         cases_link_label=d["caseStudies"]["link"]["label"],
-        approach_eyebrow=d["approach"]["eyebrow"],
-        approach_title=d["approach"]["title"],
-        approach_link_label=d["approach"]["link"]["label"],
-        approach_link_to=d["approach"]["link"]["to"],
         team_eyebrow=d["team"]["eyebrow"],
         team_title=d["team"]["title"],
+        team_subtitle=d["team"]["subtitle"],
         team_link_label=d["team"]["link"]["label"],
         team_link_to=d["team"]["link"]["to"],
         testimonials_eyebrow=d["testimonials"]["eyebrow"],
         testimonials_title=d["testimonials"]["title"],
         trusted_eyebrow=d["testimonials"]["trustedEyebrow"],
         trusted_title=d["testimonials"]["trustedTitle"],
-        logos=join_lines(d["testimonials"]["logos"]),
         insights_label=d["insights"]["label"],
         insights_title=d["insights"]["title"],
         insights_button_label=d["insights"]["button"]["label"],
         insights_button_to=d["insights"]["button"]["to"],
         insights_read_more=d["insights"]["readMore"],
     )
-    _replace(h.stats, d["stats"]["items"], page=h)
-    _replace(h.who_tiles, d["who"]["tiles"], page=h)
+    _replace(h.stats, [_with_image(x) for x in d["stats"]["items"]], page=h)
+    _replace(h.who_tiles, [{"group": g["label"], **_with_image(t)} for g in d["who"]["groups"] for t in g["tiles"]], page=h)
+    _replace(h.comparison_rows, d["comparison"]["rows"], page=h)
     _replace(h.challenge_items, d["challenge"]["items"], page=h)
-    _replace(h.what_cards, d["whatWeDo"]["cards"], page=h)
-    _replace(h.approach_steps, d["approach"]["steps"], page=h)
-    _replace(h.testimonials, d["testimonials"]["items"], page=h)
+    _replace(h.what_cards, [_with_image(x) for x in d["whatWeDo"]["cards"]], page=h)
+    _replace(h.trusted_logos, d["testimonials"]["logos"], page=h)
+    _replace(h.testimonials, [_with_image(x) for x in d["testimonials"]["items"]], page=h)
 
 
 # --------------------------------------------------------------------------- story
@@ -134,6 +147,7 @@ def import_story(d):
     _set(
         s,
         hero_eyebrow=d["hero"]["eyebrow"],
+        hero_kicker=d["hero"]["kicker"],
         hero_title=d["hero"]["title"],
         hero_subtitle=join_lines(d["hero"]["subtitle"]),
         who_eyebrow=d["who"]["eyebrow"],
@@ -152,7 +166,6 @@ def import_story(d):
         respond_button_label=d["respond"]["button"]["label"],
         respond_button_to=d["respond"]["button"]["to"],
         vision_eyebrow=d["vision"]["eyebrow"],
-        vision_index=d["vision"]["index"],
         vision_before=d["vision"]["before"],
         vision_highlight=d["vision"]["highlight"],
         vision_after=d["vision"]["after"],
@@ -162,7 +175,6 @@ def import_story(d):
         teaser_link_label=d["teamTeaser"]["link"]["label"],
         teaser_link_to=d["teamTeaser"]["link"]["to"],
     )
-    _replace(s.anchors, d["hero"]["anchors"], page=s)
     _replace(s.pillars, d["who"]["pillars"], page=s)
     _replace(s.stats, d["who"]["stats"], page=s)
     _replace(s.background_rows, d["background"]["rows"], page=s)
@@ -204,10 +216,7 @@ def import_team(d):
         t,
         hero_eyebrow=d["hero"]["eyebrow"],
         hero_title=d["hero"]["title"],
-        hero_anchor_label=d["hero"]["anchor"]["label"],
-        hero_anchor_href=d["hero"]["anchor"]["href"],
-        hero_cta_label=d["hero"]["cta"]["label"],
-        hero_cta_to=d["hero"]["cta"]["to"],
+        hero_subtitle=d["hero"]["subtitle"],
         search_placeholder=d["searchPlaceholder"],
         profile_back=d["profile"]["back"],
         profile_focus_label=d["profile"]["focusLabel"],
@@ -230,6 +239,7 @@ def import_team(d):
             slug=x["slug"],
             name=x["name"],
             role=x["role"],
+            credential=x["credential"],
             focus=x["focus"],
             firms=join_lines(x["firms"]),
             image_url=x["image"] if _is_external(x["image"]) else "",
@@ -250,7 +260,6 @@ def import_process(d):
         hero_eyebrow=d["hero"]["eyebrow"],
         hero_title=d["hero"]["title"],
         hero_subtitle=d["hero"]["subtitle"],
-        hero_anchors=join_lines(d["hero"]["anchors"]),
         stepper_eyebrow=d["stepper"]["eyebrow"],
         stepper_next_label=d["stepper"]["nextLabel"],
         why_eyebrow=d["why"]["eyebrow"],
@@ -287,9 +296,8 @@ def import_solutions(d):
         expect_eyebrow=d["expectEyebrow"],
         more_eyebrow=d["moreEyebrow"],
         more_title=d["moreTitle"],
-        scroll_cue=d["scrollCue"],
-        header_title=d["header"]["title"],
-        header_body=d["header"]["body"],
+        why_title=d["whyKwe"]["title"],
+        why_body=d["whyKwe"]["body"],
         detail_title=d["detailTitle"],
         explore_label=d["exploreLabel"],
     )
@@ -330,15 +338,13 @@ def import_solutions(d):
 
 def import_case_studies(d):
     c = m.CaseStudiesPageSettings.get_solo()
-    ctl, det, per, tr = d["controls"], d["detail"], d["perspectives"], d["trusted"]
+    ctl, det = d["controls"], d["detail"]
     _set(
         c,
         hero_eyebrow=d["hero"]["eyebrow"],
         hero_title=d["hero"]["title"],
         hero_subtitle=d["hero"]["subtitle"],
-        hero_scroll_cue=d["hero"]["scrollCue"],
         controls_categories=ctl["categories"],
-        controls_filter=ctl["filter"],
         controls_read_more=ctl["readMore"],
         controls_showing=ctl["showing"],
         controls_load_more=ctl["loadMore"],
@@ -353,15 +359,7 @@ def import_case_studies(d):
         detail_results=det["results"],
         detail_more_eyebrow=det["moreEyebrow"],
         detail_more_title=det["moreTitle"],
-        perspectives_eyebrow=per["eyebrow"],
-        perspectives_title=per["title"],
-        perspectives_note=per["note"],
-        perspectives_compliance=per["compliance"],
-        trusted_eyebrow=tr["eyebrow"],
-        trusted_logos=join_lines(tr["logos"]),
-        trusted_note=tr["note"],
     )
-    _replace(c.perspectives, per["items"], page=c)
     _import_filter_groups(
         "caseStudies",
         _dropdowns(d["hero"]["filters"])
@@ -369,43 +367,27 @@ def import_case_studies(d):
     )
     m.CaseStudy.objects.all().delete()
     for i, x in enumerate(d["items"]):
-        q = x.get("quote") or {}
         cs = m.CaseStudy.objects.create(
             order=i,
             slug=x["slug"],
-            key=x["key"],
             category=x["category"],
-            tags=join_lines(x["tags"]),
-            image_url=x["image"] if _is_external(x["image"]) else "",
+            image_url=_ext(x["image"]),
             card_title=x["cardTitle"],
             title=x["title"],
             subtitle=x["subtitle"],
-            meta=join_lines(x["meta"]),
-            challenge=x["challenge"],
-            outcome=x["outcome"],
-            quote_text=q.get("text", ""),
-            quote_attribution=q.get("attribution", ""),
+            meta="\n".join(x["meta"]),
+            challenge_heading=x["challenge"]["heading"],
+            challenge=x["challenge"]["body"],
+            approach_heading=x["approach"]["heading"],
+            results_heading=x["results"]["heading"],
+            results=x["results"]["body"],
             strategy=x["strategy"],
             fund_type=x["fundType"],
             region=x["region"],
             category_group=x["categoryGroup"],
         )
-        _replace(cs.approach_steps, x["approach"], case_study=cs)
-        _replace(cs.results, x["results"], case_study=cs)
-    m.ExtraCard.objects.filter(kind="caseStudies").delete()
-    for i, x in enumerate(d["extraCards"]):
-        m.ExtraCard.objects.create(
-            kind="caseStudies",
-            order=i,
-            category=x["category"],
-            title=x["title"],
-            tags=join_lines(x["tags"]),
-            image_url=x["image"] if _is_external(x["image"]) else "",
-            strategy=x["strategy"],
-            fund_type=x["fundType"],
-            region=x["region"],
-            category_group=x["categoryGroup"],
-        )
+        _replace(cs.approach_steps, x["approach"]["steps"], case_study=cs)
+
 
 
 # --------------------------------------------------------------------------- insights
@@ -418,7 +400,7 @@ def import_insights(d):
         n,
         hero_eyebrow=d["hero"]["eyebrow"],
         hero_title=d["hero"]["title"],
-        hero_scroll_cue=d["hero"]["scrollCue"],
+        hero_subtitle=d["hero"]["subtitle"],
         controls_categories=ctl["categories"],
         controls_filter=ctl["filter"],
         controls_read_more=ctl["readMore"],
@@ -433,22 +415,22 @@ def import_insights(d):
         follow_media_label=fo["mediaLabel"],
         article_back=art["back"],
         article_author=art["author"],
+        article_meta_labels=join_lines(art["metaLabels"]),
         article_initials=art["initials"],
-        article_toc=art["toc"],
+        article_outline=art["outline"],
         article_related=art["related"],
     )
     _replace(n.press_contacts, fo["contacts"], page=n)
     _import_filter_groups(
         "insights",
         [
-            {"kind": "chips", "label": "Topics", "options": [{"label": ch["label"], "value": ch["topic"]} for ch in d["hero"]["chips"]]},
             {"kind": "categories", "label": ctl["categories"], "options": [{"label": o} for o in ctl["categoriesOptions"]]},
             {"kind": "readtime", "label": ctl["filterOptions"]["label"], "options": [{"label": o} for o in ctl["filterOptions"]["options"]]},
         ],
     )
     m.Insight.objects.all().delete()
     for i, x in enumerate(d["items"]):
-        ins = m.Insight.objects.create(
+        m.Insight.objects.create(
             order=i,
             slug=x["slug"],
             category=x["category"],
@@ -457,25 +439,9 @@ def import_insights(d):
             image_url=x["image"] if _is_external(x["image"]) else "",
             title=x["title"],
             subtitle=x["subtitle"],
-            toc=join_lines(x["toc"]),
-            h2=x["h2"],
-            p1=x["p1"],
-            p2=x["p2"],
-            quote=x["quote"],
-            p3=x["p3"],
+            body=x["body"],
         )
-        _replace(ins.stats, x["stats"], insight=ins)
-    m.ExtraCard.objects.filter(kind="insights").delete()
-    for i, x in enumerate(d["extraCards"]):
-        m.ExtraCard.objects.create(
-            kind="insights",
-            order=i,
-            category=x["category"],
-            title=x["title"],
-            image_url=x["image"] if _is_external(x["image"]) else "",
-            date=x["date"],
-            read=x["read"],
-        )
+
 
 
 # --------------------------------------------------------------------------- contact / legal
@@ -489,8 +455,6 @@ def import_contact(d):
         hero_eyebrow=d["hero"]["eyebrow"],
         hero_title=d["hero"]["title"],
         hero_subtitle=d["hero"]["subtitle"],
-        hero_email=d["hero"]["email"],
-        hero_linkedin=d["hero"]["linkedin"],
         form_eyebrow=f["eyebrow"],
         form_title=f["title"],
         form_body=f["body"],
@@ -522,8 +486,21 @@ def import_contact(d):
 
 def import_legal(d):
     lg = m.LegalPage.get_solo()
-    _set(lg, eyebrow=d["eyebrow"], title=d["title"], updated=d["updated"])
+    _set(lg, eyebrow=d["eyebrow"], title=d["title"], updated=d["updated"], draft_note=d["draftNote"])
     _replace(lg.sections, d["sections"], page=lg)
+    m.LegalDocument.objects.all().delete()
+    for i, doc in enumerate(d["documents"]):
+        document = m.LegalDocument.objects.create(
+            order=i,
+            slug=doc["slug"],
+            eyebrow=doc["eyebrow"],
+            title=doc["title"],
+            updated=doc["updated"],
+            intro=doc["intro"],
+            disclaimer=doc["disclaimer"],
+            compliance_note=doc["complianceNote"],
+        )
+        _replace(document.sections, doc["sections"], document=document)
 
 
 # --------------------------------------------------------------------------- root
@@ -546,3 +523,15 @@ def import_data(data: dict):
 def is_empty() -> bool:
     """True when no content has been imported yet (fresh database)."""
     return not (m.NavLink.objects.exists() or m.TeamMember.objects.exists() or m.Solution.objects.exists())
+
+
+@transaction.atomic
+def wipe_content():
+    """Delete every content row (singletons included; media library and history are kept)."""
+    from django.apps import apps
+
+    keep = {m.ContentVersion, m.MediaAsset}
+    for model in apps.get_app_config("content").get_models():
+        if model in keep or model.__name__.startswith("Historical"):
+            continue
+        model.objects.all().delete()
